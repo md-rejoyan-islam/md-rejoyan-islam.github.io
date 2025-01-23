@@ -1,41 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio Website
 
-## Getting Started
+Welcome to my portfolio website repository! This is a modern, responsive web application showcasing my work and skills as a Full Stack Developer.
 
-First, run the development server:
+## 🌐 Live Demo
+
+Visit the live website: [md-rejoyan-islam.github.io](https://md-rejoyan-islam.github.io/)
+
+## 🚀 Features
+
+- Clean and modern UI design
+- Responsive layout for all devices
+- Dark/Light mode toggle
+- Interactive tech stack visualization
+- Project showcase section
+- Downloadable CV
+- Blog section
+- Skills and experience timeline
+
+## 💻 Tech Stack
+
+- React.js
+- HTML5/CSS3
+- JavaScript
+- Node.js
+- Express.js
+- MongoDB
+- Python
+- SQL/NoSQL databases
+- Various development tools and frameworks
+
+## 📱 Sections
+
+1. **Home** - Introduction and quick overview
+2. **About** - Detailed background and expertise
+3. **Projects** - Showcase of development work
+4. **Blogs** - Technical writing and insights
+5. **Skills** - Technical capabilities
+6. **Experience** - Professional journey
+7. **Education** - Academic background
+
+## 🛠️ Installation
+
+To run this project locally:
+
+1. Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/md-rejoyan-islam/md-rejoyan-islam.github.io.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🤝 Contributing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Contributions, issues, and feature requests are welcome. Feel free to check [issues page](https://github.com/md-rejoyan-islam/md-rejoyan-islam.github.io/issues)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📝 License
 
-## Learn More
+This project is licensed under the MIT License - see the [LICENSE](LICENSE)
 
-To learn more about Next.js, take a look at the following resources:
+## 👤 Author
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Md. Rejoyan Islam**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Portfolio: [https://md-rejoyan-islam.github.io/](https://md-rejoyan-islam.github.io/)
 
-## Deploy on Vercel
+## ⭐ Show your support
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# md-rejoyan-islam.github.io
-# md-rejoyan-islam.github.io
-# md-rejoyan-islam.github.io
-# md-rejoyan-islam.github.io
-# md-rejoyan-islam.github.io
+Give a ⭐️ if you like this project!
