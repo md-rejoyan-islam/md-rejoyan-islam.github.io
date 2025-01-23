@@ -15,18 +15,24 @@ Visit the live website: [md-rejoyan-islam.github.io](https://md-rejoyan-islam.gi
 - Project showcase section
 - Downloadable CV
 - Blog section
-- Skills and experience timeline
 
 ## 💻 Tech Stack
 
-- React.js
 - HTML5/CSS3
+- Tailwind CSS/Bootstrap
 - JavaScript
+- Python
 - Node.js
 - Express.js
-- MongoDB
-- Python
+- React.js
+- Next.js
+- Framer-Motion
+- Redux/Context API
+- Prisma/Mongoose/Sequelize
 - SQL/NoSQL databases
+- RESTful APIs
+- GraphQL
+- Docker
 - Various development tools and frameworks
 
 ## 📱 Sections
@@ -35,9 +41,6 @@ Visit the live website: [md-rejoyan-islam.github.io](https://md-rejoyan-islam.gi
 2. **About** - Detailed background and expertise
 3. **Projects** - Showcase of development work
 4. **Blogs** - Technical writing and insights
-5. **Skills** - Technical capabilities
-6. **Experience** - Professional journey
-7. **Education** - Academic background
 
 ## 🛠️ Installation
 
@@ -62,6 +65,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE)
 **Md. Rejoyan Islam**
 
 - Portfolio: [https://md-rejoyan-islam.github.io/](https://md-rejoyan-islam.github.io/)
+- GitHub: [@md-rejoyan-islam](https://github.com/md-rejoyan-islam)
 
 ## ⭐ Show your support
 
