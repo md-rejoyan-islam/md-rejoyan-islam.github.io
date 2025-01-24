@@ -189,7 +189,7 @@ export const projects = [
       {
         name: "Server",
         href: "https://github.com/md-rejoyan-islam/doctor-portal-server.git",
-        icon: <FaServer className="text-button dark:hover:text-white" />,
+        icon: <FaServer className="text-button  dark:hover:text-white" />,
       },
     ],
   },

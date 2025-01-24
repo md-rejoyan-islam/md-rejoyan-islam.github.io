@@ -87,7 +87,7 @@ export default function Hero() {
                 MERN stack, SQL, NoSQL databases, and Python for data science, I
                 focus on creating accessible, human-centered products that
                 deliver meaningful value."
-                className="pb-7 pt-2 md:text-lg lg:text-xl max-w-2xl mx-auto dark:text-[#8b9bba]"
+                className="pb-7 pt-2 md:text-lg lg:text-xl max-w-2xl mx-auto "
               />
               <div className="flex items-center justify-center gap-4">
                 <NiceBtn

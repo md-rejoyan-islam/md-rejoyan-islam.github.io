@@ -75,7 +75,7 @@ export default function Navbar() {
   return (
     <header
       className={clsx(
-        "text-[var(--primary-text)] dark:text-[#aeaecc] w-[100%]  z-50  h-[60px] sticky top-1 transition-all duration-700  left-0  mx-auto border-b  px-4 bg-white md:bg-transparent  dark:border-[#253359]/40 ",
+        "text-[var(--primary-text)] dark:text-[#aeaecc] w-[100%]  z-[1000]  h-[60px] sticky top-1 transition-all duration-700  left-0  mx-auto border-b  px-4 bg-white md:bg-transparent  dark:border-[#253359]/40 ",
 
         scrollHeight > 60 && "md:w-[75%] md:border-none bg-transparent "
       )}

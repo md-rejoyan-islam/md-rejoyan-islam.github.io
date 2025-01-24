@@ -18,7 +18,7 @@ export default function ThemeSwitch() {
   useOnClickOutside(ref, () => setIsOpen(false));
   if (!mounted)
     return (
-      <button className="bg-background-secondary h-8 w-8 flex items-center border border-[var(--secondary-hover-button)] hover:gap-4 transition-all rounded-xl uppercase justify-center  gap-2 ">
+      <button className="bg-background-secondary h-8 w-8 flex items-center border border-[var(--secondary-hover-button)] hover:gap-4 transition-all rounded-xl dark:border-[#253359] uppercase justify-center  gap-2 ">
         {/* <FiSun key={1} /> */}
       </button>
     );

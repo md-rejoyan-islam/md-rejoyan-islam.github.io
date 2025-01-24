@@ -82,9 +82,9 @@ export const TabList = ({
             }
           }}
           className={twMerge(
-            "transition-colors border duration-200  text-sm text-text-secondary bg-transparent  hover:bg-[#e9f7fe] hover:text-button flex items-center border-[#c8edff] justify-center rounded-md h-fit px-2 py-1 text-nowrap",
+            "transition-colors border duration-200  text-sm text-text-secondary bg-transparent  hover:bg-[#e9f7fe] hover:text-button flex items-center dark:border-[#222c64] dark:hover:bg-[#161c40] border-[#c8edff] justify-center rounded-md h-fit px-2 py-1 text-nowrap",
             currentLink.index === i &&
-              "text-[#000] border-[#c8edff]  bg-[#c8edff] hover:bg-[#c8edff]",
+              "text-[#000] border-[#c8edff] dark:border-[#222c64] dark:bg-[#161c40] dark:text-white bg-[#c8edff] hover:bg-[#c8edff]",
             fired.current
               ? ""
               : defaultSelectedTabStyles[defaultSelectedTabIndex]
@@ -103,7 +103,9 @@ export const TabList = ({
             className={twMerge(
               `transition-[color,left,width] duration-300 absolute top-1/2 -translate-y-1/2 h-full rounded-md -z-[1]`,
               //just skips animation on page load
-              fired.current ? "bg-[#c8edff]" : "bg-transparent"
+              fired.current
+                ? "bg-[#c8edff] dark:bg-[#161c40]"
+                : "bg-transparent"
             )}
           />
         </div>
