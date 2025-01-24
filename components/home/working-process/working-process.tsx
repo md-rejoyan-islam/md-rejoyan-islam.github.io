@@ -126,8 +126,8 @@ export default function WorkingProcesses() {
   ];
 
   return (
-    <section className="py-20 max-w-7xl mx-auto relative ">
-      <div className="absolute top-0 inset-0 w-full h-full bg-[url('/images/working.jpg')] bg-cover -z-10  opacity-5    bg-no-repeat bg-white/50 "></div>
+    <section className="py-20 max-w-7xl mx-auto relative  ">
+      <div className="absolute  inset-0 w-full max-w-[600px] h-[400px] sm:h-[600px] lg:max-h-[500px]  mx-auto  bg-[url('/images/output.svg')]  bg-cover -z-10  opacity-10 dark:opacity-[0.04]   bg-no-repeat bg-white/50 dark:bg-transparent "></div>
 
       <div className="text-center space-y-4">
         <HomeTittle label="How I Work" />

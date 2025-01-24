@@ -7,8 +7,8 @@ import { HomeSubtittle, HomeTittle } from "./home-page-tittle-subtitle";
 
 export default function ProvideServices() {
   return (
-    <section className="bg-[#fefeff8f] py-12 sm:py-16">
-      <div className=" px-4 sm:px-6 lg:px-8  relative bg-[url('/images/community.svg')] bg-cover   bg-no-repeat ">
+    <section className="bg-[#fefeff8f] dark:bg-[#061024] py-12 sm:py-16">
+      <div className=" px-4 sm:px-6 lg:px-8  relative bg-[url('/images/community.svg')] sm:bg-cover md:bg-contain  md:bg-bottom   md:bg-no-repeat ">
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-4">
             <HomeTittle label="My Services" />
@@ -64,10 +64,10 @@ export default function ProvideServices() {
             ].map((service, index) => (
               <Card
                 key={index}
-                className="group hover:shadow-lg backdrop-blur-[1.5px] hover:backdrop-blur-[2px] transition-shadow duration-300 border-[#60aaf445] hover:border-[#60aaf48f]  shadow-sm   bg-[#f8fcffb9]"
+                className="group hover:shadow-lg backdrop-blur-[1.5px] hover:backdrop-blur-[2px] transition-shadow duration-300 border-[#60aaf445] dark:border-[#365d8445] dark:bg-[#0c0b27]/60 dark:backdrop-blur-[3px] hover:border-[#60aaf48f]  shadow-sm   bg-[#f8fcffb9]"
               >
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 rounded-lg bg-[#e6f3ff] flex items-center justify-center text-[var(--primary-button)] mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 rounded-lg dark:bg-[#2725546e] bg-[#e6f3ff] flex items-center justify-center text-[var(--primary-button)] mb-4 group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-semibold mb-2">

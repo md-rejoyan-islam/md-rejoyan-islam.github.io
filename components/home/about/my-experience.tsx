@@ -13,16 +13,18 @@ export default function MyExperience({
       {experiences.map((exp, index) => (
         <motion.div
           key={exp.title}
-          className="bg-[var(--original-bg)] max-w-3xl mx-auto hover:border-[var(--primary-button)] border border-[#bedffd] rounded-xl p-6 shadow-lg"
+          className="bg-[var(--original-bg)] max-w-3xl mx-auto dark:bg-[#111832]/60 dark:border-[#161442]  hover:border-[var(--primary-button)] border border-[#bedffd] rounded-xl p-6 shadow-lg"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: index * 0.1 }}
         >
-          <h4 className="text-xl font-semibold mb-2 text-gray-800">
+          <h4 className="text-xl font-semibold mb-2 text-gray-800 dark:text-[#d1dae4]">
             {exp.title}
           </h4>
-          <p className="text-[var(--primary-button)] mb-2">{exp.company}</p>
-          <p className="text-sm text-gray-600">{exp.period}</p>
+          <p className="text-[var(--primary-button)] mb-2 ">{exp.company}</p>
+          <p className="text-sm text-gray-600 dark:text-[#95a1c0]">
+            {exp.period}
+          </p>
         </motion.div>
       ))}
     </div>

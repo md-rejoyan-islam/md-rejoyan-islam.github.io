@@ -12,7 +12,7 @@ export default function ShowcaseProjects() {
       <div className="pt-5">
         <div className="text-center space-y-4">
           <HomeTittle label="My Projects" />
-          <p className="max-w-3xl mx-auto text-gray-600">
+          <p className="max-w-3xl mx-auto text-gray-600 dark:text-text-secondary">
             Here are some of the projects I&apos;ve worked on, showcasing my
             expertise in full-stack development, database optimization, cloud
             hosting, and SEO optimization.
@@ -34,12 +34,12 @@ export default function ShowcaseProjects() {
             <div
               className={clsx(
                 "flex-auto  rounded-xl p-5",
-                index === 0 && "bg-blue-200",
-                index === 1 && "bg-sky-200",
-                index === 2 && "bg-green-200",
-                index === 3 && "bg-pink-200",
-                index === 4 && "bg-yellow-200",
-                index === 5 && "bg-purple-200"
+                index === 0 && "bg-blue-200 dark:bg-blue-800/20",
+                index === 1 && "bg-sky-200 dark:bg-sky-800/20",
+                index === 2 && "bg-green-200 dark:bg-green-800/20",
+                index === 3 && "bg-pink-200 dark:bg-pink-800/20",
+                index === 4 && "bg-yellow-200 dark:bg-yellow-800/20",
+                index === 5 && "bg-purple-200 dark:bg-purple-800/20"
               )}
               key={index}
             >
@@ -72,7 +72,7 @@ export default function ShowcaseProjects() {
                         {project?.techStack.map((tech, index) => (
                           <li key={index}>
                             <span
-                              className={`rounded-lg px-2 py-1.5 bg-sky-100  text-xs `}
+                              className={`rounded-lg px-2 py-1.5 bg-sky-100 dark:bg-sky-400/15  text-xs `}
                             >
                               {tech}
                             </span>
@@ -90,7 +90,7 @@ export default function ShowcaseProjects() {
                             href={link.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-[var(--primary-button)] hover:bg-[var(--primary-button)] hover:text-white hover:text-[var(--primary-hover-button)] flex  transition-all gap-2 p-2  border border-[var(--primary-button)] rounded-md"
+                            className="text-[var(--primary-button)] hover:bg-[var(--primary-button)] hover:text-white hover:text-[var(--primary-hover-button)] flex  transition-all gap-2 p-2   border border-[var(--primary-button)] rounded-md"
                           >
                             <span className="text-xs hidden"> {link.name}</span>
                             {link.icon}

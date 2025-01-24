@@ -57,7 +57,7 @@ export function StepContent({ step, direction, processes }: StepContentProps) {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.1 }}
-          className="text-3xl font-bold text-center text-gray-800"
+          className="text-3xl font-bold text-center text-gray-800 dark:text-white/80"
         >
           {content.title}
         </motion.h2>
@@ -65,7 +65,7 @@ export function StepContent({ step, direction, processes }: StepContentProps) {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="text-gray-600 text-center max-w-2xl mx-auto "
+          className="text-gray-600 text-center max-w-2xl mx-auto dark:text-text-secondary"
         >
           {content.sort_description}
         </motion.p>

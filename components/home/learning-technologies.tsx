@@ -23,7 +23,7 @@ const technologies = [
 
 export default function LearningTechnologies() {
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 py-20">
+    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 py-20 dark:from-[#03081c] dark:to-[#03081c] ">
       <div className="space-y-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4">
           <HomeTittle label="My Tech Stack" />
@@ -40,7 +40,7 @@ export default function LearningTechnologies() {
               className="group relative overflow-hidden  rounded-xl "
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="relative bg-white rounded-xl p-6 shadow-lg backdrop-blur-sm border border-gray-100 hover:border-blue-200 transition-all duration-300 ">
+              <div className="relative bg-white dark:bg-[#0c0b27] rounded-xl p-6 shadow-lg backdrop-blur-sm border border-gray-100 hover:border-blue-200 dark:border-[#211c48] transition-all duration-300 ">
                 <div className="text-center space-y-3">
                   <div className="text-3xl">
                     <Image
@@ -48,10 +48,10 @@ export default function LearningTechnologies() {
                       alt={tech.name}
                       width={60}
                       height={60}
-                      className="mx-auto p-1.5 sm:p-2 bg-gray-500/10 rounded-md w-12 sm:w-[55px] h-12  sm:h-[55px] "
+                      className="mx-auto p-1.5 sm:p-2 bg-gray-500/10 dark:bg-green-500/10 rounded-md w-12 sm:w-[55px] h-12  sm:h-[55px] "
                     />
                   </div>
-                  <h3 className="font-medium text-sm sm:text-base text-[#292875]">
+                  <h3 className="font-medium text-sm sm:text-base text-[#292875] dark:text-white/80">
                     {tech.name}
                   </h3>
                 </div>

@@ -16,6 +16,23 @@ export default {
   theme: {
     extend: {
       colors: {
+        "bg-main": "var(--bg-main)",
+        "text-main": "var(--text-main)",
+        "text-secondary": "var(--text-secondary)",
+        projectCardText: "var(--project-card-text)",
+        projectCardBackground: "var(--project-card-background)",
+        projectCardHover: "var(--project-card-hover)",
+        projectCardBgSecondary: "var(--project-card-bg-secondary)",
+        projectCardBorder: "var(--project-card-border)",
+        backgroundSecondary: "var(--background-secondary)",
+        buttonText: "var(--button-text)",
+        textRoot: "var(--text-root)",
+        textPrimary: "var(--text-primary)",
+        textSecondary: "var(--text-secondary)",
+        button: "var(--button)",
+        buttonBg: "var(--button-bg)",
+        navbarShadow: "var(--navbar-shadow)",
+
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

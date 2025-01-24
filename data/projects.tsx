@@ -13,12 +13,14 @@ export const projects = [
       {
         name: "GitHub",
         href: "https://github.com/md-rejoyan-islam/trafalfar",
-        icon: <FaGithub className="text-button" />,
+        icon: <FaGithub className="text-button dark:hover:text-white" />,
       },
       {
         name: "Preview",
         href: "https://md-rejoyan-islam.github.io/trafalfar",
-        icon: <FaExternalLinkAlt className="text-button" />,
+        icon: (
+          <FaExternalLinkAlt className="text-button dark:hover:text-white" />
+        ),
       },
       {
         name: "Figma",
@@ -175,17 +177,19 @@ export const projects = [
       {
         name: "GitHub",
         href: "https://github.com/md-rejoyan-islam/doctor-portal.git",
-        icon: <FaGithub className="text-button" />,
+        icon: <FaGithub className="text-button dark:hover:text-white" />,
       },
       {
         name: "Preview",
         href: "https://doctors-portal-f127f.web.app",
-        icon: <FaExternalLinkAlt className="text-button" />,
+        icon: (
+          <FaExternalLinkAlt className="text-button dark:hover:text-white" />
+        ),
       },
       {
         name: "Server",
         href: "https://github.com/md-rejoyan-islam/doctor-portal-server.git",
-        icon: <FaServer className="text-button" />,
+        icon: <FaServer className="text-button dark:hover:text-white" />,
       },
     ],
   },

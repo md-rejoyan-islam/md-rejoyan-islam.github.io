@@ -28,5 +28,11 @@ export function HomeSubtittle({
   label: string;
   className?: string;
 }) {
-  return <p className={clsx("text-gray-600 px-4", className)}>{label}</p>;
+  return (
+    <p
+      className={clsx("text-gray-600 dark:text-text-secondary px-4", className)}
+    >
+      {label}
+    </p>
+  );
 }

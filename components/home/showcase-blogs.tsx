@@ -31,8 +31,11 @@ export default function ShowcaseBlogs() {
   }, [blogStaggerList, BlogAnimate]);
 
   return (
-    <div className="bg-[url('/images/blogging.png')] bg-contain bg-center bg-no-repeat my-20">
-      <section className=" max-w-7xl mx-auto px-4  bg-white   bg-opacity-90">
+    <div className=" my-20 relative">
+      <div className="absolute inset-0 opacity-20  dark:opacity-5 w-full h-full">
+        <div className=" bg-[url('/images/blogging.png')] w-full h-full bg-contain bg-center bg-no-repeat"></div>
+      </div>
+      <section className=" max-w-7xl mx-auto px-4  bg-white dark:bg-transparent    bg-opacity-90">
         <div className="flex justify-between items-center text-center w-full">
           <div className="mx-auto">
             <h2 className="font-incognito text-text-root  pb-4 text-[var(--primary-button)] text-4xl font-semibold tracking-tight">

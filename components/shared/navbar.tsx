@@ -75,7 +75,7 @@ export default function Navbar() {
   return (
     <header
       className={clsx(
-        "text-[var(--primary-text)] w-[100%]  z-50  h-[60px] sticky top-1 transition-all duration-700  left-0  mx-auto border-b  px-4 bg-white md:bg-transparent  ",
+        "text-[var(--primary-text)] dark:text-[#aeaecc] w-[100%]  z-50  h-[60px] sticky top-1 transition-all duration-700  left-0  mx-auto border-b  px-4 bg-white md:bg-transparent  dark:border-[#253359]/40 ",
 
         scrollHeight > 60 && "md:w-[75%] md:border-none bg-transparent "
       )}
@@ -83,7 +83,7 @@ export default function Navbar() {
       <div
         className={clsx(
           scrollHeight >= 60
-            ? "h-[60px]  delay-500 transition-all duration-500 hidden md:block   -z-10 backdrop-blur-md absolute right-0 mx-auto top-0 left-0 bg-[#e0f3fd]/70 border border-[#c8ebfe] rounded-md "
+            ? "h-[60px]  delay-500 transition-all duration-500 hidden md:block   -z-10 backdrop-blur-md absolute right-0 mx-auto top-0 left-0 bg-[#e0f3fd]/70 dark:bg-[#19193d]/50 border border-[#c8ebfe] dark:border-[#253359]/70 rounded-md "
             : "hidden",
           scrollHeight < 60 && "bg-white"
         )}
@@ -107,8 +107,10 @@ export default function Navbar() {
               {links.map((link, index) => (
                 <motion.li
                   className={`${
-                    pathname === link.href ? "text-[var(--primary-button)]" : ""
-                  } hover:text-[var(--primary-button)]  group h-full flex items-center`}
+                    pathname === link.href
+                      ? "text-[var(--primary-button)] "
+                      : ""
+                  } hover:text-[var(--primary-button)]   group h-full flex items-center`}
                   key={index}
                   style={{ opacity: 0, scale: 0.3, x: -50 }}
                 >
@@ -135,7 +137,7 @@ export default function Navbar() {
             }}
           >
             <HoverTooltip title="GitHub">
-              <div className="h-8 w-8 flex items-center justify-center rounded-xl border  hover:bg-[var(--primary-button)] text-[var(--primary-button)] hover:text-white hover:border-[var(--primary-button)] border-[#b4dafc] transition-all">
+              <div className="h-8 w-8 flex items-center justify-center rounded-xl border  hover:bg-[var(--primary-button)] text-[var(--primary-button)] hover:text-white hover:border-[var(--primary-button)] dark:hover:border-transparent border-[#b4dafc] dark:border-[#253359] transition-all">
                 <FaGithub className="w-4 h-4 " />
               </div>
             </HoverTooltip>

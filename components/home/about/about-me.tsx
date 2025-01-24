@@ -86,7 +86,7 @@ export function AboutMe() {
 
   return (
     <section
-      className="py-12 lg:py-16 px-4 bg-gradient-to-br from-pink-50/10 to-rose-100/10 text-gray-800 overflow-hidden"
+      className="py-12 lg:py-16 px-4 bg-gradient-to-br from-pink-50/10 to-rose-100/10 dark:from-[#011126]  text-gray-800 overflow-hidden"
       id="about"
     >
       <div className="max-w-6xl mx-auto">

@@ -50,7 +50,7 @@ export default function Hero() {
     "Python Data Analyst",
   ];
   return (
-    <div className=" pb-16 pt-[40px] px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-sky-50/50 to-sky-50">
+    <div className=" pb-16 pt-[40px] px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-sky-50/50 to-sky-50 dark:from-bg-main dark:to-[#010b24e6]">
       <div className="max-w-7xl mx-auto">
         <div className="   px-0 grid grid-cols-1 lg:grid-cols-5 overflow-hidden w-full">
           <div className="flex col-span-3 h-full justify-center lg:justify-start  items-center order-2 lg:order-1">
@@ -87,7 +87,7 @@ export default function Hero() {
                 MERN stack, SQL, NoSQL databases, and Python for data science, I
                 focus on creating accessible, human-centered products that
                 deliver meaningful value."
-                className="pb-7 pt-2 md:text-lg lg:text-xl max-w-2xl mx-auto"
+                className="pb-7 pt-2 md:text-lg lg:text-xl max-w-2xl mx-auto dark:text-[#8b9bba]"
               />
               <div className="flex items-center justify-center gap-4">
                 <NiceBtn

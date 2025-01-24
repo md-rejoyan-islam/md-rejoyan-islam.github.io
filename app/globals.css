@@ -53,8 +53,42 @@ html {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+
+    --bg-main: #fff;
+    --text-main: #000;
+    --text-secondary: #4b5563;
+    --project-card-text: #222;
+    --project-card-background: #f5f3fe;
+    --project-card-hover: #593ceabf;
+    --project-card-bg-secondary: #f7f6fe;
+    --project-card-border: #593cea8e;
+    --background-secondary: #fff;
+    --button-text: #201ce2;
+    --text-root: #583cea;
+    --text-primary: #1f2937;
+    --text-secondary: #292875;
+    --button: #583cea;
+    --button-bg: #593cea22;
+    --navbar-shadow: #d4d4d4b3;
   }
   .dark {
+    --bg-main: #071124;
+    --text-main: #d6c0cb;
+    --text-secondary: #7a8aa9;
+    --project-card-text: #fff;
+    --project-card-background: #0d132a;
+    --project-card-hover: #ee6eff;
+    --project-card-bg-secondary: #071124;
+    --project-card-border: #312f55;
+    --background-secondary: #fff;
+    --button-text: #eee;
+    --text-root: #fff;
+    --text-primary: #b2bbcf;
+    --text-secondary: #7b89a8;
+    --button: #00c7ff;
+    --button-bg: #192742;
+    --navbar-shadow: #020c1bb3;
+
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;

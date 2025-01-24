@@ -14,7 +14,7 @@ export default function ProcessCard({
   handleTabClick: (index: number) => void;
 }) {
   return (
-    <Card className="h-full border-[#c7e4fe]  ">
+    <Card className="h-full border-[#c7e4fe] dark:backdrop-blur-[1.5px] dark:border-[#1c2453] dark:bg-[#101531]/60  ">
       <div
         className={`relative h-full overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg p-6 rounded-md ${
           step === index
@@ -29,16 +29,18 @@ export default function ProcessCard({
                         ${
                           step === index
                             ? "bg-[var(--primary-button)] text-white"
-                            : " bg-[#e1eefa] text-gray-600"
+                            : " bg-[#e1eefa] dark:bg-[#171e46] dark:text-white/60 text-gray-600"
                         }`}
           >
             {index + 1}
           </span>
           <div>
-            <h3 className="text-xl font-semibold text-gray-900">
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white/80">
               {data.title}
             </h3>
-            <p className="mt-1 text-sm text-gray-500">{data.description}</p>
+            <p className="mt-1 text-sm text-gray-500 dark:text-text-secondary">
+              {data.description}
+            </p>
           </div>
         </div>
         <div className="  h-full absolute left-0 top-0  rounded-sm w-full">
