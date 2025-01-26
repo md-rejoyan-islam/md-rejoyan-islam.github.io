@@ -27,6 +27,8 @@ const ContactForm = () => {
   });
 
   const onSubmit = (data: FormData) => {
+    console.log(data);
+    // Handle form submission logic
     toast({
       title: "Message sent!",
       description: "Thanks for reaching out. I'll get back to you soon!",
