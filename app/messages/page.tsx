@@ -1,16 +1,12 @@
+"use client";
 import { ClientMessages } from "@/components/messages/client-messages";
 import { redirect } from "next/navigation";
 
-interface MessagesPageProps {
-  searchParams: {
-    api_key: string;
-  };
-}
+import { useSearchParams } from "next/navigation";
+export default function MessagesPage() {
+  const searchParams = useSearchParams();
+  const api_key = searchParams.get("api_key") || "";
 
-export default async function MessagesPage({
-  searchParams,
-}: MessagesPageProps) {
-  const { api_key } = searchParams;
   if (api_key !== process.env.NEXT_PUBLIC_API_KEY) {
     return redirect("/");
   }
