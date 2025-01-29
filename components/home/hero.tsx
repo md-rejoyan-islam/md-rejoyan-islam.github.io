@@ -49,6 +49,14 @@ export default function Hero() {
     "Next.Js Expert",
     "Python Data Analyst",
   ];
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/pdf/REJOYAN_RESUME.pdf";
+    link.download = "REJOYAN_RESUME.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <div className=" pb-16 pt-[40px] px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-sky-50/50 to-sky-50 dark:from-bg-main dark:to-[#010b24e6]">
       <div className="max-w-7xl mx-auto">
@@ -103,6 +111,7 @@ export default function Hero() {
                   label="Download CV"
                   icon={<IoMdDownload className="w-4 h-4 animate-bounce " />}
                   className="hover:bg-[#0d7ded] hover:text-white"
+                  onClick={handleDownload}
                   iconPosition="right"
                 />
               </div>
