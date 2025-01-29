@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
-export default function MessagesPage() {
+function MessagesPage() {
   const searchParams = useSearchParams();
   const api_key = searchParams.get("api_key") || "";
 
@@ -22,6 +22,14 @@ export default function MessagesPage() {
           <ClientMessages />
         </div>
       </section>
+    </Suspense>
+  );
+}
+
+export default function MessagePageWithSuspense() {
+  return (
+    <Suspense>
+      <MessagesPage />
     </Suspense>
   );
 }
