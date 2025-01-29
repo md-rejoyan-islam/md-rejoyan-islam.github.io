@@ -36,7 +36,7 @@ export function ContactWithMe() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-white dark:bg-[#111738]/50 border border-[#263663]/70 backdrop-blur-md rounded-2xl shadow-xl p-8 h-full"
+            className="bg-white dark:bg-[#111738]/50 border border-[#aacced] dark:border-[#263663]/70 backdrop-blur-md rounded-2xl shadow-xl p-8 h-full"
           >
             <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-6">
               Message Me
@@ -50,7 +50,7 @@ export function ContactWithMe() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="relative h-full"
           >
-            <div className="bg-white h-full dark:bg-[#111738]/50 border border-[#263663]/70 backdrop-blur-md rounded-2xl shadow-xl p-8 space-y-8">
+            <div className="bg-white h-full dark:bg-[#111738]/50 border border-[#aacced] dark:border-[#263663]/70  backdrop-blur-md rounded-2xl shadow-xl p-8 space-y-8">
               <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-6">
                 Contact Information
               </h3>

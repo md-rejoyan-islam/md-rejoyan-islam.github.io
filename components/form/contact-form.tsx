@@ -1,5 +1,7 @@
-import { toast } from "@/hooks/use-toast";
+import { useToast } from "@/hooks/use-toast";
+import { db } from "@/lib/firebase";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { AnimatePresence, motion } from "framer-motion";
 import { Send } from "lucide-react";
 import { useForm } from "react-hook-form";
@@ -22,17 +24,26 @@ const ContactForm = () => {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
+    reset,
   } = useForm<FormData>({
     resolver: zodResolver(schema),
   });
+  const { toast } = useToast();
 
-  const onSubmit = (data: FormData) => {
-    console.log(data);
-    // Handle form submission logic
-    toast({
-      title: "Message sent!",
-      description: "Thanks for reaching out. I'll get back to you soon!",
-    });
+  const onSubmit = async (data: FormData) => {
+    try {
+      await addDoc(collection(db, "messages"), {
+        ...data,
+        createdAt: serverTimestamp(), // Firestore handles the timestamp
+      });
+      reset();
+      toast({
+        title: "Message sent successfully",
+        description: "Thanks for reaching out. I'll get back to you soon!",
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

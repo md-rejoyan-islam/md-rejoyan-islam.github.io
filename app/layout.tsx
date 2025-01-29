@@ -2,6 +2,7 @@ import ScrollToTopButton from "@/components/scroll-to-top-button";
 import Footer from "@/components/shared/footer";
 import Navbar from "@/components/shared/navbar";
 import { ThemeProvider } from "@/components/theme/theme-provider";
+import { Toaster } from "@/components/ui/toaster";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -55,6 +56,7 @@ export default function RootLayout({
           /> */}
 
           <main className="">{children}</main>
+          <Toaster />
           {/* <Socials direction="col" position="fixed" /> */}
           <ScrollToTopButton />
           <Footer />

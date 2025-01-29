@@ -60,7 +60,7 @@ export default function Hero() {
               transition={{ duration: 0.5 }}
               className="text-center"
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-6 text-[var(--primary-title)] ">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-6 text-[var(--primary-title)] dark:text-[#4df9e5]/60">
                 Hi, I&apos;m{" "}
                 <span className=" text-[var(--primary-button)]">
                   Md. Rejoyan Islam
@@ -76,7 +76,7 @@ export default function Hero() {
                 <FlipWords
                   words={words}
                   className={
-                    "bg-clip-text inline-block overflow-hidden font-medium text-wrap text-[1.75rem] md:text-[2em] lg:text-[2.5em] text-[var(--primary-title)] "
+                    "bg-clip-text inline-block overflow-hidden font-medium text-wrap text-[1.75rem] md:text-[2em] lg:text-[2.5em] text-[var(--primary-title)] dark:text-[#4df9e5]/60 "
                   }
                 />
               </motion.div>

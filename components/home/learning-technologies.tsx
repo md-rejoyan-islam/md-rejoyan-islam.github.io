@@ -23,7 +23,7 @@ const technologies = [
 
 export default function LearningTechnologies() {
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 py-20 dark:from-[#03081c] dark:to-[#03081c] ">
+    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 py-20 dark:from-[#03081c]/50 dark:to-[#03081c]/50 ">
       <div className="space-y-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4">
           <HomeTittle label="My Tech Stack" />
