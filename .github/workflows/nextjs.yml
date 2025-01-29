@@ -24,8 +24,6 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    env:
-      NEXT_PUBLIC_FIREBASE_API_KEY: ${{ secrets.NEXT_PUBLIC_FIREBASE_API_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -81,7 +79,7 @@ jobs:
           echo "NEXT_PUBLIC_FIREBASE_APP_ID=${{ secrets.NEXT_PUBLIC_FIREBASE_APP_ID }}" >> .env
         shell: bash
       - name: print env
-        run: echo NEXT_PUBLIC_FIREBASE_API_KEY=$NEXT_PUBLIC_FIREBASE_API_KEY
+        run: cat .env
 
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
