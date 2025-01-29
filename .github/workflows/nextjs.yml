@@ -79,7 +79,7 @@ jobs:
           echo "NEXT_PUBLIC_FIREBASE_APP_ID=${{ secrets.NEXT_PUBLIC_FIREBASE_APP_ID }}" >> .env
         shell: bash
       - name: Print .env file (for debugging)
-        run: echo "${{ env.NEXT_PUBLIC_FIREBASE_API_KEY }}"
+        run: echo "${{ secrets.NEXT_PUBLIC_FIREBASE_API_KEY }}"
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
         env:
