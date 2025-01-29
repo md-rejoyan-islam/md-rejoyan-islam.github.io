@@ -1,6 +1,20 @@
 import { ClientMessages } from "@/components/messages/client-messages";
+import { redirect } from "next/navigation";
 
-export default async function MessagesPage() {
+interface MessagesPageProps {
+  searchParams: {
+    api_key: string;
+  };
+}
+
+export default async function MessagesPage({
+  searchParams,
+}: MessagesPageProps) {
+  const { api_key } = searchParams;
+  if (api_key !== process.env.NEXT_PUBLIC_API_KEY) {
+    return redirect("/");
+  }
+
   return (
     <section className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
