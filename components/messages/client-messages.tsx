@@ -1,8 +1,9 @@
 "use client";
 
 import { MESSAGE_TYPE } from "@/lib/types";
-import { deleteMessageById } from "@/queries/message";
+import { deleteMessageById, getAllMessages } from "@/queries/message";
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { MessageCard } from "./message-card";
 
 export interface User {
@@ -13,14 +14,20 @@ export interface User {
   message: string;
 }
 
-export function ClientMessages({
-  messages = [],
-}: {
-  messages: MESSAGE_TYPE[];
-}) {
+export function ClientMessages() {
   const handleDelete = async (id: string) => {
     await deleteMessageById(id);
   };
+  const [messages, setMessages] = useState<MESSAGE_TYPE[]>([]);
+
+  useEffect(() => {
+    const fetchMessages = async () => {
+      const messages = (await getAllMessages()) as MESSAGE_TYPE[] | [];
+      setMessages(messages);
+    };
+
+    fetchMessages();
+  }, []);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
