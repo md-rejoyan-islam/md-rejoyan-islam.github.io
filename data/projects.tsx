@@ -13,7 +13,7 @@ export const projects = [
       {
         name: "GitHub",
         href: "https://github.com/md-rejoyan-islam/trafalfar",
-        icon: <FaGithub className="text-button dark:hover:text-white" />,
+        icon: <FaGithub className="text-[#0d7ded] dark:hover:text-white" />,
       },
       {
         name: "Preview",

@@ -78,7 +78,7 @@ export default function Blogs() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="max-w-4xl text-center mx-auto  sm:text-xl text-gray-700 leading-relaxed"
+          className="max-w-4xl text-center mx-auto  sm:text-xl text-gray-600 dark:text-text-secondary leading-relaxed"
         >
           In this space, I share personal stories, insights, and experiences
           from my journey as a web developer and freelancer. You&apos;ll find

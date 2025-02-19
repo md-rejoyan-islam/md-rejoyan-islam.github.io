@@ -21,7 +21,7 @@ export default function Navbar() {
     },
     {
       name: "About",
-      href: "/#about",
+      href: "/about",
       active: false,
     },
     {
@@ -70,7 +70,7 @@ export default function Navbar() {
   return (
     <header
       className={clsx(
-        "text-[var(--primary-text)] dark:text-[#aeaecc] w-[100%]  z-[1000]  h-[60px] sticky top-1 transition-all duration-700  left-0  mx-auto border-b  px-4 bg-white dark:bg-[#061024] md:bg-transparent    dark:border-[#253359]/40 ",
+        "text-[var(--primary-text)] dark:text-[#aeaecc] w-[100%]  z-[1000]  h-[60px] sticky top-0 md:top-1 transition-all duration-700  left-0  mx-auto border-b  px-4 bg-white dark:bg-[#061024] md:bg-transparent    dark:border-[#253359]/40 ",
 
         scrollHeight > 60 && "md:w-[75%] md:border-none bg-transparent "
       )}
@@ -178,12 +178,16 @@ export default function Navbar() {
       </div>
       {isOpen && (
         <div className="bg-white dark:bg-[#0d1533]  absolute top-16 right-3.5 border border-[#0d79ed29] shadow-lg md:hidden  w-[200px] rounded-md">
-          <ul className="flex flex-col  p-5">
+          <ul className="flex flex-col  p-5 gap-1">
             {links.map((link, index) => (
               <li key={index} className="block group">
                 <Link
                   href={link.href}
-                  className=" group flex cursor-pointer items-center gap-2 rounded-xl p-2.5 transition-all duration-200 hover:bg-[#f9fafb] dark:hover:bg-[#161c40a6] dark:hover:text-white"
+                  className={clsx(
+                    "group flex cursor-pointer items-center gap-2 rounded-xl p-2 transition-all duration-200 hover:bg-[#f9fafb] dark:hover:bg-[#161c40a6] dark:hover:text-white",
+                    pathname === link.href &&
+                      "bg-[#f9fafb] dark:bg-[#161c40a6] dark:text-white"
+                  )}
                 >
                   {/* <TiHomeOutline className="text-xl text-[#0d78ed]" /> */}
                   <span className="text-body-4 font-medium capitalize text-metal-600 group-hover:text-[#1c222b] dark:group-hover:text-white/80">

@@ -2,6 +2,8 @@
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { LuFigma } from "react-icons/lu";
 import { LinkPreview } from "./link-preview";
 
 export const PinContainer = ({
@@ -17,7 +19,7 @@ export const PinContainer = ({
   title: string;
   href: string;
   className?: string;
-  links: { href: string; icon: JSX.Element }[];
+  links: { href: string; name: string }[];
   containerClassName?: string;
   project: JSX.Element;
 }) => {
@@ -73,7 +75,7 @@ export const PinPerspective = ({
   links,
   project,
 }: {
-  links: { href: string; icon: JSX.Element }[];
+  links: { href: string; name: string }[];
   project: JSX.Element;
   title?: string;
   href?: string;
@@ -86,10 +88,12 @@ export const PinPerspective = ({
           {links?.map((link, index) => (
             <LinkPreview
               url={link?.href || "https://ui.aceternity.com"}
-              className="relative cursor-pointer flex space-x-2 items-center hover:bg-project-card-bg-secondary border-project-card-border border rounded-md py-1.5 px-2.5 ring-1"
+              className="relative cursor-pointer flex space-x-2 items-center  border-[#0d7ded65] text-[#0d7ded] border rounded-md hover:bg-[#0d7ded] hover:text-white py-1.5 px-2.5 "
               key={index}
             >
-              {link?.icon}
+              {link.name === "GitHub" && <FaGithub />}
+              {link.name === "Preview" && <FaExternalLinkAlt />}
+              {link.name === "Figma" && <LuFigma />}
             </LinkPreview>
           ))}
         </div>

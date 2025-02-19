@@ -59,7 +59,7 @@ export default function Projects() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="max-w-4xl text-center mx-auto  sm:text-xl text-gray-700 leading-relaxed"
+          className="max-w-4xl text-center mx-auto  sm:text-xl text-gray-600 dark:text-text-secondary leading-relaxed"
         >
           Over the years, I&apos;ve worked on a variety of projects that reflect
           my passion for web development. Here are some of the ones I&apos;m
@@ -94,7 +94,11 @@ export default function Projects() {
               <motion.article
                 key={index}
                 className="h-full"
-                style={{ opacity: 0, scale: 0.3, x: -50 }}
+                // style={{ opacity: 0, scale: 0.3, x: -50 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
               >
                 <ShowOneByOne index={index}>
                   <ThreeDPin

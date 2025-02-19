@@ -82,7 +82,7 @@ export const TabList = ({
             }
           }}
           className={twMerge(
-            "transition-colors border duration-200  text-sm text-text-secondary bg-transparent  hover:bg-[#e9f7fe] hover:text-button flex items-center dark:border-[#222c64] dark:hover:bg-[#161c40] border-[#c8edff] justify-center rounded-md h-fit px-2 py-1 text-nowrap",
+            "transition-colors border duration-200  text-sm text-text-secondary bg-transparent  hover:bg-[#e9f7fe] hover:text-[var(--primary-button)] flex items-center dark:border-[#222c64] dark:hover:bg-[#161c40] border-[#c8edff] justify-center rounded-md h-fit px-2 py-1 text-nowrap",
             currentLink.index === i &&
               "text-[#000] border-[#c8edff] dark:border-[#222c64] dark:bg-[#161c40] dark:text-white bg-[#c8edff] hover:bg-[#c8edff]",
             fired.current
