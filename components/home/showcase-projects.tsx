@@ -48,15 +48,22 @@ export default function ShowcaseProjects() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <div className="relative h-full w-full overflow-hidden rounded-2xl bg-white dark:bg-[#1118329b] shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-blue-500/5 border border-[#0d87f23b] dark:border-[#0d87f221] dark:hover:border-[#0d87f23b] hover:border group-hover:translate-z-12 group-hover:scale-105 ">
+                <div className="relative h-full w-full overflow-hidden rounded-2xl bg-white dark:bg-[#1118329b] shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-blue-500/5 border border-[#0d87f23b] dark:border-[#0d87f221] dark:hover:border-[#0d87f23b] hover:border group-hover:translate-z-12 group-hover:scale-[1.02] md:group-hover:scale-[1.04] ">
                   {/* Project Image */}
                   <div className="relative h-[200px] overflow-hidden">
-                    <div className="absolute -translate-y-full group-hover:translate-y-0 transition-all duration-300 inset-0 z-10 w-full h-full ">
-                      <div className="absolute inset-0 bg-sky-900/50"></div>
+                    <Link
+                      href={
+                        project.links?.find((link) => link.name === "Preview")
+                          ?.href || ""
+                      }
+                      target="_blank"
+                      className="absolute -translate-y-full group-hover:translate-y-0 transition-all duration-300 inset-0 z-10 w-full h-full "
+                    >
+                      <div className="absolute inset-0 bg-sky-900/30"></div>
                       <div className="absolute inset-0 flex items-center justify-center z-20 cursor-pointer">
                         <TbZoomInArea
                           className=" w-10 h-10 text-gray-100"
-                          title="Zoom In"
+                          title="Preview"
                         />
                       </div>
                       <Image
@@ -66,7 +73,7 @@ export default function ShowcaseProjects() {
                         height={450}
                         width={800}
                       />
-                    </div>
+                    </Link>
                     <Image
                       src={project.banner}
                       alt={project.name}
@@ -104,8 +111,17 @@ export default function ShowcaseProjects() {
 
                     {/* Links */}
                     <div className="flex gap-4 pt-2">
-                      {project.links[0]?.name && (
-                        <>
+                      {project.links?.some(
+                        (link) => link.name === "Preview"
+                      ) && (
+                        <Link
+                          href={
+                            project.links?.find(
+                              (link) => link.name === "Preview"
+                            )?.href || ""
+                          }
+                          target="_blank"
+                        >
                           <NiceBtn
                             label="Live Demo"
                             icon={
@@ -114,17 +130,28 @@ export default function ShowcaseProjects() {
                             className="hover:bg-[#0d7ded] dark:hover:bg-[#0d7ded] hover:text-white"
                             iconPosition="left"
                           />
-                        </>
+                        </Link>
                       )}
-                      {project.links[1] && (
-                        <NiceBtn
-                          label="Source"
-                          className="group/btn inline-flex items-center  rounded-xl bg-white hover:bg-gray-50 font-semibold text-[#373881] backdrop-blur-sm transition-all  "
-                          icon={
-                            <LuGithub className="h-4 w-4 transition-transform group-hover/btn:rotate-12" />
+                      {project.links?.some(
+                        (link) => link.name === "GitHub"
+                      ) && (
+                        <Link
+                          href={
+                            project.links?.find(
+                              (link) => link.name === "GitHub"
+                            )?.href || ""
                           }
-                          iconPosition="left"
-                        />
+                          target="_blank"
+                        >
+                          <NiceBtn
+                            label="Source"
+                            className="group/btn inline-flex items-center  rounded-xl bg-white hover:bg-gray-50 font-semibold text-[#373881] backdrop-blur-sm transition-all  "
+                            icon={
+                              <LuGithub className="h-4 w-4 transition-transform group-hover/btn:rotate-12" />
+                            }
+                            iconPosition="left"
+                          />
+                        </Link>
                       )}
                     </div>
                   </div>
