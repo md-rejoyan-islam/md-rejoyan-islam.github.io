@@ -1,6 +1,7 @@
 import ScrollToTopButton from "@/components/scroll-to-top-button";
 import Footer from "@/components/shared/footer";
 import Navbar from "@/components/shared/navbar";
+import Socials from "@/components/shared/socials";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 import type { Metadata } from "next";
@@ -37,27 +38,12 @@ export default function RootLayout({
           enableSystem
           attribute="class"
           defaultTheme="light"
-          themes={[
-            "light",
-            "dark",
-            // "instagram",
-            // "facebook",
-            // "discord",
-            // "netflix",
-            // "twilight",
-            // "reddit",
-          ]}
+          themes={["light", "dark"]}
         >
           <Navbar />
-
-          {/* <Spotlight
-            className="top-40 left-0 md:left-96 md:top-0 z-50  "
-            fill="rgba(16, 163, 233, .7)"
-          /> */}
-
           <main className="">{children}</main>
           <Toaster />
-          {/* <Socials direction="col" position="fixed" /> */}
+          <Socials direction="col" position="fixed" />
           <ScrollToTopButton />
           <Footer />
         </ThemeProvider>

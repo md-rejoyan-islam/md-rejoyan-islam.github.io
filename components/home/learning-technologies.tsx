@@ -142,12 +142,14 @@ export default function LearningTechnologies() {
             <motion.div
               key={tech.name}
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              // animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               whileHover={{
                 scale: 1.05,
                 transition: { duration: 0.1, delay: 0 },
               }}
+              viewport={{ once: true }}
               className="group relative overflow-hidden  rounded-xl "
             >
               <div className="absolute flex rounded-xl -translate-y-full group-hover:translate-y-0 inset-0 transition-all duration-500   items-center justify-center w-full h-full z-50 ">

@@ -1,5 +1,6 @@
 "use client";
 import { projects } from "@/data/projects";
+import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -39,7 +40,14 @@ export default function ShowcaseProjects() {
             ?.filter((project) => project?.isBest)
             ?.slice(0, 6)
             .map((project, index) => (
-              <div key={index} className="group relative">
+              <motion.div
+                key={index}
+                className="group relative"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
                 <div className="relative h-full w-full overflow-hidden rounded-2xl bg-white dark:bg-[#1118329b] shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-blue-500/5 border border-[#0d87f23b] dark:border-[#0d87f221] dark:hover:border-[#0d87f23b] hover:border group-hover:translate-z-12 group-hover:scale-105 ">
                   {/* Project Image */}
                   <div className="relative h-[200px] overflow-hidden">
@@ -121,7 +129,7 @@ export default function ShowcaseProjects() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
         </div>
       </div>

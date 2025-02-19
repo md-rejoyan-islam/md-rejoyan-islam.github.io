@@ -52,13 +52,6 @@ export default function ShowcaseBlogs() {
               </Link>
             </p>
           </div>
-          {/* <Button
-            variant="outline"
-            className="border-[var(--primary-button)] text-[var(--primary-button)] hover:bg-[var(--primary-button)] hover:text-white rounded-full"
-          >
-            All Blogs
-            <ExternalLink className="ml-2 h-4 w-4" />
-          </Button> */}
         </div>
 
         <motion.div

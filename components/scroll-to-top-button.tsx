@@ -40,7 +40,7 @@ export default function ScrollToTopButton() {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="animate-bounce text-primary   rounded-full  relative p-1.5"
           style={{
-            backgroundImage: `conic-gradient(rgb(5,191,219) ${pagePercentage}%, rgb(215,215,215) ${pagePercentage}%)`,
+            backgroundImage: `conic-gradient(#0d7ded ${pagePercentage}%, rgb(215,215,215) ${pagePercentage}%)`,
           }}
         >
           <FaArrowUp className="text-4xl bg-white text-[var(--primary-button)]  rounded-full p-1.5" />

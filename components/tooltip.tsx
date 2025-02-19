@@ -16,7 +16,7 @@ export default function HoverTooltip({
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger>{children}</TooltipTrigger>
-        <TooltipContent>
+        <TooltipContent className="z-[1000]">
           <p>{title}</p>
         </TooltipContent>
       </Tooltip>
