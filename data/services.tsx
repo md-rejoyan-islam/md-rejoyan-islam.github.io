@@ -62,9 +62,9 @@ export const services = [
     ),
   },
   {
-    name: "Firebase",
+    name: "API Development",
     description:
-      "Real-time databases, authentication, and hosting ensure secure, scalable and efficient performance with Firebase.",
+      "RESTful and GraphQL API design and implementation for seamless data flow between client and server.",
     icon: (
       <IoLogoFirebase
         className="text-[65px] text-button "

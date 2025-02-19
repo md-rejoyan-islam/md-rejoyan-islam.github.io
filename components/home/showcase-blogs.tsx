@@ -32,7 +32,7 @@ export default function ShowcaseBlogs() {
 
   return (
     <div className=" my-20 relative">
-      <div className="absolute inset-0 opacity-20  dark:opacity-5 w-full h-full">
+      <div className="absolute inset-0 opacity-[0.1]  dark:opacity-5 w-full h-full">
         <div className=" bg-[url('/images/blogging.png')] w-full h-full bg-contain bg-center bg-no-repeat"></div>
       </div>
       <section className=" max-w-7xl mx-auto px-4  bg-white dark:bg-transparent    bg-opacity-90">

@@ -14,33 +14,35 @@ export default function Hero() {
   const slugs = [
     "typescript",
     "javascript",
-    "dart",
-    "java",
-    "react",
-    "flutter",
-    "android",
+    "nextdotjs",
+    "python",
     "html5",
     "css3",
-    "nodedotjs",
     "express",
-    "nextdotjs",
+    "react",
+    "express",
+    "bootstrap",
+    "reactbootstrap",
+    "pypi",
+    "sass",
+    "netlify",
+    "mongodb",
+    "mongoose",
+    "nodedotjs",
+    "mysql",
+    "npm",
+    "numpy",
+    "pandas",
+    "sequelize",
+    "tailwindcss",
     "prisma",
-    "amazonaws",
-    "postgresql",
     "firebase",
-    "nginx",
     "vercel",
-    "testinglibrary",
     "jest",
-    "cypress",
     "docker",
     "git",
-    "jira",
     "github",
-    "gitlab",
     "visualstudiocode",
-    "androidstudio",
-    "sonarqube",
     "figma",
   ];
   const words = [
@@ -70,7 +72,7 @@ export default function Hero() {
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-6 text-[var(--primary-title)] dark:text-[#4df9e5]/60">
                 Hi, I&apos;m{" "}
-                <span className=" text-[var(--primary-button)]">
+                <span className=" text-transparent bg-clip-text bg-gradient-to-r from-[#0d7ded] to-[#0d3aed]">
                   Md. Rejoyan Islam
                 </span>
               </h2>

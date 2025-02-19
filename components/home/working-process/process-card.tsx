@@ -19,7 +19,7 @@ export default function ProcessCard({
         className={`relative h-full overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg p-6 rounded-md ${
           step === index
             ? " border-l-4 border-l-[var(--primary-button)]"
-            : "hover:border-l-4 hover:border-l-[var(--primary-button)]"
+            : "hover:border-l-4  hover:border-l-[var(--primary-button)]"
         }`}
         onClick={() => handleTabClick(index)}
       >

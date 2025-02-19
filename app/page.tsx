@@ -9,7 +9,7 @@ import WorkingProcesses from "@/components/home/working-process/working-process"
 
 export default function Home() {
   return (
-    <>
+    <div className="overflow-hidden">
       <Hero />
       <AboutMe />
       <LearningTechnologies />
@@ -18,6 +18,6 @@ export default function Home() {
       <ShowcaseProjects />
       <ShowcaseBlogs />
       <ContactWithMe />
-    </>
+    </div>
   );
 }

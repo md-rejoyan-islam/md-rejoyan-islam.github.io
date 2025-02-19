@@ -25,7 +25,7 @@ export default function BlogCard({ blog }: BlogCardProps) {
       className="cursor-pointer h-full"
     >
       <CardContainer className="inter-var h-full bg-white/70 dark:bg-[#0f172e]/50 rounded-xl hover:shadow-2xl hover:shadow-[#78ffc042] dark:hover:shadow-[#373b6d42]">
-        <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] border-[#0d7ded34] w-auto  rounded-xl p-6 border h-full flex justify-between flex-col  hover:dark:bg-grid-small-white/[0.2] dark:bg-grid-small-white/[0.1] bg-grid-small-black/[0.1] hover:bg-grid-small-black/[0.2]">
+        <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] border-[#0d7ded51] w-auto  rounded-xl p-6 border h-full flex justify-between flex-col  hover:dark:bg-grid-small-white/[0.2] dark:bg-grid-small-white/[0.1] bg-grid-small-black/[0.1] hover:bg-grid-small-black/[0.2]">
           <div>
             <CardItem translateZ={50} className="w-full mt-1">
               <Image

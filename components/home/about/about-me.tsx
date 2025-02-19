@@ -29,6 +29,7 @@ export function AboutMe() {
       level: 90,
       description:
         "I have been working as a front-end developer for 3 years with experience in React.js, Next.js, and Tailwind CSS.",
+      tech: "React.js, Next.js",
     },
     {
       name: "Backend Master",
@@ -36,6 +37,7 @@ export function AboutMe() {
       level: 85,
       description:
         "I have been working as a backend developer for 2 years. I have experience in Node.js, Express.js, and MongoDB.",
+      tech: "Node.js, Express.js, MongoDB",
     },
     {
       name: "Content Writing",
@@ -43,6 +45,7 @@ export function AboutMe() {
       level: 80,
       description:
         "I have been writing content for 5 months. I have experience in writing blogs, articles, and technical documentation.",
+      tech: "Hashnode, Medium",
     },
     {
       name: "Database Management",
@@ -50,6 +53,7 @@ export function AboutMe() {
       level: 75,
       description:
         "I have been working as a database manager with experience in SQL, NoSQL, and Firebase.",
+      tech: "SQL, NoSQL, Firebase",
     },
   ];
 
@@ -65,9 +69,14 @@ export function AboutMe() {
       period: "2023 - Present",
     },
     {
-      title: "Volunteer Developer",
+      title: "Vice President",
       company: "KIN,A Volunteer Organization, SUST",
-      period: "2020 - Present",
+      period: "2024 - Present",
+    },
+    {
+      title: "Web Secretary",
+      company: "KIN,A Volunteer Organization, SUST",
+      period: "2023 - 2024",
     },
   ];
 

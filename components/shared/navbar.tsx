@@ -1,12 +1,5 @@
 "use client";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import useDropDownPopupControl from "@/hooks/use-drop_down_popup_control";
 import clsx from "clsx";
 import { motion, stagger, useAnimate } from "framer-motion";
 import Image from "next/image";
@@ -43,12 +36,14 @@ export default function Navbar() {
     },
   ];
 
+  const { isOpen, toggleMenu, dropDownRef } = useDropDownPopupControl();
+
   const pathname = usePathname();
 
   const [scope, animate] = useAnimate();
   const staggerList = stagger(0.1, { startDelay: 0 });
 
-  const [openModal, setOpenModal] = useState(false);
+  // const [openModal, setOpenModal] = useState(false);
 
   const [scrollHeight, setScrollHeight] = useState(0);
 
@@ -75,7 +70,7 @@ export default function Navbar() {
   return (
     <header
       className={clsx(
-        "text-[var(--primary-text)] dark:text-[#aeaecc] w-[100%]  z-[1000]  h-[60px] sticky top-1 transition-all duration-700  left-0  mx-auto border-b  px-4 bg-white md:bg-transparent  dark:border-[#253359]/40 ",
+        "text-[var(--primary-text)] dark:text-[#aeaecc] w-[100%]  z-[1000]  h-[60px] sticky top-1 transition-all duration-700  left-0  mx-auto border-b  px-4 bg-white dark:bg-[#061024] md:bg-transparent    dark:border-[#253359]/40 ",
 
         scrollHeight > 60 && "md:w-[75%] md:border-none bg-transparent "
       )}
@@ -143,9 +138,14 @@ export default function Navbar() {
             </HoverTooltip>
           </div>
           <ThemeSwitch />
-          <Sheet onOpenChange={setOpenModal} open={openModal}>
+
+          <button onClick={toggleMenu} ref={dropDownRef}>
+            <RiMenu3Line className="text-3xl  rounded-md border p-[5px]   hover:bg-[var(--primary-button)] text-[var(--primary-button)] hover:text-white hover:border-[var(--primary-button)] dark:hover:border-transparent border-[#b4dafc] dark:border-[#253359] transition-all  " />
+          </button>
+
+          {/* <Sheet onOpenChange={setOpenModal} open={openModal}>
             <SheetTrigger className="md:hidden">
-              <RiMenu3Line className="text-3xl border-[var(--secondary-hover-button)] rounded-md border p-[5px] hover:bg-[var(--secondary-button)] text-[var(--primary-text)]  " />
+              <RiMenu3Line className="text-3xl  rounded-md border p-[5px]   hover:bg-[var(--primary-button)] text-[var(--primary-button)] hover:text-white hover:border-[var(--primary-button)] dark:hover:border-transparent border-[#b4dafc] dark:border-[#253359] transition-all  " />
             </SheetTrigger>
 
             <SheetContent
@@ -173,9 +173,28 @@ export default function Navbar() {
                 </ul>
               </nav>
             </SheetContent>
-          </Sheet>
+          </Sheet> */}
         </div>
       </div>
+      {isOpen && (
+        <div className="bg-white dark:bg-[#0d1533]  absolute top-16 right-3.5 border border-[#0d79ed29] shadow-lg md:hidden  w-[200px] rounded-md">
+          <ul className="flex flex-col  p-5">
+            {links.map((link, index) => (
+              <li key={index} className="block group">
+                <Link
+                  href={link.href}
+                  className=" group flex cursor-pointer items-center gap-2 rounded-xl p-2.5 transition-all duration-200 hover:bg-[#f9fafb] dark:hover:bg-[#161c40a6] dark:hover:text-white"
+                >
+                  {/* <TiHomeOutline className="text-xl text-[#0d78ed]" /> */}
+                  <span className="text-body-4 font-medium capitalize text-metal-600 group-hover:text-[#1c222b] dark:group-hover:text-white/80">
+                    {link.name}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </header>
   );
 }
