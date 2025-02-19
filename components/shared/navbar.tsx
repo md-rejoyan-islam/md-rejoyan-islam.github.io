@@ -139,7 +139,7 @@ export default function Navbar() {
           </div>
           <ThemeSwitch />
 
-          <button onClick={toggleMenu} ref={dropDownRef}>
+          <button onClick={toggleMenu} ref={dropDownRef} className="md:hidden">
             <RiMenu3Line className="text-3xl  rounded-md border p-[5px]   hover:bg-[var(--primary-button)] text-[var(--primary-button)] hover:text-white hover:border-[var(--primary-button)] dark:hover:border-transparent border-[#b4dafc] dark:border-[#253359] transition-all  " />
           </button>
 
