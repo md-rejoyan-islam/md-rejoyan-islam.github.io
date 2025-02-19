@@ -26,10 +26,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
+    title: "Rejoyan Islam portfolio website",
+    description:
+      "I am md rejoyan islam, a full stack developer, mern stack developer, next.js expert, python data analyst",
     url: "md-rejoyan-islam.github.io",
     images: [
       {
-        url: "/images/rejoyan.jpeg",
+        url: "https://md-rejoyan-islam.github.io/images/rejoyan.jpeg",
         width: 1200,
         height: 630,
         alt: "Rejoyan Islam",
