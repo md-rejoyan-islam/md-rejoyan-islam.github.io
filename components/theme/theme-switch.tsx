@@ -18,7 +18,10 @@ export default function ThemeSwitch() {
   useOnClickOutside(ref, () => setIsOpen(false));
   if (!mounted)
     return (
-      <button className="bg-background-secondary h-8 w-8 flex items-center border border-[var(--secondary-hover-button)] hover:gap-4 transition-all rounded-xl dark:border-[#253359] uppercase justify-center  gap-2 ">
+      <button
+        className="bg-background-secondary h-8 w-8 flex items-center border border-[var(--secondary-hover-button)] hover:gap-4 transition-all rounded-xl dark:border-[#253359] uppercase justify-center  gap-2 "
+        aria-label="Theme Changer Button"
+      >
         {/* <FiSun key={1} /> */}
       </button>
     );
@@ -69,6 +72,7 @@ export default function ThemeSwitch() {
               return (
                 <button
                   key={themeItem.id}
+                  aria-label="Theme Changer Button"
                   onClick={() => {
                     setTheme(themeItem.key);
                     setIsOpen(false);
