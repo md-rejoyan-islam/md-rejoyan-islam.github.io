@@ -158,7 +158,7 @@ export default function LearningTechnologies() {
                   alt={tech.name}
                   width={60}
                   height={60}
-                  className="mx-auto  rounded-xl w-full bg-white dark:bg-[#111832]  p-7 h-full border border-[#bedffd] hover:border-[var(--primary-button)] dark:border-[#211c48] dark:hover:border-[#0d7ded6d]"
+                  className="mx-auto  rounded-xl w-full bg-white dark:bg-[#111832]  p-7 h-full border border-[#bedffd] hover:border-[var(--primary-button)] max-w-[150px] max-h-[150px] dark:border-[#211c48] dark:hover:border-[#b6cbe06d]"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
