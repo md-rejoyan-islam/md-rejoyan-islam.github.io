@@ -53,7 +53,7 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
     aProps: {
       href: undefined,
       target: undefined,
-      rel: undefined,
+      rel: "noopener noreferrer",
       onClick: (e) => e.preventDefault(),
     },
   });

@@ -42,7 +42,6 @@ export default function Hero() {
     "docker",
     "git",
     "github",
-    "visualstudiocode",
     "figma",
   ];
   const words = [

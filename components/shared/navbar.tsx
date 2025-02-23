@@ -95,7 +95,7 @@ export default function Navbar() {
               ref={scope}
             >
               <motion.li style={{ opacity: 0, scale: 0.3, x: -50 }}>
-                <Link href="/">
+                <Link href="/" aria-label="Home">
                   <HomeIcon />
                 </Link>
               </motion.li>
