@@ -44,6 +44,7 @@ export default function Socials({ direction = "row", position = "relative" }) {
               href={social.url}
               target="_blank"
               className="inline-flex items-center relative group text-[var(--primary-button)] "
+              aria-label={social.name}
             >
               <div
                 className={`layer ${

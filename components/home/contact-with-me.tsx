@@ -63,7 +63,11 @@ export function ContactWithMe() {
                 </a>
               </ContactInfo>
               <ContactInfo icon={Phone} title="Phone">
-                <a href="tel:+8801568-816822" className="hover:underline">
+                <a
+                  href="tel:+8801568-816822"
+                  className="hover:underline"
+                  aria-label="Phone number"
+                >
                   +8801568-816822
                 </a>
               </ContactInfo>
@@ -136,6 +140,7 @@ function SocialIcon({ href, icon }: { href: string; icon: string }) {
       className="bg-[#ebf5fe] dark:bg-[#273764]/50 text-[var(--primary-button)]  p-3 rounded-full  transition-colors duration-300"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
+      aria-label={icon}
     >
       {icon === "github" && <FaGithub />}
       {icon === "linkedin" && <FaLinkedin />}

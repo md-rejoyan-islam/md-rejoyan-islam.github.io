@@ -42,6 +42,7 @@ export default function ScrollToTopButton() {
           style={{
             backgroundImage: `conic-gradient(#0d7ded ${pagePercentage}%, rgb(215,215,215) ${pagePercentage}%)`,
           }}
+          aria-label="Scroll to top"
         >
           <FaArrowUp className="text-4xl bg-white text-[var(--primary-button)]  rounded-full p-1.5" />
         </button>

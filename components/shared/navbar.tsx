@@ -121,7 +121,7 @@ export default function Navbar() {
               ))}
             </ul>
           </nav>
-          <Link href="/" className="md:hidden">
+          <Link href="/" className="md:hidden" aria-label="Home">
             <Image src={"/code.png"} width={40} height={40} alt="code" />
           </Link>
         </div>
@@ -139,7 +139,12 @@ export default function Navbar() {
           </div>
           <ThemeSwitch />
 
-          <button onClick={toggleMenu} ref={dropDownRef} className="md:hidden">
+          <button
+            onClick={toggleMenu}
+            ref={dropDownRef}
+            className="md:hidden"
+            aria-label="Toggle Menu"
+          >
             <RiMenu3Line className="text-3xl  rounded-md border p-[5px]   hover:bg-[var(--primary-button)] text-[var(--primary-button)] hover:text-white hover:border-[var(--primary-button)] dark:hover:border-transparent border-[#b4dafc] dark:border-[#253359] transition-all  " />
           </button>
 
