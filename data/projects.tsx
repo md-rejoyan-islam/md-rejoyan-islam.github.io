@@ -217,9 +217,9 @@ export const projects = [
     name: "MOVIX",
     isBest: true,
     description:
-      "Tasker is a web application that allows users to easily add, remove, update, and search tasks. The application is built using React and Tailwind CSS.",
+      "Movix is a web application that allows users to search for movies, view movie details, and save their favorite movies to a watchlist. The application is built using React, Tailwind CSS, and Redux.",
     techStack: ["REACT", "TailwindCSS", "Redux"],
-    banner: "/images/projects/trafalgar.png",
+    banner: "/images/projects/movix.png",
     links: [
       {
         name: "GitHub",
@@ -228,7 +228,7 @@ export const projects = [
       },
       {
         name: "Preview",
-        href: "https://movix-plex.netlify.app",
+        href: "https://movix-cinema.vercel.app/",
         icon: <FaExternalLinkAlt className="text-button" />,
       },
     ],
@@ -255,7 +255,7 @@ export const projects = [
   },
   {
     name: "Job Box",
-    isBest: true,
+    isBest: false,
     description:
       "Job Box is a server-side application that helps job seekers organize and manage their job search process. It provides features such as tracking job applications, saving job listings, and setting reminders for interviews and follow-ups.",
     techStack: ["REACT", "TailwindCSS", "Redux"],
@@ -270,6 +270,26 @@ export const projects = [
         name: "Server",
         href: "https://github.com/md-rejoyan-islam/job-box-server.git",
         icon: <FaServer className="text-button" />,
+      },
+    ],
+  },
+  {
+    name: "KVirus-19",
+    isBest: true,
+    description:
+      "KVirus-19 is a web application that provides information about the COVID-19 pandemic. It includes features such as tracking the number of cases, deaths, and recoveries, as well as providing information about prevention and treatment. The application is built using React, Tailwind CSS, and Redux.",
+    techStack: ["REACT", "TailwindCSS", "Next.JS", "Framer Motion"],
+    banner: "/images/projects/kvirus-19.png",
+    links: [
+      {
+        name: "GitHub",
+        href: "https://github.com/md-rejoyan-islam/covid-19",
+        icon: <FaGithub className="text-button" />,
+      },
+      {
+        name: "Preview",
+        href: "https://covid-19-nextjs.vercel.app/",
+        icon: <FaExternalLinkAlt className="text-button" />,
       },
     ],
   },
@@ -294,12 +314,32 @@ export const projects = [
     ],
   },
   {
-    name: "KIN DASHBOARD",
+    name: "Stay-Swift - Hotel Booking",
     isBest: true,
+    description:
+      "Stay-Swift is a web application that allows users to search for hotels, view hotel details, and book rooms. The application is built using React, Tailwind CSS, and Redux.",
+    techStack: ["REACT", "TailwindCSS", "Redux"],
+    banner: "/images/projects/stay-swift.png",
+    links: [
+      {
+        name: "GitHub",
+        href: "https://github.com/md-rejoyan-islam/stay-swift-hotel",
+        icon: <FaGithub className="text-button" />,
+      },
+      {
+        name: "Preview",
+        href: "https://stay-swift-hotel.vercel.app/",
+        icon: <FaExternalLinkAlt className="text-button" />,
+      },
+    ],
+  },
+  {
+    name: "KIN DASHBOARD",
+    isBest: false,
     description:
       "This is a dashboard for the KIN project. It is a web application that allows users to view and interact with the data from the KIN project. The dashboard is built using the JavaScript framework in React. The data is stored in a MySQL database.",
     techStack: ["REACT", "TailwindCSS", "Redux"],
-    banner: "/images/projects/trafalgar.png",
+    banner: "/images/projects/dashboard.png",
     links: [
       {
         name: "GitHub",
