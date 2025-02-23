@@ -45,9 +45,9 @@ export default function AboutPage() {
             </CardHeader>
             <CardContent>
               <ul className="list-disc list-inside space-y-2 dark:text-slate-400">
-                <li>Full Stack Developer at TechCorp (2020 - Present)</li>
-                <li>Frontend Developer at WebSolutions Inc. (2018 - 2020)</li>
-                <li>Web Development Intern at StartupXYZ (2017)</li>
+                <li>Front Developer, Self-Employed (2022 - Present)</li>
+                <li>Backend Developer, Self-Employed (2023 - Present)</li>
+                <li>Data Scientist, Self-Employed (2025 - Present)</li>
               </ul>
             </CardContent>
           </Card>

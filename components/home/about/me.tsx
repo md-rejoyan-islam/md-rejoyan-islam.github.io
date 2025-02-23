@@ -14,13 +14,13 @@ export default function Me() {
         animate={{ opacity: 1, x: 0 }}
         className="relative mb-10 lg:col-span-2   max-w-[400px] w-full sm:w-[380px]  lg:max-w-[350px]  mx-auto"
       >
-        <div className="absolute inset-0 bg-blue-600 rounded-3xl rotate-6 opacity-10 " />
+        <div className="absolute inset-0 bg-blue-600 rounded-3xl rotate-6 hover:rotate-6 opacity-20 " />
         <Image
           src="/images/rejoyan.jpeg"
           alt="Profile"
           width={500}
-          height={500}
-          className="rounded-2xl relative z-10 w-full object-cover "
+          height={600}
+          className="rounded-2xl relative z-10 w-full object-cover saturate-50 hue-rotate-90 hover:saturation-100 hover:hue-rotate-0"
         />
       </motion.div>
 

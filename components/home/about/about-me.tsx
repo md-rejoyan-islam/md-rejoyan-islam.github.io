@@ -36,8 +36,8 @@ export function AboutMe() {
       icon: Palette,
       level: 85,
       description:
-        "I have been working as a backend developer for 2 years. I have experience in Node.js, Express.js, and MongoDB.",
-      tech: "Node.js, Express.js, MongoDB",
+        "I have been working as a backend developer for 2.5 years. I have experience in Node.js, Express.js, MySQL and MongoDB.",
+      tech: "Node.js, Express.js, MongoDB, MySQL",
     },
     {
       name: "Content Writing",
@@ -45,7 +45,7 @@ export function AboutMe() {
       level: 80,
       description:
         "I have been writing content for 5 months. I have experience in writing blogs, articles, and technical documentation.",
-      tech: "Hashnode, Medium",
+      tech: "Hashnode",
     },
     {
       name: "Database Management",

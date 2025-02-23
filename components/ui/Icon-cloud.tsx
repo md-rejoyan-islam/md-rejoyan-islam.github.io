@@ -51,8 +51,8 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
     minContrastRatio,
     size: 42,
     aProps: {
-      href: undefined,
-      target: undefined,
+      href: "https://simpleicons.org/",
+      target: "_blank",
       rel: "noopener noreferrer",
       onClick: (e) => e.preventDefault(),
     },

@@ -43,6 +43,12 @@ export default function Hero() {
     "git",
     "github",
     "figma",
+    "redux",
+    "vitest",
+    "vite",
+    "jest",
+    "shadcnui",
+    "daisyui",
   ];
   const words = [
     "MERN Stack Developer",
@@ -91,11 +97,7 @@ export default function Hero() {
               </motion.div>
 
               <HomeSubtittle
-                label="I'm a full-stack developer specializing in building and
-                designing exceptional digital experiences. With expertise in the
-                MERN stack, SQL, NoSQL databases, and Python for data science, I
-                focus on creating accessible, human-centered products that
-                deliver meaningful value."
+                label="I’m a skilled Full-Stack Web Developer proficient in front-end, back-end, and data-driven applications. With expertise in state management, MongoDB, MySQL, and a focus on pixel-perfect designs, I create seamless, scalable solutions. I’m also currently exploring machine learning to build smarter applications. Let’s turn your vision into reality!"
                 className="pb-7 pt-2 md:text-lg lg:text-xl max-w-2xl mx-auto "
               />
               <div className="flex items-center justify-center gap-4">
