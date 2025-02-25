@@ -13,7 +13,6 @@ export default function ProjectCard({
     links: {
       href: string;
       name: string;
-      icon: JSX.Element;
     }[];
   };
 }) {
@@ -21,13 +20,13 @@ export default function ProjectCard({
     <div className="moving-card">
       <div className=" hover:dark:bg-grid-small-white/[0.2] dark:bg-grid-small-white/[0.1] bg-grid-small-black/[0.1] hover:bg-grid-small-black/[0.2]  backdrop-blur-xl relative border border-project-card-border  group overflow-hidden rounded-[15px] gap-x-4 bg-project-card-background border-[#0d7ded3b]  dark:border-[#1c2451] p-4">
         <Image
-          src={project?.banner || "https://rejoyan.vercel.app"}
+          src={project?.banner || ""}
           alt="Currencee"
           loading="lazy"
           width={200}
           height={200}
           decoding="async"
-          className="dark:bg-zinc-800 bg-zinc-100 rounded-md p-1 w-full object-cover  h-[180px]"
+          className="dark:bg-[#3a6ac419] bg-[#315bd814] rounded-md p-1 w-full object-cover  h-[180px]"
           style={{ color: "transparent" }}
         />
         <div className="pt-3">
@@ -59,7 +58,7 @@ export default function ProjectCard({
                   className=" flex items-center gap-2 border border-project-card-border  hover:bg-button-bg text-button h-fit rounded-md px-2 text-sm py-1.5"
                 >
                   <span>{link?.name} </span>
-                  {link?.icon}
+                  {/* {link?.icon} */}
                 </a>
               </li>
             ))}

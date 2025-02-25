@@ -11,7 +11,7 @@ export default function ThreeDPin({
   project: JSX.Element;
   links: {
     href: string;
-    icon: JSX.Element;
+
     name: string;
   }[];
 }) {

@@ -10,7 +10,9 @@ export const TabList = ({
   style,
 }: {
   tabs: string[];
-  projectsData: { techStack: string[] }[];
+  projectsData: {
+    techStack: string[];
+  }[];
   setProject: (projects: { techStack: string[] }[]) => void;
   ref: React.RefObject<HTMLDivElement>;
   style: MotionStyle;
@@ -69,13 +71,13 @@ export const TabList = ({
                 ?.getBoundingClientRect().width,
               index: i,
             }));
-            if (link === "All") {
+            if (link === "ALL") {
               setProject([...projectsData]);
             } else {
               setProject(
                 [...projectsData].filter((project) =>
                   project.techStack.find((tech) => {
-                    return tech.toLowerCase() === link.toLowerCase();
+                    return tech.toLowerCase().includes(link.toLowerCase());
                   })
                 ) || []
               );

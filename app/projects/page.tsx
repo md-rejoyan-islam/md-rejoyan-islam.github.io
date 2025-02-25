@@ -14,7 +14,7 @@ export default function Projects() {
   const [scopeRef, projectAnimate] = useAnimate();
   const projectStaggerList = stagger(0.2, { startDelay: 1.3 });
 
-  const [projects, setProject] = useState([...projectsData]);
+  const [projects, setProject] = useState(projectsData);
 
   useEffect(() => {
     animate(
@@ -83,7 +83,7 @@ export default function Projects() {
       </div>
       <div>
         <motion.section
-          className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-x-12 gap-y-12  relative items-start "
+          className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-x-12 gap-y-12  relative items-start  mb-8"
           ref={scopeRef}
           transition={{ delay: 1.3 }}
           initial={{ opacity: 0 }}

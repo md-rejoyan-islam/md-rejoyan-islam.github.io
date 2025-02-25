@@ -84,7 +84,7 @@ export default function ShowcaseProjects() {
                     <div
                       className={`absolute inset-0 bg-gradient-to-b from-transparent to-sky-900/20`}
                     ></div>
-                    <div className="flex flex-wrap gap-2 absolute bottom-3 left-4">
+                    <div className="flex flex-wrap-reverse   gap-2 absolute bottom-3 left-4">
                       {project.techStack.map((tag) => (
                         <span
                           key={tag}
@@ -104,13 +104,14 @@ export default function ShowcaseProjects() {
                         {project.name}
                       </h3>
                       <p className="text-sm leading-relaxed text-slate-600 dark:text-white/60">
-                        {project.description?.slice(0, 200)}
-                        {project.description?.length > 200 && "..."}
+                        {project.description}
+                        {/* {project.description?.slice(0, 300)}
+                        {project.description?.length > 300 && "..."} */}
                       </p>
                     </div>
 
                     {/* Links */}
-                    <div className="flex gap-4 pt-2">
+                    <div className="flex gap-4 pt-0">
                       {project.links?.some(
                         (link) => link.name === "Preview"
                       ) && (
