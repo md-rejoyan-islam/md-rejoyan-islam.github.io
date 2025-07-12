@@ -43,6 +43,12 @@ const ContactForm = () => {
       });
     } catch (error) {
       console.log(error);
+      toast({
+        title: "Error sending message",
+        description:
+          "There was an error sending your message. Please try again later.",
+        variant: "destructive",
+      });
     }
   };
 

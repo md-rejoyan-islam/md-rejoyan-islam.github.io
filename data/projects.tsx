@@ -12,6 +12,83 @@ export const projects: {
   techStack: string[];
 }[] = [
   {
+    name: "Quiz Master",
+    isBest: true,
+    description:
+      "This project is QuizMaster, an interactive online quiz platform. It empowers students with expert-crafted questions across subjects, AI-powered learning, timed challenges, and progress tracking, helping them achieve educational goals.",
+    techStack: [
+      PROJECT_KEYWORD.REACT,
+      PROJECT_KEYWORD.NEXTJS,
+      PROJECT_KEYWORD.TYPESCRIPT,
+      PROJECT_KEYWORD.TAILWINDCSS,
+      PROJECT_KEYWORD.ZOD,
+      PROJECT_KEYWORD.SHADCN_UI,
+      PROJECT_KEYWORD.FRAMER_MOTION,
+    ],
+    banner: "/images/projects/quiz-master.png",
+    links: [
+      {
+        name: "GitHub",
+        href: "https://github.com/md-rejoyan-islam/Quiz-Master-Client",
+      },
+      {
+        name: "Preview",
+        href: "https://quiz-master-client-app.vercel.app",
+      },
+    ],
+  },
+  {
+    name: "Quiz Master API",
+    isBest: true,
+    description:
+      "This API streamlines quiz app development by providing a secure, ready-made backend. It manages user authentication, quizzes, questions, and result tracking, letting developers focus on the frontend experience.",
+    techStack: [
+      PROJECT_KEYWORD.REST_API,
+      PROJECT_KEYWORD.EXPRESSJS,
+      PROJECT_KEYWORD.TYPESCRIPT,
+      PROJECT_KEYWORD.SWAGGER,
+      PROJECT_KEYWORD.POSTGRESQL,
+      PROJECT_KEYWORD.PRISMA,
+      PROJECT_KEYWORD.ZOD,
+    ],
+    banner: "/images/projects/api.jpg",
+    links: [
+      {
+        name: "GitHub",
+        href: "https://github.com/md-rejoyan-islam/Quiz-Master-API",
+      },
+      {
+        name: "Preview",
+        href: "https://api-quiz-master.vercel.app",
+      },
+    ],
+  },
+  {
+    name: "MOVIX",
+    isBest: true,
+    description:
+      "The Movix website is a modern web application designed for movie and TV show enthusiasts. It likely features a sleek interface allowing users to explore trending movies and shows, access detailed information such as ratings and trailers, and search an extensive database, providing a seamless experience for cinema lovers.",
+    techStack: [
+      PROJECT_KEYWORD.REACT,
+      PROJECT_KEYWORD.NEXTJS,
+      PROJECT_KEYWORD.TYPESCRIPT,
+      PROJECT_KEYWORD.REDUX_TOOLKIT_QUERY,
+      PROJECT_KEYWORD.TAILWINDCSS,
+      PROJECT_KEYWORD.FRAMER_MOTION,
+    ],
+    banner: "/images/projects/movix.png",
+    links: [
+      {
+        name: "GitHub",
+        href: "https://github.com/md-rejoyan-islam/movix-client.git",
+      },
+      {
+        name: "Preview",
+        href: "https://movix-cinema.vercel.app/",
+      },
+    ],
+  },
+  {
     name: "KVirus-19",
     isBest: true,
     description:
@@ -19,9 +96,9 @@ export const projects: {
     techStack: [
       PROJECT_KEYWORD.REACT,
       PROJECT_KEYWORD.NEXTJS,
+      PROJECT_KEYWORD.TYPESCRIPT,
       PROJECT_KEYWORD.TAILWINDCSS,
       PROJECT_KEYWORD.FRAMER_MOTION,
-      PROJECT_KEYWORD.TYPESCRIPT,
     ],
     banner: "/images/projects/kvirus-19.png",
     links: [
@@ -43,9 +120,9 @@ export const projects: {
     techStack: [
       PROJECT_KEYWORD.REACT,
       PROJECT_KEYWORD.NEXTJS,
+      PROJECT_KEYWORD.TYPESCRIPT,
       PROJECT_KEYWORD.TAILWINDCSS,
       PROJECT_KEYWORD.FRAMER_MOTION,
-      PROJECT_KEYWORD.TYPESCRIPT,
     ],
     banner: "/images/projects/quranul-karim.png",
     links: [
@@ -65,12 +142,12 @@ export const projects: {
     description:
       "The website is a dynamic event discovery platform, designed to help users find, track, or manage events effortlessly. Built with modern web tools, it offers features like event listings, detailed information, and an intuitive interface, catering to users seeking a seamless experience.",
     techStack: [
-      PROJECT_KEYWORD.REACT,
-      PROJECT_KEYWORD.TAILWINDCSS,
-      PROJECT_KEYWORD.NEXTJS,
-      PROJECT_KEYWORD.FRAMER_MOTION,
-      PROJECT_KEYWORD.TYPESCRIPT,
       PROJECT_KEYWORD.APOLLO_CLIENT,
+      PROJECT_KEYWORD.REACT,
+      PROJECT_KEYWORD.NEXTJS,
+      PROJECT_KEYWORD.TYPESCRIPT,
+      PROJECT_KEYWORD.TAILWINDCSS,
+      PROJECT_KEYWORD.FRAMER_MOTION,
     ],
     banner: "/images/projects/event-explorer.png",
     links: [
@@ -90,9 +167,9 @@ export const projects: {
     description:
       "The Event Explorer API is a robust backend solution for the Event Explorer project, providing essential features like user authentication, event scheduling, and data management. It offers secure API endpoints for seamless integration with the front-end application, ensuring efficient functionality and data management.",
     techStack: [
+      PROJECT_KEYWORD.GRAPHQL_API,
       PROJECT_KEYWORD.EXPRESSJS,
       PROJECT_KEYWORD.MONGODB,
-      PROJECT_KEYWORD.GRAPHQL_API,
       PROJECT_KEYWORD.PRISMA,
       PROJECT_KEYWORD.APOLLO_SERVER,
     ],
@@ -208,31 +285,7 @@ export const projects: {
       },
     ],
   },
-  {
-    name: "MOVIX",
-    isBest: true,
-    description:
-      "The Movix website is a modern web application designed for movie and TV show enthusiasts. It likely features a sleek interface allowing users to explore trending movies and shows, access detailed information such as ratings and trailers, and search an extensive database, providing a seamless experience for cinema lovers.",
-    techStack: [
-      PROJECT_KEYWORD.REACT,
-      PROJECT_KEYWORD.TAILWINDCSS,
-      PROJECT_KEYWORD.NEXTJS,
-      PROJECT_KEYWORD.TYPESCRIPT,
-      PROJECT_KEYWORD.FRAMER_MOTION,
-      PROJECT_KEYWORD.REDUX_TOOLKIT_QUERY,
-    ],
-    banner: "/images/projects/movix.png",
-    links: [
-      {
-        name: "GitHub",
-        href: "https://github.com/md-rejoyan-islam/movix-client.git",
-      },
-      {
-        name: "Preview",
-        href: "https://movix-cinema.vercel.app/",
-      },
-    ],
-  },
+
   {
     name: "TRAFALGAR - Online Medical Service",
     isBest: false,

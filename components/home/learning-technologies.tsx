@@ -2,12 +2,6 @@
 import { motion } from "framer-motion";
 import { HomeSubtittle, HomeTittle } from "./home-page-tittle-subtitle";
 
-// const SkillIcon = ({ icon: Icon, color }: { icon: any; color: string }) => (
-//   <div className={`p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg`}>
-//     <Icon className={`w-6 h-6 ${color}`} />
-//   </div>
-// );
-
 import Image from "next/image";
 
 const technologies = [
@@ -150,7 +144,7 @@ export default function LearningTechnologies() {
                 transition: { duration: 0.1, delay: 0 },
               }}
               viewport={{ once: true }}
-              className="group relative overflow-hidden  rounded-xl "
+              className="group relative overflow-hidden cursor-grab  rounded-xl "
             >
               <div className="absolute flex rounded-xl -translate-y-full group-hover:translate-y-0 inset-0 transition-all duration-500   items-center justify-center w-full h-full z-50 ">
                 <Image
@@ -158,7 +152,7 @@ export default function LearningTechnologies() {
                   alt={tech.name}
                   width={60}
                   height={60}
-                  className="mx-auto  rounded-xl w-full bg-white dark:bg-[#111832]  p-7 h-full border border-[#bedffd] hover:border-[var(--primary-button)] max-w-[150px] max-h-[150px] dark:border-[#211c48] dark:hover:border-[#b6cbe06d]"
+                  className="mx-auto  rounded-xl w-full bg-white dark:bg-[#111832]  p-7 h-full border border-[#bedffd] hover:border-[var(--primary-button)] max-w-[150px] max-h-[150px] dark:border-[#211c48] dark:hover:border-[#0d7ded51]"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

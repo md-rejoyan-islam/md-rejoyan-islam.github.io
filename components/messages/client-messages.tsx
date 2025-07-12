@@ -32,7 +32,7 @@ export function ClientMessages() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <AnimatePresence>
-        {messages.map((message) => (
+        {messages?.map((message) => (
           <motion.div
             key={message.id}
             initial={{ opacity: 0, y: 50 }}
@@ -43,7 +43,7 @@ export function ClientMessages() {
             <MessageCard message={message} onDelete={handleDelete} />
           </motion.div>
         ))}
-        {messages.length === 0 && (
+        {messages?.length === 0 && (
           <div className="col-span-3 text-center text-gray-500 dark:text-gray-400">
             No messages found.
           </div>

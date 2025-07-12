@@ -58,4 +58,7 @@ export enum PROJECT_KEYWORD {
   CLOUDINARY = "Cloudinary",
   APOLLO_CLIENT = "Apollo Client",
   APOLLO_SERVER = "Apollo Server",
+  ZOD = "Zod",
+  SWAGGER = "Swagger",
+  POSTGRESQL = "PostgreSQL",
 }

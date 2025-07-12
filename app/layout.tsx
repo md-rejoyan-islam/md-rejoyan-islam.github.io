@@ -20,7 +20,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Rejoyan Islam Portfolio",
+  title: "Rejoyan - Full Stack Developer",
   description:
     "I am md rejoyan islam, a full stack developer, mern stack developer, next.js expert, python data analyst",
   openGraph: {

@@ -3,6 +3,36 @@ import { FaHashnode } from "react-icons/fa6";
 
 export const blogs = [
   {
+    title: "Zod Mastery Guide: The Complete Beginner to Expert Handbook",
+    description: `This "Zod Mastery Guide" blog offers a comprehensive handbook for Zod, a TypeScript schema validation library, taking users from beginner to expert in data type safety.`,
+    date: "July 1, 2025",
+    time: "6 min",
+    image:
+      "https://cdn.hashnode.com/res/hashnode/image/upload/v1751378203089/e144d397-ee76-4bcf-b45a-6443c513f0ba.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp",
+    host: {
+      name: "Hashnode",
+      link: "https://rejoyan.hashnode.dev/zod-mastery-guide-the-complete-beginner-to-expert-handbook",
+      icon: (
+        <FaHashnode className="flex-shrink-0 h-5 w-5 text-text-secondary group-hover:text-text-root duration-300" />
+      ),
+    },
+  },
+  {
+    title: "Understanding YAML: A Beginner-Friendly Guide",
+    description: `This "YAML: A Beginner-Friendly Guide" blog likely covers YAML's syntax, data types, and uses for configuration files, helping beginners understand this human-readable data serialization language.`,
+    date: "May 11, 2025",
+    time: "7 min",
+    image:
+      "https://cdn.hashnode.com/res/hashnode/image/upload/v1746940406586/2eac2f32-8447-4815-8819-e0c66a421baf.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp",
+    host: {
+      name: "Hashnode",
+      link: "https://rejoyan.hashnode.dev/yaml-a-beginner-friendly-guide",
+      icon: (
+        <FaHashnode className="flex-shrink-0 h-5 w-5 text-text-secondary group-hover:text-text-root duration-300" />
+      ),
+    },
+  },
+  {
     title: "Unlocking the Power of JSON",
     description:
       "Learn how to use JSON to store and exchange data between a server and a web application. JSON is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate.",
@@ -50,34 +80,4 @@ export const blogs = [
       ),
     },
   },
-  // {
-  //   title: "How to run Localhost on your Mobile Device using Ngrok",
-  //   description:
-  //     "Learn how to run and test your web applications changes without deploying using Ngrok—a globally distributed reverse proxy that creates secure tunnels to your web app",
-  //   date: "Aug 6, 2024",
-  //   time: "4 min",
-  //   image: "/image/blogs/blog1.png",
-  //   host: {
-  //     name: "FreeCodeCamp",
-  //     link: "https://freecodecamp.org/news/author/victoreke/?ref=victoreke.com",
-  //     icon: (
-  //       <FaFreeCodeCamp className="flex-shrink-0 h-5 w-5 text-text-secondary group-hover:text-text-root duration-300" />
-  //     ),
-  //   },
-  // },
-  // {
-  //   title: "How to run Localhost on your Mobile Device using Ngrok",
-  //   description:
-  //     "Learn how to run and test your web applications changes without deploying using Ngrok—a globally distributed reverse proxy that creates secure tunnels to your web app",
-  //   date: "Aug 6, 2024",
-  //   time: "4 min",
-  //   image: "/image/blogs/blog1.png",
-  //   host: {
-  //     name: "Sanity",
-  //     link: "https://www.sanity.io/exchange/community/victoreke?ref=victoreke.com",
-  //     icon: (
-  //       <SiSanity className="flex-shrink-0 h-5 w-5 text-text-secondary group-hover:text-text-root duration-300" />
-  //     ),
-  //   },
-  // },
 ];
