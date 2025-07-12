@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import React, {
   ComponentType,
   createContext,
+  JSX,
   MouseEvent,
   ReactNode,
   useContext,

@@ -8,7 +8,7 @@ export default function ThreeDPin({
   links,
 }: {
   children: React.ReactNode;
-  project: JSX.Element;
+  project: React.ReactElement;
   links: {
     href: string;
 

@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 import { useTheme } from "next-themes";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FiSun } from "react-icons/fi";
 import { LuMoonStar } from "react-icons/lu";
 import { MdOutlineImportantDevices } from "react-icons/md";
@@ -13,9 +13,11 @@ export default function ThemeSwitch() {
   const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false); // New state to control dropdown visibility
   const { setTheme, theme } = useTheme();
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   useEffect(() => setMounted(true), []);
-  useOnClickOutside(ref, () => setIsOpen(false));
+  useOnClickOutside(ref as React.RefObject<HTMLElement>, () =>
+    setIsOpen(false)
+  );
   if (!mounted)
     return (
       <button

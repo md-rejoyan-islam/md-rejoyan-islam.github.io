@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { JSX, useState } from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { LuFigma } from "react-icons/lu";
 import { LinkPreview } from "./link-preview";

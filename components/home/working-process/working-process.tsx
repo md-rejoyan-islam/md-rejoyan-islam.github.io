@@ -18,7 +18,7 @@ import { StepContent } from "./step-count";
 interface WorkProcess {
   id: number;
   title: string;
-  icon: JSX.Element;
+  icon: React.ReactElement;
   sort_description: string;
   long_description: string;
   description: string;

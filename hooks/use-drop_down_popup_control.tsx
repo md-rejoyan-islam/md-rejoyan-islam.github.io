@@ -3,13 +3,13 @@ import React, { useEffect, useRef, useState } from "react";
 interface UseDropDownPopupControl {
   isOpen: boolean;
   toggleMenu: () => void;
-  dropDownRef: React.RefObject<HTMLButtonElement>; // Ref type for div
+  dropDownRef: React.RefObject<HTMLButtonElement | null>;
 }
 
 const useDropDownPopupControl = (): UseDropDownPopupControl => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const dropDownRef = useRef<HTMLButtonElement | null>(null);
+  const dropDownRef = useRef<HTMLButtonElement>(null);
 
   // toggle menu
   const toggleMenu = () => {
