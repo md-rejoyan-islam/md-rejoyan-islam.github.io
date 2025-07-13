@@ -67,7 +67,7 @@ const ContactForm = () => {
             type="text"
             placeholder="John Doe"
             {...register("name")}
-            className="w-full dark:border-[#212e54] "
+            className="w-full bg-white/[0.03] border-[#38a7c967] dark:border-[#212e54] placeholder:dark:text-gray-600 "
           />
           {errors.name && (
             <span className="text-red-600 text-sm">{errors.name.message}</span>
@@ -85,7 +85,7 @@ const ContactForm = () => {
             type="email"
             placeholder="john@example.com"
             {...register("email")}
-            className="w-full dark:border-[#212e54] "
+            className="w-full bg-white/[0.03] border-[#38a7c967] dark:border-[#212e54] placeholder:dark:text-gray-600 "
           />
           {errors.email && (
             <span className="text-red-600 text-sm">{errors.email.message}</span>
@@ -104,7 +104,7 @@ const ContactForm = () => {
           type="text"
           placeholder="Project Inquiry"
           {...register("subject")}
-          className="w-full dark:border-[#212e54] "
+          className="w-full bg-white/[0.03] border-[#38a7c967] dark:border-[#212e54] placeholder:dark:text-gray-600 "
         />
         {errors.subject && (
           <span className="text-red-600 text-sm">{errors.subject.message}</span>
@@ -122,7 +122,7 @@ const ContactForm = () => {
           placeholder="Tell me about your project..."
           rows={5}
           {...register("message")}
-          className="w-full dark:border-[#212e54] "
+          className="w-full bg-white/[0.03] border-[#38a7c967] dark:border-[#212e54] placeholder:dark:text-gray-600 "
         />
         {errors.message && (
           <span className="text-red-600 text-sm">{errors.message.message}</span>

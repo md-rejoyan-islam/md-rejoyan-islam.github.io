@@ -70,7 +70,7 @@ export default function Navbar() {
   return (
     <header
       className={clsx(
-        "text-[var(--primary-text)] dark:text-[#aeaecc] w-[100%]  z-[1000]  h-[60px] sticky top-0 md:top-1 transition-all duration-700  left-0  mx-auto border-b  px-4 bg-white dark:bg-[#061024] md:bg-transparent    dark:border-[#253359]/40 ",
+        "text-[var(--primary-text)] hidden md:block dark:text-[#aeaecc] w-[100%]  z-[1000]  h-[60px] sticky top-0 md:top-1 transition-all duration-700  left-0  mx-auto border-b  px-4 bg-white dark:bg-[#061024] md:bg-transparent    dark:border-[#253359]/40 ",
 
         scrollHeight > 60 && "md:w-[75%] md:border-none bg-transparent "
       )}
@@ -147,38 +147,6 @@ export default function Navbar() {
           >
             <RiMenu3Line className="text-3xl  rounded-md border p-[5px]   hover:bg-[var(--primary-button)] text-[var(--primary-button)] hover:text-white hover:border-[var(--primary-button)] dark:hover:border-transparent border-[#b4dafc] dark:border-[#253359] transition-all  " />
           </button>
-
-          {/* <Sheet onOpenChange={setOpenModal} open={openModal}>
-            <SheetTrigger className="md:hidden">
-              <RiMenu3Line className="text-3xl  rounded-md border p-[5px]   hover:bg-[var(--primary-button)] text-[var(--primary-button)] hover:text-white hover:border-[var(--primary-button)] dark:hover:border-transparent border-[#b4dafc] dark:border-[#253359] transition-all  " />
-            </SheetTrigger>
-
-            <SheetContent
-              className="z-[1000] border-[var(--secondary-hover-button)] text-[#000] md:hidden sm:max-w-[325px]  max-w-[50vw] min-w-[250px] bg-[#fff]   backdrop-blur-[3px] "
-              side={"right"}
-            >
-              <SheetHeader>
-                <SheetTitle></SheetTitle>
-                <SheetDescription></SheetDescription>
-              </SheetHeader>
-
-              <nav className=" pt-6  w-full h-full  flex justify-center   ">
-                <ul className="flex md:hidden px-6 flex-col gap-12 items-center justify-start  ">
-                  {links.map((link, index) => (
-                    <li
-                      className="hover:opacity-70"
-                      key={index}
-                      onClick={() => {
-                        setOpenModal(false);
-                      }}
-                    >
-                      <Link href={link.href}>{link.name}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </SheetContent>
-          </Sheet> */}
         </div>
       </div>
       {isOpen && (

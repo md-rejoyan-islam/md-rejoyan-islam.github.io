@@ -16,7 +16,7 @@ export default function MySkill({
       {skills.map((skill, index) => (
         <motion.div
           key={skill.name}
-          className="bg-[var(--original-bg)] dark:bg-[#111832]/60 dark:backdrop-blur-md dark:border-[#0d7ded26] dark:hover:border-[#0d7ded6d]  hover:border-[var(--primary-button)] border border-[#bedffd] rounded-xl p-6 shadow-md"
+          className="bg-[var(--original-bg)] relative dark:bg-[#111832]/60 dark:backdrop-blur-md dark:border-[#0d7ded26] dark:hover:border-[#0d7ded6d]  hover:border-[var(--primary-button)] border  group border-[#bedffd] rounded-xl p-6 shadow-md"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: index * 0.1 }}
@@ -25,6 +25,7 @@ export default function MySkill({
             transition: { duration: 0.2, delay: 0 },
           }}
         >
+          <div className="absolute w-full h-full inset-0 bg-teal-500/10 blur-xl rounded-xl scale-0 group-hover:scale-100  transition-transform duration-500"></div>
           <div className="flex items-center mb-3">
             <div className="flex items-center mb-4">
               <div className="p-2 rounded-full bg-white dark:bg-[#111832] shadow-lg mr-3">

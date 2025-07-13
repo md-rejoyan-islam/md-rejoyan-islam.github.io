@@ -1,8 +1,6 @@
-"use client";
-
+import CardAnimation from "@/components/about/card-animation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { motion } from "framer-motion";
 import {
   Award,
   BookOpen,
@@ -14,27 +12,26 @@ import {
   MapPin,
   Phone,
 } from "lucide-react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
 import { LuGithub, LuLinkedin } from "react-icons/lu";
 import { RiTwitterXFill } from "react-icons/ri";
 import { TiContacts } from "react-icons/ti";
 
+export const metadata: Metadata = {
+  title: "About Me",
+  description:
+    "Learn more about me, my experience, education, and how to contact me. I am a full stack developer, mern stack developer, next.js expert, python data analyst.",
+};
+
 export default function AboutPage() {
   return (
     <div className="pt-10 pb-12 px-3 sm:px-4 relative max-w-7xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          viewport={{ once: true }}
-          whileInView={{ opacity: 1, y: 0 }}
-          whileHover={{
-            scale: 1.03,
-            transition: { duration: 0.1, delay: 0 },
-          }}
-        >
-          <Card className="border-[#0d7ded52] dark:border-[#0d7ded2e] shadow-xl shadow-[#0d7ded1b] dark:shadow-[#0d7ded11] dark:bg-[#0c132bd9]">
+        <CardAnimation>
+          <Card className="border-[#0d7ded52] relative group dark:border-[#0d7ded2e] shadow-xl shadow-[#0d7ded1b] dark:shadow-[#0d7ded11] dark:bg-[#0c132bd9]">
+            <div className="absolute w-full h-full inset-0 bg-teal-500/10 blur-xl rounded-xl scale-0 group-hover:scale-100  transition-transform duration-500"></div>
             <CardHeader>
               <CardTitle className="flex items-center text-xl sm:text-2xl">
                 <div className="p-2 rounded-full bg-white dark:bg-[#111832] shadow-lg mr-2">
@@ -51,19 +48,11 @@ export default function AboutPage() {
               </ul>
             </CardContent>
           </Card>
-        </motion.div>
+        </CardAnimation>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          viewport={{ once: true }}
-          whileInView={{ opacity: 1, y: 0 }}
-          whileHover={{
-            scale: 1.03,
-            transition: { duration: 0.1, delay: 0 },
-          }}
-        >
-          <Card className="border-[#0d7ded52] dark:border-[#0d7ded2e] shadow-xl shadow-[#0d7ded1b] dark:shadow-[#0d7ded11] dark:bg-[#0c132bd9]">
+        <CardAnimation>
+          <Card className="border-[#0d7ded52] dark:border-[#0d7ded2e] shadow-xl shadow-[#0d7ded1b] dark:shadow-[#0d7ded11] dark:bg-[#0c132bd9] relative group">
+            <div className="absolute w-full h-full inset-0 bg-teal-500/10 blur-xl rounded-xl scale-0 group-hover:scale-100  transition-transform duration-500"></div>
             <CardHeader>
               <CardTitle className="flex items-center text-xl sm:text-2xl">
                 <div className="p-2 rounded-full bg-white dark:bg-[#111832] shadow-lg mr-2">
@@ -82,19 +71,11 @@ export default function AboutPage() {
               </ul>
             </CardContent>
           </Card>
-        </motion.div>
+        </CardAnimation>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          viewport={{ once: true }}
-          whileInView={{ opacity: 1, y: 0 }}
-          whileHover={{
-            scale: 1.03,
-            transition: { duration: 0.1, delay: 0 },
-          }}
-        >
-          <Card className="border-[#0d7ded52] dark:border-[#0d7ded2e] shadow-xl shadow-[#0d7ded1b] dark:shadow-[#0d7ded11] dark:bg-[#0c132bd9]">
+        <CardAnimation>
+          <Card className="border-[#0d7ded52] dark:border-[#0d7ded2e] shadow-xl shadow-[#0d7ded1b] dark:shadow-[#0d7ded11] dark:bg-[#0c132bd9] relative group">
+            <div className="absolute w-full h-full inset-0 bg-teal-500/10 blur-xl rounded-xl scale-0 group-hover:scale-100  transition-transform duration-500"></div>
             <CardHeader>
               <CardTitle className="flex items-center text-xl sm:text-2xl">
                 <div className="p-2 rounded-full bg-white dark:bg-[#111832] shadow-lg mr-2">
@@ -112,19 +93,11 @@ export default function AboutPage() {
               </ul>
             </CardContent>
           </Card>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          viewport={{ once: true }}
-          whileInView={{ opacity: 1, y: 0 }}
-          whileHover={{
-            scale: 1.03,
-            transition: { duration: 0.1, delay: 0 },
-          }}
-        >
-          <Card className="border-[#0d7ded52] dark:border-[#0d7ded2e] shadow-xl shadow-[#0d7ded1b] dark:shadow-[#0d7ded11] dark:bg-[#0c132bd9]">
+        </CardAnimation>
+        <CardAnimation>
+          {" "}
+          <Card className="border-[#0d7ded52] dark:border-[#0d7ded2e] shadow-xl shadow-[#0d7ded1b] dark:shadow-[#0d7ded11] dark:bg-[#0c132bd9] relative group">
+            <div className="absolute w-full h-full inset-0 bg-teal-500/10 blur-xl rounded-xl scale-0 group-hover:scale-100  transition-transform duration-500"></div>
             <CardHeader>
               <CardTitle className="flex items-center text-xl sm:text-2xl">
                 <div className="p-2 rounded-full bg-white dark:bg-[#111832] shadow-lg mr-2">
@@ -150,19 +123,11 @@ export default function AboutPage() {
               </ul>
             </CardContent>
           </Card>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          viewport={{ once: true }}
-          whileInView={{ opacity: 1, y: 0 }}
-          whileHover={{
-            scale: 1.03,
-            transition: { duration: 0.1, delay: 0 },
-          }}
-        >
-          <Card className="border-[#0d7ded52] dark:border-[#0d7ded2e] shadow-xl shadow-[#0d7ded1b] dark:shadow-[#0d7ded11] dark:bg-[#0c132bd9]">
+        </CardAnimation>
+        <CardAnimation>
+          {" "}
+          <Card className="border-[#0d7ded52] dark:border-[#0d7ded2e] shadow-xl shadow-[#0d7ded1b] dark:shadow-[#0d7ded11] dark:bg-[#0c132bd9] relative group">
+            <div className="absolute w-full h-full inset-0 bg-teal-500/10 blur-xl rounded-xl scale-0 group-hover:scale-100  transition-transform duration-500"></div>
             <CardHeader>
               <CardTitle className="flex items-center text-xl sm:text-2xl">
                 <div className="p-2 rounded-full bg-white dark:bg-[#111832] shadow-lg mr-2">
@@ -180,19 +145,10 @@ export default function AboutPage() {
               </ul>
             </CardContent>
           </Card>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          viewport={{ once: true }}
-          whileInView={{ opacity: 1, y: 0 }}
-          whileHover={{
-            scale: 1.03,
-            transition: { duration: 0.1, delay: 0 },
-          }}
-        >
-          <Card className="border-[#0d7ded52] dark:border-[#0d7ded2e] shadow-xl shadow-[#0d7ded1b] dark:shadow-[#0d7ded11] dark:bg-[#0c132bd9]">
+        </CardAnimation>
+        <CardAnimation>
+          <Card className="border-[#0d7ded52] dark:border-[#0d7ded2e] shadow-xl shadow-[#0d7ded1b] dark:shadow-[#0d7ded11] dark:bg-[#0c132bd9] relative group">
+            <div className="absolute w-full h-full inset-0 bg-teal-500/10 blur-xl rounded-xl scale-0 group-hover:scale-100  transition-transform duration-500"></div>
             <CardHeader>
               <CardTitle className="flex items-center text-xl sm:text-2xl">
                 <div className="p-2 rounded-full bg-white dark:bg-[#111832] shadow-lg mr-2">
@@ -218,18 +174,11 @@ export default function AboutPage() {
               </ul>
             </CardContent>
           </Card>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          viewport={{ once: true }}
-          whileInView={{ opacity: 1, y: 0 }}
-          whileHover={{
-            scale: 1.03,
-            transition: { duration: 0.1, delay: 0 },
-          }}
-        >
-          <Card className="border-[#0d7ded52] dark:border-[#0d7ded2e] shadow-xl shadow-[#0d7ded1b] dark:shadow-[#0d7ded11] dark:bg-[#0c132bd9]">
+        </CardAnimation>
+        <CardAnimation>
+          {" "}
+          <Card className="border-[#0d7ded52] dark:border-[#0d7ded2e] shadow-xl shadow-[#0d7ded1b] dark:shadow-[#0d7ded11] dark:bg-[#0c132bd9] relative group">
+            <div className="absolute w-full h-full inset-0 bg-teal-500/10 blur-xl rounded-xl scale-0 group-hover:scale-100  z-1 transition-transform duration-500"></div>
             <CardHeader>
               <CardTitle className="flex items-center text-xl sm:text-2xl">
                 <div className="p-2 rounded-full bg-white dark:bg-[#111832] shadow-lg mr-2">
@@ -238,7 +187,7 @@ export default function AboutPage() {
                 Contact Information
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-4  relative">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
                 <a href="mailto:rejoyanislam0014@gmail.com">
@@ -282,7 +231,11 @@ export default function AboutPage() {
                   </Button>
                 </Link>
                 <Link href={"https://x.com/md_rejoyanislam"} target="_blank">
-                  <Button variant="outline" size="icon">
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="cursor-pointer"
+                  >
                     <RiTwitterXFill className="h-4 w-4" />
                     <span className="sr-only">Twitter</span>
                   </Button>
@@ -290,7 +243,7 @@ export default function AboutPage() {
               </div>
             </CardContent>
           </Card>
-        </motion.div>
+        </CardAnimation>
       </div>
     </div>
   );

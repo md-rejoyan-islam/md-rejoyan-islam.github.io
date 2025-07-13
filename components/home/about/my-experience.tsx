@@ -14,7 +14,7 @@ export default function MyExperience({
       {experiences.map((exp, index) => (
         <motion.div
           key={exp.title}
-          className="bg-[var(--original-bg)] w-full mx-auto dark:bg-[#111832]/60 dark:border-[#0d7ded26]  hover:border-[var(--primary-button)] border border-[#bed2fd]  dark:hover:border-[#0d7ded6d] rounded-xl p-6 shadow-md"
+          className="bg-[var(--original-bg)] w-full mx-auto dark:bg-[#111832]/60 dark:border-[#0d7ded26]  relative group hover:border-[var(--primary-button)] border border-[#bed2fd]  dark:hover:border-[#0d7ded6d] rounded-xl p-6 shadow-md"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: index * 0.1 }}
@@ -23,6 +23,7 @@ export default function MyExperience({
             transition: { duration: 0.2, delay: 0 },
           }}
         >
+          <div className="absolute w-full h-full inset-0 bg-teal-500/10 blur-xl rounded-xl scale-0 group-hover:scale-100  transition-transform duration-500"></div>
           <h4 className="text-xl font-semibold mb-2 text-gray-800 dark:text-[#d1dae4] flex items-center gap-2">
             <Briefcase className="w-6 h-6" />
             {exp.title}

@@ -75,7 +75,8 @@ export default function ProvideServices() {
                   transition: { duration: 0.3, delay: 0 },
                 }}
               >
-                <Card className="group hover:shadow-lg backdrop-blur-[1.5px] hover:backdrop-blur-[0px] transition-shadow duration-300 border-[#60aaf445] dark:border-[#365d8445] dark:bg-[#0c0b27]/60 dark:backdrop-blur-[3px] hover:border-[#439bf2b9] dark:hover:border-[#0d7ded6d]    shadow-sm   bg-[#f8fcffb9]">
+                <Card className="group hover:shadow-lg backdrop-blur-[1.5px] hover:backdrop-blur-[0px] transition-shadow duration-300 relative border-[#60aaf445] dark:border-[#365d8445] dark:bg-[#0c0b27]/60 dark:backdrop-blur-[3px] hover:border-[#439bf2b9] dark:hover:border-[#0d7ded6d]    shadow-sm   bg-[#f8fcffb9]">
+                  <div className="absolute w-full h-full inset-0 bg-teal-500/5 blur-xl rounded-xl scale-0 group-hover:scale-100  transition-transform duration-500"></div>
                   <CardContent className="p-6">
                     <div className="w-12 h-12 rounded-lg dark:bg-[#2725546e] bg-[#e6f3ff] flex items-center justify-center text-[var(--primary-button)] mb-4 transition-transform duration-300">
                       {service.icon}

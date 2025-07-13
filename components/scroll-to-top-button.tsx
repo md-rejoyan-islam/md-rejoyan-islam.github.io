@@ -30,7 +30,7 @@ export default function ScrollToTopButton() {
 
   return (
     <motion.div
-      className="fixed bottom-5 sm:bottom-10 right-5 sm:right-10 progress-bar z-[1000]"
+      className="fixed bottom-20 md:bottom-10 right-5 sm:right-10 progress-bar z-[1000]"
       animate={controls}
       initial={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
@@ -38,13 +38,13 @@ export default function ScrollToTopButton() {
       <div className="relative">
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="animate-bounce text-primary   rounded-full  relative p-1 sm:p-1.5"
+          className="animate-bounce text-primary   rounded-full  relative p-1 sm:p-[5px]  md:p-1.5"
           style={{
             backgroundImage: `conic-gradient(#0d7ded ${pagePercentage}%, rgb(215,215,215) ${pagePercentage}%)`,
           }}
           aria-label="Scroll to top"
         >
-          <FaArrowUp className="text-[26px] sm:text-4xl bg-white text-[var(--primary-button)]  rounded-full p-1.5" />
+          <FaArrowUp className="text-[26px] sm:text-[28px] md:text-4xl bg-white text-[var(--primary-button)]  rounded-full p-1.5" />
         </button>
       </div>
     </motion.div>

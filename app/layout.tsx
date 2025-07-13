@@ -20,22 +20,22 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Rejoyan - Full Stack Developer",
+  title: "Rejoyan | Full Stack Developer",
   description:
-    "I am md rejoyan islam, a full stack developer, mern stack developer, next.js expert, python data analyst",
+    "I am md rejoyan islam, a full stack developer, mern stack developer, next.js expert, python data analyst. I create beautiful and functional web applications.",
   openGraph: {
     type: "website",
     locale: "en_US",
-    title: "Rejoyan Islam portfolio website",
+    title: "Rejoyan | Full Stack Developer",
     description:
-      "I am md rejoyan islam, a full stack developer, mern stack developer, next.js expert, python data analyst",
+      "I am md rejoyan islam, a full stack developer, mern stack developer, next.js expert, python data analyst. I create beautiful and functional web applications.",
     url: "md-rejoyan-islam.github.io",
     images: [
       {
         url: "https://md-rejoyan-islam.github.io/images/rejoyan.jpeg",
         width: 1200,
         height: 630,
-        alt: "Rejoyan Islam",
+        alt: "Md Rejoyan Islam",
       },
     ],
   },
@@ -49,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-bg-main text-text-main  `}
+        className={`${geistSans.variable} ${geistMono.variable}  antialiased bg-bg-main text-text-main  `}
       >
         <ThemeProvider
           enableSystem
@@ -63,6 +63,7 @@ export default function RootLayout({
           <Socials direction="col" position="fixed" />
           <ScrollToTopButton />
           <Footer />
+          {/* <MobileBottomMenu /> */}
         </ThemeProvider>
       </body>
     </html>
