@@ -78,7 +78,7 @@ export function IconCloud({ iconSlugs }: IconCloudProps) {
   }, [data, theme]);
 
   return (
-    // @ts-ignore
+    // @ts-expect-error - `cloudProps` is not a valid prop for `Cloud`
     <Cloud {...cloudProps}>
       <>{renderedIcons}</>
     </Cloud>
