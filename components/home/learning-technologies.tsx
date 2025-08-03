@@ -5,29 +5,32 @@ import { HomeSubtittle, HomeTittle } from "./home-page-tittle-subtitle";
 import Image from "next/image";
 
 const technologies = [
-  { name: "HTML", icon: "/icons/html.png" },
-  { name: "CSS", icon: "/icons/css.png" },
-  { name: "TailwindCSS", icon: "/icons/tailwind.png" },
-  { name: "JavaScript", icon: "/icons/js.png" },
-  { name: "React", icon: "/icons/react.png" },
-  { name: "Next.js", icon: "/icons/nextjs.png" },
-  { name: "Prisma", icon: "/icons/prisma.png" },
-  { name: "GraphQL", icon: "/icons/graphql.png" },
-  { name: "TypeScript", icon: "/icons/typescript.png" },
-  { name: "Vitest", icon: "/icons/vitest.png" },
-  { name: "MongoDB", icon: "/icons/mongodb.png" },
-  { name: "Express", icon: "/icons/expressjs.png" },
+  { name: "HTML", icon: "/icons/html.webp" },
+  { name: "CSS", icon: "/icons/css.webp" },
+  { name: "TailwindCSS", icon: "/icons/tailwind.webp" },
+  { name: "JavaScript", icon: "/icons/js.webp" },
+  { name: "React", icon: "/icons/react.webp" },
+  { name: "Next.js", icon: "/icons/nextjs.webp" },
+  { name: "Prisma", icon: "/icons/prisma.webp" },
+  { name: "GraphQL", icon: "/icons/graphql.webp" },
+  { name: "TypeScript", icon: "/icons/typescript.webp" },
+  { name: "Vitest", icon: "/icons/vitest.webp" },
+  { name: "MongoDB", icon: "/icons/mongodb.webp" },
+  { name: "Express", icon: "/icons/expressjs.webp" },
   { name: "Firebase", icon: "/icons/firebase.webp" },
-  { name: "Python", icon: "/icons/python.png" },
-  { name: "Redux", icon: "/icons/redux.png" },
-  { name: "Git", icon: "/icons/git.png" },
+  { name: "Python", icon: "/icons/python.webp" },
+  { name: "Redux", icon: "/icons/redux.webp" },
+  { name: "Git", icon: "/icons/git.webp" },
   { name: "Docker", icon: "/icons/docker.webp" },
-  { name: "MySQL", icon: "/icons/mysql.png" },
-  { name: "Sequelize", icon: "/icons/sequelize.png" },
-  { name: "GitHub", icon: "/icons/github.png" },
-  { name: "Numpy", icon: "/icons/numpy.png" },
-  { name: "Pandas", icon: "/icons/pandas.png" },
-  { name: "Node", icon: "/icons/node.png" },
+  { name: "MySQL", icon: "/icons/mysql.webp" },
+  { name: "Sequelize", icon: "/icons/sequelize.webp" },
+  { name: "GitHub", icon: "/icons/github.webp" },
+  { name: "Numpy", icon: "/icons/numpy.webp" },
+  { name: "Pandas", icon: "/icons/pandas.webp" },
+  { name: "Node", icon: "/icons/node.webp" },
+  { name: "Bootstrap", icon: "/icons/bootstrap.webp" },
+  { name: "Linux", icon: "/icons/linux.webp" },
+  { name: "Nginx", icon: "/icons/nginx.webp" },
 ];
 
 // const skills = [
@@ -38,7 +41,7 @@ const technologies = [
 //     description:
 //       "Building responsive and interactive user interfaces with modern React features and Next.js for optimal performance.",
 //     color: "text-blue-500",
-//     icon_logos: ["/icons/react.png", "/icons/nextjs.png"],
+//     icon_logos: ["/icons/react.webp", "/icons/nextjs.webp"],
 //   },
 //   {
 //     icon: Server,
@@ -47,7 +50,7 @@ const technologies = [
 //     description:
 //       "Creating robust server-side applications with focus on scalability and clean architecture.",
 //     color: "text-green-500",
-//     icon_logos: ["/icons/node.png", "/icons/expressjs.png"],
+//     icon_logos: ["/icons/node.webp", "/icons/expressjs.webp"],
 //   },
 //   {
 //     icon: Database,
@@ -56,7 +59,7 @@ const technologies = [
 //     description:
 //       "Designing and implementing efficient database schemas and queries for optimal data management.",
 //     color: "text-purple-500",
-//     icon_logos: ["/icons/mongodb.png", "/icons/mongoose.png"],
+//     icon_logos: ["/icons/mongodb.webp", "/icons/mongoose.webp"],
 //   },
 //   {
 //     icon: Layout,
@@ -65,7 +68,7 @@ const technologies = [
 //     description:
 //       "Crafting beautiful and intuitive user interfaces with modern design principles and frameworks.",
 //     color: "text-pink-500",
-//     icon_logos: ["/icons/tailwind.png", "/icons/bootstrap.png"],
+//     icon_logos: ["/icons/tailwind.webp", "/icons/bootstrap.webp"],
 //   },
 //   {
 //     icon: GitBranch,
@@ -74,7 +77,7 @@ const technologies = [
 //     description:
 //       "Managing code versions efficiently with Git and collaborating effectively through GitHub.",
 //     color: "text-orange-500",
-//     icon_logos: ["/icons/git.png", "/icons/github.png"],
+//     icon_logos: ["/icons/git.webp", "/icons/github.webp"],
 //   },
 //   {
 //     icon: Terminal,
@@ -83,7 +86,7 @@ const technologies = [
 //     description:
 //       "Writing type-safe code for better maintainability and developer experience.",
 //     color: "text-yellow-500",
-//     icon_logos: ["/icons/typescript.png", "/icons/js.png"],
+//     icon_logos: ["/icons/typescript.webp", "/icons/js.webp"],
 //   },
 //   {
 //     icon: Layers,
@@ -92,7 +95,7 @@ const technologies = [
 //     description:
 //       "Managing complex application state with modern state management solutions.",
 //     color: "text-indigo-500",
-//     icon_logos: ["/icons/redux.png"],
+//     icon_logos: ["/icons/redux.webp"],
 //   },
 //   {
 //     icon: Cpu,
@@ -101,7 +104,7 @@ const technologies = [
 //     description:
 //       "Designing and implementing efficient APIs for seamless data communication.",
 //     color: "text-red-500",
-//     icon_logos: ["/icons/graphql.png"],
+//     icon_logos: ["/icons/graphql.webp"],
 //   },
 //   {
 //     icon: Globe,
@@ -150,9 +153,8 @@ export default function LearningTechnologies() {
                 <Image
                   src={tech.icon}
                   alt={tech.name}
-                  width={60}
-                  height={60}
-                  className="mx-auto  rounded-xl w-full bg-white dark:bg-[#111832]  p-7 h-full border border-[#bedffd] hover:border-[var(--primary-button)] max-w-[150px] max-h-[150px] dark:border-[#211c48] dark:hover:border-[#0d7ded51]"
+                  fill
+                  className="mx-auto  rounded-xl  bg-white dark:bg-[#111832] p-8  border border-[#bedffd] hover:border-[var(--primary-button)]  dark:border-[#211c48] dark:hover:border-[#0d7ded51]"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -165,7 +167,7 @@ export default function LearningTechnologies() {
                       alt={tech.name}
                       width={60}
                       height={60}
-                      className="mx-auto p-1.5 sm:p-2 bg-gray-500/10 dark:bg-green-500/10 rounded-md w-12 sm:w-[50px] h-12  sm:h-[50px] "
+                      className="mx-auto object-contain p-1.5 sm:p-2 bg-gray-500/10 dark:bg-green-500/10 rounded-md w-12 sm:w-[50px] h-12  sm:h-[50px] "
                     />
                   </div>
                   <h3 className="font-medium text-sm sm:text-[15px] text-[#292875] dark:text-white/80">

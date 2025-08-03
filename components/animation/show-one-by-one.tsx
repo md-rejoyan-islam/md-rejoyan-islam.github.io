@@ -7,8 +7,8 @@ export default function ShowOneByOne({
   children,
   index,
 }: {
-  children: React.ReactNode;
-  index: number;
+  readonly children: React.ReactNode;
+  readonly index: number;
 }) {
   const viewRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(viewRef, { once: true });

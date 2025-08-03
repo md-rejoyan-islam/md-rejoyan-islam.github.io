@@ -1,8 +1,7 @@
 "use client";
 import { ClientMessages } from "@/components/messages/client-messages";
-import { redirect } from "next/navigation";
 
-import { useSearchParams } from "next/navigation";
+import { redirect, useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 function MessagesPage() {
   const searchParams = useSearchParams();

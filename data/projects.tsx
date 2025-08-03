@@ -1,6 +1,7 @@
 import { PROJECT_KEYWORD } from "@/lib/types";
 
 export const projects: {
+  id: number;
   name: string;
   description: string;
   isBest: boolean;
@@ -12,6 +13,7 @@ export const projects: {
   techStack: string[];
 }[] = [
   {
+    id: 1,
     name: "Quiz Master",
     isBest: true,
     description:
@@ -38,6 +40,7 @@ export const projects: {
     ],
   },
   {
+    id: 2,
     name: "Quiz Master API",
     isBest: true,
     description:
@@ -64,6 +67,7 @@ export const projects: {
     ],
   },
   {
+    id: 3,
     name: "MOVIX",
     isBest: true,
     description:
@@ -89,6 +93,7 @@ export const projects: {
     ],
   },
   {
+    id: 4,
     name: "KVirus-19",
     isBest: true,
     description:
@@ -113,6 +118,7 @@ export const projects: {
     ],
   },
   {
+    id: 5,
     name: "Quranul Karim Multi-Languages",
     isBest: true,
     description:
@@ -137,6 +143,7 @@ export const projects: {
     ],
   },
   {
+    id: 6,
     name: "Event Explorer",
     isBest: false,
     description:
@@ -162,6 +169,7 @@ export const projects: {
     ],
   },
   {
+    id: 7,
     name: "Event Explorer API",
     isBest: false,
     description:
@@ -186,6 +194,7 @@ export const projects: {
     ],
   },
   {
+    id: 8,
     name: "Job Box",
     isBest: false,
     description:
@@ -209,6 +218,7 @@ export const projects: {
     ],
   },
   {
+    id: 9,
     name: "Job Box API",
     isBest: false,
     description:
@@ -233,6 +243,7 @@ export const projects: {
     ],
   },
   {
+    id: 10,
     name: "Stay-Swift - Hotel Booking",
     isBest: true,
     description:
@@ -258,6 +269,7 @@ export const projects: {
     ],
   },
   {
+    id: 11,
     name: "KINSUST A VOLUNTARY ORGANIZATION",
     isBest: true,
     description:
@@ -287,6 +299,7 @@ export const projects: {
   },
 
   {
+    id: 12,
     name: "TRAFALGAR - Online Medical Service",
     isBest: false,
     description:
@@ -314,6 +327,7 @@ export const projects: {
     ],
   },
   {
+    id: 13,
     name: "POSITIVUS - Digital Marketing Agency",
     isBest: false,
     description:
@@ -341,6 +355,7 @@ export const projects: {
     ],
   },
   {
+    id: 14,
     name: "Bizpro - Business Promotion Solution",
     isBest: false,
     description:
@@ -368,6 +383,7 @@ export const projects: {
     ],
   },
   {
+    id: 15,
     name: "Tasty Food 🍔🍕🍣",
     isBest: false,
     description:
@@ -390,6 +406,7 @@ export const projects: {
     ],
   },
   {
+    id: 16,
     name: "React Tic-Tac-Toe Game",
     isBest: false,
     description:
@@ -414,6 +431,7 @@ export const projects: {
     ],
   },
   {
+    id: 17,
     name: "Blood Finder App",
     isBest: false,
     description:
@@ -467,6 +485,7 @@ export const projects: {
   //   ],
   // },
   {
+    id: 18,
     name: "Doctor Portal",
     isBest: true,
     description:
@@ -489,6 +508,7 @@ export const projects: {
     ],
   },
   {
+    id: 19,
     name: "Doctor's Portal - Backend",
     isBest: false,
     description:
@@ -514,6 +534,7 @@ export const projects: {
     ],
   },
   {
+    id: 20,
     name: "Tasker",
     isBest: false,
     description:
@@ -538,6 +559,7 @@ export const projects: {
     ],
   },
   {
+    id: 21,
     name: "Donate Now",
     isBest: false,
     description:
@@ -561,6 +583,7 @@ export const projects: {
     ],
   },
   {
+    id: 22,
     name: "KIN DASHBOARD",
     isBest: false,
     description:
@@ -588,6 +611,7 @@ export const projects: {
     ],
   },
   {
+    id: 23,
     name: "E-Commerce API",
     description:
       "This an e-commerce API built for managing online store operations. It likely includes features like product listing, cart management, order processing, and user authentication, designed with modern web technologies for scalability and efficiency, serving as a backend solution for e-commerce applications.",

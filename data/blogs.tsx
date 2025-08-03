@@ -3,6 +3,7 @@ import { FaHashnode } from "react-icons/fa6";
 
 export const blogs = [
   {
+    id: 1,
     title: "Zod Mastery Guide: The Complete Beginner to Expert Handbook",
     description: `This "Zod Mastery Guide" blog offers a comprehensive handbook for Zod, a TypeScript schema validation library, taking users from beginner to expert in data type safety.`,
     date: "July 1, 2025",
@@ -18,6 +19,7 @@ export const blogs = [
     },
   },
   {
+    id: 2,
     title: "Understanding YAML: A Beginner-Friendly Guide",
     description: `This "YAML: A Beginner-Friendly Guide" blog likely covers YAML's syntax, data types, and uses for configuration files, helping beginners understand this human-readable data serialization language.`,
     date: "May 11, 2025",
@@ -33,6 +35,7 @@ export const blogs = [
     },
   },
   {
+    id: 3,
     title: "Unlocking the Power of JSON",
     description:
       "Learn how to use JSON to store and exchange data between a server and a web application. JSON is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate.",
@@ -49,6 +52,7 @@ export const blogs = [
     },
   },
   {
+    id: 4,
     title: "Top Command Line Commands Every Developer Should Know",
     description:
       "Learn how to use the top command line commands that every developer should know. These commands will help you navigate your computer and perform tasks more efficiently.",
@@ -65,6 +69,7 @@ export const blogs = [
     },
   },
   {
+    id: 5,
     title: "How to Deploy a Next.js App Router Project",
     description:
       "Learn how to deploy a Next.js app router project on a Node.js supported cPanel. Next.js enables functionality such as server-side rendering and generating static websites.",

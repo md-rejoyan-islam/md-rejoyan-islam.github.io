@@ -7,11 +7,10 @@ export default function ThreeDPin({
   project,
   links,
 }: {
-  children: React.ReactNode;
-  project: React.ReactElement;
-  links: {
+  readonly children: React.ReactNode;
+  readonly project: React.ReactElement;
+  readonly links: {
     href: string;
-
     name: string;
   }[];
 }) {

@@ -27,10 +27,11 @@ export default function Blogs() {
     {}
   );
 
-  const blogSites = Object.keys(groupedBlogs).map((site) => ({
+  const blogSites = Object.keys(groupedBlogs).map((site, index) => ({
     name: site,
     icon: groupedBlogs[site][0].host.icon,
     link: groupedBlogs[site][0].host.link,
+    id: index + 1,
   }));
 
   useEffect(() => {
@@ -90,8 +91,8 @@ export default function Blogs() {
           className="flex items-center flex-wrap gap-x-5 gap-y-10 my-10"
           ref={scope}
         >
-          {blogSites.map((site, index) => (
-            <motion.li key={index} style={{ opacity: 0, scale: 0.3, x: -50 }}>
+          {blogSites.map((site) => (
+            <motion.li key={site.id} style={{ opacity: 0, scale: 0.3, x: -50 }}>
               <Link
                 rel="noopener"
                 target="_blank"
@@ -114,12 +115,12 @@ export default function Blogs() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
-        {blogs.map((blog, index) => (
+        {blogs.map((blog) => (
           <motion.article
-            key={index}
+            key={blog.id}
             style={{ opacity: 0, scale: 0.3, x: -50 }}
           >
-            <ShowOneByOne index={index}>
+            <ShowOneByOne index={blog.id}>
               <BlogCard blog={blog} />
             </ShowOneByOne>
           </motion.article>

@@ -18,12 +18,10 @@ html {
   --primary-title: rgb(41, 40, 117);
   --primary-text: #374151;
   --secondary-text: #6b7280;
-
   --gradient-button-from: #e11d48;
   --gradient-button-to: #db2777;
   --background: #fff;
   --foreground: #000;
-  /* --foreground: #000; */
 }
 
 @layer base {

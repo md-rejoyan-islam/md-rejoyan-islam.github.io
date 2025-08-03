@@ -14,7 +14,7 @@ export default function Projects() {
   const [scopeRef, projectAnimate] = useAnimate();
   const projectStaggerList = stagger(0.2, { startDelay: 1.3 });
 
-  const [projects, setProject] = useState(projectsData);
+  const [projects, setProject] = useState([...projectsData]);
 
   useEffect(() => {
     animate(
@@ -92,7 +92,7 @@ export default function Projects() {
           {projects?.length ? (
             projects?.map((project, index) => (
               <motion.article
-                key={index}
+                key={project.id}
                 className="h-full"
                 // style={{ opacity: 0, scale: 0.3, x: -50 }}
                 transition={{ delay: index * 0.1 }}
@@ -100,7 +100,7 @@ export default function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 20 }}
               >
-                <ShowOneByOne index={index}>
+                <ShowOneByOne index={project.id}>
                   <ThreeDPin
                     project={<ProjectCard project={project} />}
                     links={project?.links}
