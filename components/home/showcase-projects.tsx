@@ -12,7 +12,7 @@ import { HomeTittle } from "./home-page-tittle-subtitle";
 
 export default function ShowcaseProjects() {
   return (
-    <section className="relative">
+    <section className="relative group/main">
       {/* Floating papers background */}
       <div className="absolute inset-0 -z-10 overflow-hidden w-full h-full">
         <FloatingPaper count={50} />
@@ -57,7 +57,7 @@ export default function ShowcaseProjects() {
                           ?.href || ""
                       }
                       target="_blank"
-                      className="absolute -translate-y-full group-hover:translate-y-0 transition-all duration-300 inset-0 z-10 w-full h-full "
+                      className="absolute hidden group-hover/main:block -translate-y-full group-hover:translate-y-0 transition-all duration-300 inset-0 z-10 w-full h-full "
                     >
                       <div className="absolute inset-0 bg-sky-900/30"></div>
                       <div className="absolute inset-0 flex items-center justify-center z-20 cursor-pointer">
@@ -70,16 +70,16 @@ export default function ShowcaseProjects() {
                         src={project.banner}
                         alt={project.name}
                         className="h-full w-full object-fit transition-transform duration-500"
-                        height={450}
-                        width={800}
+                        height={300}
+                        width={400}
                       />
                     </Link>
                     <Image
                       src={project.banner}
                       alt={project.name}
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      height={450}
-                      width={800}
+                      height={300}
+                      width={400}
                     />
                     <div
                       className={`absolute inset-0 bg-gradient-to-b from-transparent to-sky-900/20`}
