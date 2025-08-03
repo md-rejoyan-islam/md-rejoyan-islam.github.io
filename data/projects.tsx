@@ -27,7 +27,7 @@ export const projects: {
       PROJECT_KEYWORD.SHADCN_UI,
       PROJECT_KEYWORD.FRAMER_MOTION,
     ],
-    banner: "/images/projects/quiz-master.png",
+    banner: "/images/projects/quiz-master.webp",
     links: [
       {
         name: "GitHub",
@@ -54,7 +54,7 @@ export const projects: {
       PROJECT_KEYWORD.PRISMA,
       PROJECT_KEYWORD.ZOD,
     ],
-    banner: "/images/projects/api.jpg",
+    banner: "/images/projects/api.webp",
     links: [
       {
         name: "GitHub",
@@ -80,7 +80,7 @@ export const projects: {
       PROJECT_KEYWORD.TAILWINDCSS,
       PROJECT_KEYWORD.FRAMER_MOTION,
     ],
-    banner: "/images/projects/movix.png",
+    banner: "/images/projects/movix.webp",
     links: [
       {
         name: "GitHub",

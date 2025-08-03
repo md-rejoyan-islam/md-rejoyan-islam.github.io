@@ -118,7 +118,7 @@ const technologies = [
 
 export default function LearningTechnologies() {
   return (
-    <div className="bg-gradient-to-br w-full    relative from-blue-50 to-indigo-50 py-20 dark:from-[#03081c]/50 dark:to-[#03081c]/50 ">
+    <div className="bg-gradient-to-br w-full  group/main     relative from-blue-50 to-indigo-50 py-20 dark:from-[#03081c]/50 dark:to-[#03081c]/50 ">
       {/* background image  */}
 
       <div className="absolute  w-1/2   -right-1/4 opacity-50 inset-y-0  h-full flex items-center justify-center">
@@ -128,13 +128,13 @@ export default function LearningTechnologies() {
         <div className="w-[350px] h-[350px] opacity-50 bg-no-repeat dark:bg-[url('/images/setting_dark.svg')] bg-[url('/images/setting.svg')] bg-contain bg-center origin-center animate-[spin_6s_linear_infinite]"></div>
       </div>
 
-      <div className="space-y-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-4">
+      <div className="space-y-8 max-w-7xl mx-auto overflow-hidden   px-4 sm:px-6 lg:px-8">
+        <div className="text-center space-y-4 relative z-[1000]">
           <HomeTittle label="My Tech Stack" />
           <HomeSubtittle label="Here are the technologies and tools I specialize in to build seamless digital experiences." />
         </div>
 
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4">
+        <div className="grid grid-cols-3   sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4">
           {technologies.map((tech, index) => (
             <motion.div
               key={tech.name}
@@ -149,14 +149,6 @@ export default function LearningTechnologies() {
               viewport={{ once: true }}
               className="group relative overflow-hidden cursor-grab  rounded-xl "
             >
-              <div className="absolute flex rounded-xl -translate-y-full group-hover:translate-y-0 inset-0 transition-all duration-500   items-center justify-center w-full h-full z-50 ">
-                <Image
-                  src={tech.icon}
-                  alt={tech.name}
-                  fill
-                  className="mx-auto  rounded-xl  bg-white dark:bg-[#111832] p-8  border border-[#bedffd] hover:border-[var(--primary-button)]  dark:border-[#211c48] dark:hover:border-[#0d7ded51]"
-                />
-              </div>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               {/* hover:border-[var(--primary-button)] dark:hover:border-[#0d7ded6d]  */}
               <div className="relative bg-white dark:bg-[#111832]/60 rounded-xl p-6 shadow-lg backdrop-blur-sm border border-[#bedffd]  dark:border-[#211c48]  transition-all duration-300 ">
@@ -174,6 +166,14 @@ export default function LearningTechnologies() {
                     {tech.name}
                   </h3>
                 </div>
+              </div>
+              <div className="absolute  hidden  group-hover/main:flex rounded-xl -translate-y-full group-hover:translate-y-0 inset-0 transition-all duration-500   items-center justify-center w-full h-full z-50 ">
+                <Image
+                  src={tech.icon}
+                  alt={tech.name}
+                  fill
+                  className="mx-auto  rounded-xl  bg-white dark:bg-[#111832] p-8  border border-[#bedffd] hover:border-[var(--primary-button)]  dark:border-[#211c48] dark:hover:border-[#0d7ded51]"
+                />
               </div>
             </motion.div>
           ))}

@@ -48,7 +48,7 @@ export default function ShowcaseBlogs() {
                 href="/blogs"
                 className=" underline text-[var(--primary-button)] ml-2"
               >
-                Read more
+                Read more my blogs
               </Link>
             </p>
           </div>
