@@ -56,7 +56,7 @@ export const TabList = ({
     >
       {tabs.map((link, i) => (
         <motion.button
-          key={i}
+          key={link}
           style={style}
           id={"uuu-btn-" + i}
           whileHover={{ scale: 1.05 }}

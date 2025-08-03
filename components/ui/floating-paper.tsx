@@ -27,9 +27,9 @@ export function FloatingPaper({ count = 5 }) {
 
   return (
     <div className="relative w-full h-full">
-      {Array.from({ length: count }).map((_, i) => (
+      {Array.from({ length: count }, (_, index) => index + 1).map((val) => (
         <motion.div
-          key={i}
+          key={val}
           className="absolute"
           initial={{
             x: Math.random() * dimensions.width,

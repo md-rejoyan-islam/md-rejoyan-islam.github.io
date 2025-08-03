@@ -3,12 +3,12 @@ import React from "react";
 export default function MySkill({
   skills,
 }: {
-  skills: {
-    name: string;
-    icon: React.ElementType;
-    level: number;
-    description: string;
-    tech: string;
+  readonly skills: {
+    readonly name: string;
+    readonly icon: React.ElementType;
+    readonly level: number;
+    readonly description: string;
+    readonly tech: string;
   }[];
 }) {
   return (

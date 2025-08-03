@@ -43,8 +43,6 @@ export default function Navbar() {
   const [scope, animate] = useAnimate();
   const staggerList = stagger(0.1, { startDelay: 0 });
 
-  // const [openModal, setOpenModal] = useState(false);
-
   const [scrollHeight, setScrollHeight] = useState(0);
 
   useEffect(() => {
@@ -70,9 +68,10 @@ export default function Navbar() {
   return (
     <header
       className={clsx(
-        "text-[var(--primary-text)] hidden md:block dark:text-[#aeaecc] w-[100%]  z-[1000]  h-[60px] sticky top-0 md:top-1 transition-all duration-700  left-0  mx-auto border-b  px-4 bg-white dark:bg-[#061024] md:bg-transparent    dark:border-[#253359]/40 ",
+        "text-[var(--primary-text)] hidden md:block dark:text-[#aeaecc] w-[100%]  z-[1000]  h-[60px] sticky top-0 md:top-1 transition-all duration-700   left-0  mx-auto border-b  px-4 bg-white dark:bg-[#061024] md:bg-transparent    dark:border-[#253359]/40 ",
 
-        scrollHeight > 60 && "md:w-[75%] md:border-none bg-transparent "
+        scrollHeight > 60 &&
+          "md:w-[75%] rounded-md md:border-none bg-transparent "
       )}
     >
       <div
@@ -99,14 +98,14 @@ export default function Navbar() {
                   <HomeIcon />
                 </Link>
               </motion.li>
-              {links.map((link, index) => (
+              {links.map((link) => (
                 <motion.li
                   className={`${
                     pathname === link.href
                       ? "text-[var(--primary-button)] "
                       : ""
                   } hover:text-[var(--primary-button)]   group h-full flex items-center`}
-                  key={index}
+                  key={link.href}
                   style={{ opacity: 0, scale: 0.3, x: -50 }}
                 >
                   <div className="relative overflow-hidden  h-full flex items-center px-0">
@@ -126,17 +125,13 @@ export default function Navbar() {
           </Link>
         </div>
         <div className="flex gap-3 items-center">
-          <div
-            onClick={() => {
-              window.open("https://github.com/md-rejoyan-islam", "_blank");
-            }}
-          >
+          <Link href={"https://github.com/md-rejoyan-islam"} target="_blank">
             <HoverTooltip title="GitHub">
               <div className="h-8 w-8 flex items-center justify-center rounded-xl border  hover:bg-[var(--primary-button)] text-[var(--primary-button)] hover:text-white hover:border-[var(--primary-button)] dark:hover:border-transparent border-[#b4dafc] dark:border-[#253359] transition-all">
                 <FaGithub className="w-4 h-4 " />
               </div>
             </HoverTooltip>
-          </div>
+          </Link>
           <ThemeSwitch />
 
           <button
@@ -152,8 +147,8 @@ export default function Navbar() {
       {isOpen && (
         <div className="bg-white dark:bg-[#0d1533]  absolute top-16 right-3.5 border border-[#0d79ed29] shadow-lg md:hidden  w-[200px] rounded-md">
           <ul className="flex flex-col  p-5 gap-1">
-            {links.map((link, index) => (
-              <li key={index} className="block group">
+            {links.map((link) => (
+              <li key={link.href} className="block group">
                 <Link
                   href={link.href}
                   className={clsx(

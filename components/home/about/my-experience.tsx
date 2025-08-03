@@ -3,10 +3,10 @@ import { Briefcase, Calendar, MapPin } from "lucide-react";
 export default function MyExperience({
   experiences,
 }: {
-  experiences: {
-    title: string;
-    company: string;
-    period: string;
+  readonly experiences: {
+    readonly title: string;
+    readonly company: string;
+    readonly period: string;
   }[];
 }) {
   return (

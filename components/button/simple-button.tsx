@@ -6,9 +6,9 @@ export default function SimpleButton({
   className,
   onClick,
 }: {
-  children: React.ReactNode;
-  className?: string;
-  onClick?: () => void;
+  readonly children: React.ReactNode;
+  readonly className?: string;
+  readonly onClick?: () => void;
 }) {
   return (
     <motion.button
@@ -28,7 +28,7 @@ export default function SimpleButton({
 export function SimpleButtonWithoutBg({
   children,
 }: {
-  children: React.ReactNode;
+  readonly children: React.ReactNode;
 }) {
   return (
     <button className="px-6 py-3 text-sm rounded-full border border-[var(--primary-button)]  hover:bg-gradient-to-r from-[var(--gradient-button-to)] hover:to-[var(--gradient-button-from)]  text-[var(--primary-text)]  hover:text-white font-medium hover:opacity-90 transition-opacity flex items-center gap-2">

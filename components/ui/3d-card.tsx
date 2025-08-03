@@ -8,6 +8,7 @@ import React, {
   ReactNode,
   useContext,
   useEffect,
+  useMemo,
   useRef,
   useState,
 } from "react";
@@ -52,8 +53,16 @@ export const CardContainer: React.FC<CardContainerProps> = ({
     }
   };
 
+  const value = useMemo(
+    () => ({
+      isMouseEntered,
+      setIsMouseEntered,
+    }),
+    [isMouseEntered, setIsMouseEntered]
+  );
+
   return (
-    <MouseEnterContext.Provider value={{ isMouseEntered, setIsMouseEntered }}>
+    <MouseEnterContext.Provider value={value}>
       <div
         className={cn("w-fit h-full", containerClassName)}
         style={{ perspective: "1000px" }}

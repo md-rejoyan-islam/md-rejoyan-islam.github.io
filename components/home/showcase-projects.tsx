@@ -41,7 +41,7 @@ export default function ShowcaseProjects() {
             ?.slice(0, 6)
             .map((project, index) => (
               <motion.div
-                key={index}
+                key={project.id}
                 className="group relative"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ export default function ShowcaseProjects() {
                     <Link
                       href={
                         project.links?.find((link) => link.name === "Preview")
-                          ?.href || ""
+                          ?.href ?? ""
                       }
                       target="_blank"
                       className="absolute hidden group-hover/main:block -translate-y-full group-hover:translate-y-0 transition-all duration-300 inset-0 z-10 w-full h-full "
@@ -119,7 +119,7 @@ export default function ShowcaseProjects() {
                           href={
                             project.links?.find(
                               (link) => link.name === "Preview"
-                            )?.href || ""
+                            )?.href ?? ""
                           }
                           target="_blank"
                         >
@@ -140,7 +140,7 @@ export default function ShowcaseProjects() {
                           href={
                             project.links?.find(
                               (link) => link.name === "GitHub"
-                            )?.href || ""
+                            )?.href ?? ""
                           }
                           target="_blank"
                         >

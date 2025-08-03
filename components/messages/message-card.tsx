@@ -15,8 +15,8 @@ export interface User {
 }
 
 interface UserCardProps {
-  onDelete: (id: string) => void;
-  message: MESSAGE_TYPE;
+  readonly onDelete: (id: string) => void;
+  readonly message: MESSAGE_TYPE;
 }
 
 export function MessageCard({ onDelete, message }: UserCardProps) {

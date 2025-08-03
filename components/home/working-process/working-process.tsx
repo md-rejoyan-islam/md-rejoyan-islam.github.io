@@ -143,7 +143,7 @@ export default function WorkingProcesses() {
           <div className="space-y-3 md:hidden lg:block order-1">
             {workProcess?.slice(0, 3).map((data, index) => (
               <motion.div
-                key={index}
+                key={data.id}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -160,7 +160,7 @@ export default function WorkingProcesses() {
           <div className=" gap-4 order-2 sm:grid-cols-2 md:grid hidden  lg:hidden col-span-full">
             {workProcess?.map((data, index) => (
               <motion.div
-                key={index}
+                key={data.id}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -190,7 +190,7 @@ export default function WorkingProcesses() {
           <div className="space-y-3 flex-1 order-3 md:hidden  lg:block">
             {workProcess?.slice(3, 6).map((data, index) => (
               <motion.div
-                key={index + 3}
+                key={data.id}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}

@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function ProjectCard({
   project,
 }: {
-  project: {
+  readonly project: {
     banner: string;
     name: string;
     description: string;
@@ -39,10 +39,10 @@ export default function ProjectCard({
         </div>
         <div className="py-2.5">
           <ul className="flex items-center gap-x-3 gap-y-2 flex-wrap">
-            {project?.techStack?.map((tech, index) => (
+            {project?.techStack?.map((tech) => (
               <li
                 className="text-nowrap text-[var(--primary-button)] border border-[#0d7ded2a] bg-black/5 dark:bg-white/5 px-2 py-1 rounded-md text-[10px]"
-                key={index}
+                key={tech}
               >
                 {tech}
               </li>
@@ -51,14 +51,13 @@ export default function ProjectCard({
         </div>
         <div className="absolut top-3 right-3 z-10 md:hidden ">
           <ul className="flex gap-2 items-center">
-            {project?.links?.map((link, index) => (
-              <li key={index}>
+            {project?.links?.map((link) => (
+              <li key={link.href}>
                 <a
                   href={link?.href}
                   className=" flex items-center gap-2 border border-project-card-border  hover:bg-button-bg text-button h-fit rounded-md px-2 text-sm py-1.5"
                 >
                   <span>{link?.name} </span>
-                  {/* {link?.icon} */}
                 </a>
               </li>
             ))}

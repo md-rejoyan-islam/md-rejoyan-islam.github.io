@@ -16,7 +16,7 @@ export const BackgroundLines = ({
 }) => {
   return (
     <div className={cn("h-full  w-full ", className)}>
-      <SVG svgOptions={svgOptions} />
+      <SvgComponent svgOptions={svgOptions} />
       {children}
     </div>
   );
@@ -31,7 +31,7 @@ const pathVariants = {
   },
 };
 
-const SVG = ({
+const SvgComponent = ({
   svgOptions,
 }: {
   svgOptions?: {
@@ -105,7 +105,7 @@ const SVG = ({
           initial="initial"
           animate="animate"
           transition={{
-            duration: svgOptions?.duration || 10,
+            duration: svgOptions?.duration ?? 10,
             ease: "linear",
             repeat: Infinity,
             repeatType: "loop",
@@ -127,14 +127,14 @@ const SVG = ({
           initial="initial"
           animate="animate"
           transition={{
-            duration: svgOptions?.duration || 10,
+            duration: svgOptions?.duration ?? 10,
             ease: "linear",
             repeat: Infinity,
             repeatType: "loop",
             delay: Math.floor(Math.random() * 10),
             repeatDelay: Math.floor(Math.random() * 10 + 2),
           }}
-          key={`path-second-${idx}`}
+          key={`path-second-${path}`}
         />
       ))}
     </motion.svg>

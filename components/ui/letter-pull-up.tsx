@@ -11,9 +11,9 @@ export default function LetterPullup({
   words,
   delay,
 }: {
-  className?: string;
-  words: string;
-  delay?: number;
+  readonly className?: string;
+  readonly words: string;
+  readonly delay?: number;
 }) {
   const letters = words.split("");
 
@@ -23,7 +23,7 @@ export default function LetterPullup({
       y: 0,
       opacity: 1,
       transition: {
-        delay: i * (delay ? delay : 0.05), // By default, delay each letter's animation by 0.05 seconds
+        delay: i * (delay || 0.05), // By default, delay each letter's animation by 0.05 seconds
       },
     }),
   };

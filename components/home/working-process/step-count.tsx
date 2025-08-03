@@ -8,9 +8,9 @@ interface Process {
 }
 
 interface StepContentProps {
-  step: number;
-  direction: number;
-  processes: Process[];
+  readonly step: number;
+  readonly direction: number;
+  readonly processes: Process[];
 }
 
 const variants = {

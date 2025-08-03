@@ -10,7 +10,7 @@ import {
 } from "react-icon-cloud";
 
 interface IconCloudProps {
-  iconSlugs: string[];
+  readonly iconSlugs: string[];
 }
 
 export const cloudProps = {

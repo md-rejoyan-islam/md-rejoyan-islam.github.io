@@ -9,8 +9,8 @@ export default function HoverTooltip({
   children,
   title,
 }: {
-  children: React.ReactNode;
-  title: string;
+  readonly children: React.ReactNode;
+  readonly title: string;
 }) {
   return (
     <TooltipProvider>

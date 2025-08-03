@@ -21,7 +21,7 @@ export default function ScrollToTopButton() {
       document?.documentElement?.scrollHeight - window.innerHeight;
     controls.start({ opacity: value / 100 });
     const percentage = Math.round(
-      (Math.floor(value) / Math.floor(pageY ? pageY : 1)) * 100
+      (Math.floor(value) / Math.floor(pageY || 1)) * 100
     );
     if (pagePercentage !== percentage) {
       setPagePercentage(percentage);

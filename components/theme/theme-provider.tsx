@@ -5,11 +5,11 @@ import { Attribute, ThemeProvider as NextThemesProvider } from "next-themes";
 import { ReactNode } from "react";
 
 interface ThemeProviderProps {
-  children: ReactNode;
-  enableSystem?: boolean;
-  attribute?: Attribute;
-  defaultTheme?: string;
-  themes?: string[];
+  readonly children: ReactNode;
+  readonly enableSystem?: boolean;
+  readonly attribute?: Attribute;
+  readonly defaultTheme?: string;
+  readonly themes?: string[];
 }
 
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {

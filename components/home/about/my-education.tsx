@@ -4,10 +4,10 @@ import { Calendar, GraduationCap } from "lucide-react";
 export default function MyEducation({
   education,
 }: {
-  education: {
-    degree: string;
-    school: string;
-    year: string;
+  readonly education: {
+    readonly degree: string;
+    readonly school: string;
+    readonly year: string;
   }[];
 }) {
   return (

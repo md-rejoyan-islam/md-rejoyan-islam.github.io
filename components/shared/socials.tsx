@@ -34,10 +34,10 @@ export default function Socials({ direction = "row", position = "relative" }) {
         } text-xl `}
         ref={scope}
       >
-        {socialLinks.map((social, index) => (
+        {socialLinks.map((social) => (
           <motion.li
             className="icons"
-            key={index}
+            key={social.name}
             style={{ opacity: 0, scale: 0.3, x: -50 }}
           >
             <Link

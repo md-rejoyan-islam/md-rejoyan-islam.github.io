@@ -5,8 +5,8 @@ export function HomeTittle({
   label,
   className,
 }: {
-  label: string;
-  className?: string;
+  readonly label: string;
+  readonly className?: string;
 }) {
   return (
     <motion.h2
@@ -25,8 +25,8 @@ export function HomeSubtittle({
   label,
   className,
 }: {
-  label: string;
-  className?: string;
+  readonly label: string;
+  readonly className?: string;
 }) {
   return (
     <p

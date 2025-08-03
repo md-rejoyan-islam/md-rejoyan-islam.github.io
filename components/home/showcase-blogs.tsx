@@ -7,6 +7,7 @@ import Link from "next/link";
 import BlogCard from "../blogs/BlogCard";
 
 interface Blog {
+  id: number;
   host: { link: string };
   title: string;
   image: string;
@@ -61,12 +62,12 @@ export default function ShowcaseBlogs() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          {blogs?.slice(0, 3).map((blog: Blog, index: number) => (
+          {blogs?.slice(0, 3).map((blog: Blog) => (
             <motion.article
-              key={index}
+              key={blog.id}
               style={{ opacity: 0, scale: 0.3, x: -50 }}
             >
-              <BlogCard blog={blog} key={index} />
+              <BlogCard blog={blog} key={blog.id} />
             </motion.article>
           ))}
         </motion.div>

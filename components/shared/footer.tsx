@@ -8,9 +8,9 @@ export default function Footer() {
         <div className=" grid grid-cols-1   px-4 max-w-7xl  mx-auto   md:grid-cols-2     items-center gap-y-4  gap-x-12   py-6   flex-wrap overflow-hidden z">
           <div className="text-text-secondary order-2 md:order-1">
             <p className="text-center md:text-left text-sm">
-              Copyright © 2024.Made by&nbsp;
+              Copyright © 2024.Made by{" "}
               <span className="text-[#0d7ded] font-medium dark:text-[#0d7ded]">
-                Md. Rejoyan Islam.&nbsp;
+                Md. Rejoyan Islam.
               </span>
             </p>
           </div>

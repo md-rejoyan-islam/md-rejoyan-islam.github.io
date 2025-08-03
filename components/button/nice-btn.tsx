@@ -9,12 +9,12 @@ export default function NiceBtn({
   className,
   iconPosition = "left",
 }: {
-  active?: boolean;
-  icon?: React.ReactNode;
-  label?: string;
-  onClick?: () => void;
-  className?: string;
-  iconPosition?: "left" | "right";
+  readonly active?: boolean;
+  readonly icon?: React.ReactNode;
+  readonly label?: string;
+  readonly onClick?: () => void;
+  readonly className?: string;
+  readonly iconPosition?: "left" | "right";
 }) {
   return (
     <motion.button
@@ -25,7 +25,7 @@ export default function NiceBtn({
         "flex items-center text-xs sm:text-sm px-4 py-2 rounded-lg font-semibold",
         className
       )}
-      onClick={() => onClick && onClick()}
+      onClick={() => onClick?.()}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >

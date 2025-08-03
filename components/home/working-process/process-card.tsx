@@ -8,15 +8,16 @@ export default function ProcessCard({
   data,
   handleTabClick,
 }: {
-  step: number;
-  index: number;
-  data: { title: string; description: string };
-  handleTabClick: (index: number) => void;
+  readonly step: number;
+  readonly index: number;
+  readonly data: { title: string; description: string };
+  readonly handleTabClick: (index: number) => void;
 }) {
   return (
     <Card className="h-full border-[#c7e4fe] dark:backdrop-blur-[1.5px] dark:border-[#1c2453] dark:bg-[#101531]/60  ">
-      <div
-        className={`relative h-full overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg p-6 rounded-md ${
+      <button
+        aria-label={`Step ${index + 1} - ${data.title}`}
+        className={`relative block w-full h-full overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg p-6 rounded-md ${
           step === index
             ? " border-l-4 border-l-[var(--primary-button)]"
             : "hover:border-l-4  hover:border-l-[var(--primary-button)]"
@@ -56,7 +57,7 @@ export default function ProcessCard({
             }}
           />
         </div>
-      </div>
+      </button>
     </Card>
   );
 }

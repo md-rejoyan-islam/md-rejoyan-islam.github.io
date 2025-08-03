@@ -8,35 +8,40 @@ import { HomeSubtittle, HomeTittle } from "./home-page-tittle-subtitle";
 
 const services = [
   {
+    id: 1,
     icon: <AiOutlineFundView className="w-6 h-6" />,
-
     title: "Front-End Development",
     description:
       "Building responsive and interactive user interfaces with React and Next.js",
   },
   {
+    id: 2,
     icon: <Server className="w-6 h-6" />,
     title: "Back-End Development",
     description:
       "Developing robust server-side applications with Node.js and Express",
   },
   {
+    id: 3,
     icon: <Globe className="w-6 h-6" />,
     title: "Hosting Management",
     description: "Deploying and managing applications on cloud platforms",
   },
   {
+    id: 4,
     icon: <Database className="w-6 h-6" />,
     title: "Database Management",
     description: "Designing and optimizing database structures for performance",
   },
   {
+    id: 5,
     icon: <Code className="w-6 h-6" />,
     title: "API Development",
     description:
       "RESTful and GraphQL API  for seamless data flow between client and server.",
   },
   {
+    id: 6,
     icon: <Search className="w-6 h-6" />,
     title: "SEO Optimization",
     description: "Optimizing websites for better search engine visibility",
@@ -64,7 +69,7 @@ export default function ProvideServices() {
           >
             {services.map((service, index) => (
               <motion.div
-                key={index}
+                key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 // animate={{ opacity: 1, y: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}

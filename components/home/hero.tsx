@@ -121,7 +121,7 @@ export default function Hero() {
             </motion.div>
           </div>
           <div className=" hidden   lg:col-span-2 order-1 lg:order-2 lg:flex w-full  items-center justify-center">
-            <div className=" ">
+            <div>
               <IconCloud iconSlugs={slugs} />
             </div>
           </div>
