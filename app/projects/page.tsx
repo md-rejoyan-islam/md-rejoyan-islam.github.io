@@ -16,8 +16,6 @@ export default function Projects() {
 
   const [projects, setProject] = useState([...projectsData]);
 
-  console.log("projects", projects);
-
   useEffect(() => {
     animate(
       "button",

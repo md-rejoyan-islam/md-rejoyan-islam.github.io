@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { JSX, useState } from "react";
+import { CiServer } from "react-icons/ci";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { LuFigma } from "react-icons/lu";
 import { LinkPreview } from "./link-preview";
@@ -85,6 +86,7 @@ export const PinPerspective = ({
               {link.name === "GitHub" && <FaGithub />}
               {link.name === "Preview" && <FaExternalLinkAlt />}
               {link.name === "Figma" && <LuFigma />}
+              {link.name === "Server" && <CiServer />}
             </LinkPreview>
           ))}
         </div>
