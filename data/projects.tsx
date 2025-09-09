@@ -13,7 +13,7 @@ export const projects: {
   techStack: string[];
 }[] = [
   {
-    id: 1111,
+    id: 111,
     name: "Neuronomous",
     isBest: true,
     description:
