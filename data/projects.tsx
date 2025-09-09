@@ -13,6 +13,39 @@ export const projects: {
   techStack: string[];
 }[] = [
   {
+    id: 1111,
+    name: "Neuronomous",
+    isBest: true,
+    description:
+      "This project is SUST EEE IoT Hub, a real-time IoT device management platform. It empowers users with remote control, scheduling, monitoring, and seamless MQTT-based communication, ensuring efficient and scalable smart device management.",
+    techStack: [
+      PROJECT_KEYWORD.REACT,
+      PROJECT_KEYWORD.NEXTJS,
+      PROJECT_KEYWORD.TYPESCRIPT,
+      PROJECT_KEYWORD.MONGODB,
+      PROJECT_KEYWORD.REDUX_TOOLKIT_QUERY,
+      PROJECT_KEYWORD.TAILWINDCSS,
+      PROJECT_KEYWORD.ZOD,
+      PROJECT_KEYWORD.SHADCN_UI,
+      PROJECT_KEYWORD.FRAMER_MOTION,
+    ],
+    banner: "/images/projects/neuronomous.webp",
+    links: [
+      {
+        name: "GitHub",
+        href: "https://github.com/md-rejoyan-islam/SUST_EEE_IOT_CLIENT",
+      },
+      {
+        name: "Preview",
+        href: "https://neuronomous.net",
+      },
+      {
+        name: "Server",
+        href: "https://github.com/md-rejoyan-islam/SUST_EEE_IOT_HUB_API",
+      },
+    ],
+  },
+  {
     id: 1,
     name: "Quiz Master",
     isBest: true,
@@ -39,6 +72,7 @@ export const projects: {
       },
     ],
   },
+
   {
     id: 2,
     name: "Quiz Master API",
