@@ -41,14 +41,7 @@ pipeline {
             steps {
                 script {
                     def envContent = '''
-                        NEXT_PUBLIC_FIREBASE_API_KEY = AIzaSyCNC7SgNVtEFMNOVF299TSvP2Cmagf4vto
-                        NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN = portfolio-d96b9.firebaseapp.com
-                        NEXT_PUBLIC_FIREBASE_PROJECT_ID = portfolio-d96b9
-                        NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET = portfolio-d96b9.firebasestorage.app
-                        NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID = 498240279077
-                        NEXT_PUBLIC_FIREBASE_APP_ID = 1:498240279077:web:70496acd3063c0d84325cc
-
-                        NEXT_PUBLIC_API_KEY = "rejoyan001468"
+                        env file
                         '''
                     writeFile file: "${WORKSPACE}/.env", text: envContent
                     echo '✅ .env file generated'
