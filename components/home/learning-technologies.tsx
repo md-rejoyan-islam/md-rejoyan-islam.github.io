@@ -5,32 +5,33 @@ import { HomeSubtittle, HomeTittle } from "./home-page-tittle-subtitle";
 import Image from "next/image";
 
 const technologies = [
-  { name: "HTML", icon: "/icons/html.webp" },
-  { name: "CSS", icon: "/icons/css.webp" },
+  // { name: "HTML", icon: "/icons/html.webp" },
+  // { name: "CSS", icon: "/icons/css.webp" },
   { name: "TailwindCSS", icon: "/icons/tailwind.webp" },
   { name: "JavaScript", icon: "/icons/js.webp" },
+  { name: "TypeScript", icon: "/icons/typescript.webp" },
   { name: "React", icon: "/icons/react.webp" },
   { name: "Next.js", icon: "/icons/nextjs.webp" },
-  { name: "Prisma", icon: "/icons/prisma.webp" },
-  { name: "GraphQL", icon: "/icons/graphql.webp" },
-  { name: "TypeScript", icon: "/icons/typescript.webp" },
-  { name: "Vitest", icon: "/icons/vitest.webp" },
-  { name: "MongoDB", icon: "/icons/mongodb.webp" },
   { name: "Express", icon: "/icons/expressjs.webp" },
-  { name: "Firebase", icon: "/icons/firebase.webp" },
-  { name: "Python", icon: "/icons/python.webp" },
+  { name: "Prisma", icon: "/icons/prisma.webp" },
+  { name: "MongoDB", icon: "/icons/mongodb.webp" },
+  { name: "Docker", icon: "/icons/docker.webp" },
+  { name: "Linux", icon: "/icons/linux.webp" },
   { name: "Redux", icon: "/icons/redux.webp" },
   { name: "Git", icon: "/icons/git.webp" },
-  { name: "Docker", icon: "/icons/docker.webp" },
+  { name: "GitHub", icon: "/icons/github.webp" },
+  { name: "Jenkins", icon: "/icons/jenkins.webp" },
   { name: "MySQL", icon: "/icons/mysql.webp" },
   { name: "Sequelize", icon: "/icons/sequelize.webp" },
-  { name: "GitHub", icon: "/icons/github.webp" },
-  { name: "Numpy", icon: "/icons/numpy.webp" },
-  { name: "Pandas", icon: "/icons/pandas.webp" },
-  { name: "Node", icon: "/icons/node.webp" },
-  { name: "Bootstrap", icon: "/icons/bootstrap.webp" },
-  { name: "Linux", icon: "/icons/linux.webp" },
+  { name: "Vitest", icon: "/icons/vitest.webp" },
   { name: "Nginx", icon: "/icons/nginx.webp" },
+  { name: "GraphQL", icon: "/icons/graphql.webp" },
+  { name: "Python", icon: "/icons/python.webp" },
+  { name: "Firebase", icon: "/icons/firebase.webp" },
+  // { name: "Numpy", icon: "/icons/numpy.webp" },
+  // { name: "Pandas", icon: "/icons/pandas.webp" },
+  // { name: "Node", icon: "/icons/node.webp" },
+  { name: "Bootstrap", icon: "/icons/bootstrap.webp" },
 ];
 
 export default function LearningTechnologies() {
@@ -51,7 +52,7 @@ export default function LearningTechnologies() {
           <HomeSubtittle label="Here are the technologies and tools I specialize in to build seamless digital experiences." />
         </div>
 
-        <div className="grid grid-cols-3   sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4">
+        <div className="grid grid-cols-3   sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 pb-1 xl:grid-cols-8 gap-4">
           {technologies.map((tech, index) => (
             <motion.div
               key={tech.name}

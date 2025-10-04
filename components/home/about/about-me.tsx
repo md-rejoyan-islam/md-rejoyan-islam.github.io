@@ -59,24 +59,29 @@ export function AboutMe() {
 
   const experiences = [
     {
-      title: "Junior Front Developer",
-      company: "Self-Employed",
-      period: "2022 - Present",
+      title: "Ecommerce Website Maintainer",
+      company: "charglife.com",
+      period: "July 2025 - Present",
     },
     {
-      title: "Junior Backend Developer",
-      company: "Self-Employed",
-      period: "2023 - Present",
+      title: "VPS Server Configurator & Maintainer",
+      company: "Sust EEE Society",
+      period: "June 2025 - Present",
+    },
+    {
+      title: "Research Assistant - Dr. Md Rasedujjaman",
+      company: "SUST, Dept. of EEE",
+      period: "January 2025 - Present",
     },
     {
       title: "Vice President",
       company: "KIN,A Volunteer Organization, SUST",
-      period: "2024 - Present",
+      period: "March 2024 - May 2025",
     },
     {
       title: "Web Secretary",
       company: "KIN,A Volunteer Organization, SUST",
-      period: "2023 - 2024",
+      period: "January 2023 - March 2024",
     },
   ];
 
@@ -84,7 +89,7 @@ export function AboutMe() {
     {
       degree: "Bachelor of Science in Electrical and Electronic Engineering",
       school: "Shahjalal University of Science and Technology, Sylhet",
-      year: "2020 - Present",
+      year: "2020 - 2026",
     },
     {
       degree: "Higher Secondary Certificate",
