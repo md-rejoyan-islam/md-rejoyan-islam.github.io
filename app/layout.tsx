@@ -23,6 +23,11 @@ export const metadata: Metadata = {
   title: "Rejoyan | Full Stack Developer",
   description:
     "I am md rejoyan islam, a full stack developer, mern stack developer, next.js expert, python data analyst. I create beautiful and functional web applications.",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -39,6 +44,38 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: {
+    canonical: "https://rejoyan.me",
+  },
+  authors: [
+    {
+      name: "Md Rejoyan Islam",
+      url: "https://rejoyan.me",
+    },
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  creator: "Md Rejoyan Islam",
+  keywords: [
+    "Rejoyan",
+    "Rejoyan Islam",
+    "Md Rejoyan Islam",
+    "Full Stack Developer",
+    "MERN Stack Developer",
+    "Next.js Developer",
+    "Portfolio",
+    "Software Engineer",
+    "Web Developer",
+  ],
 };
 
 export default function RootLayout({
