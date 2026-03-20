@@ -51,7 +51,7 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
 USER nextjs
 
-EXPOSE 3000
+EXPOSE 4000
 
 # server.js is created by next build from the standalone output
 CMD ["node", "server.js"]
