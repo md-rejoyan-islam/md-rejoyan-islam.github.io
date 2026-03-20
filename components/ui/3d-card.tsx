@@ -112,6 +112,7 @@ interface CardItemProps {
   rotateX?: number;
   rotateY?: number;
   rotateZ?: number;
+  [key: string]: any;
 }
 
 export const CardItem: React.FC<CardItemProps> = ({

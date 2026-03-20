@@ -1,10 +1,38 @@
 import BackButton from "@/components/back-button";
 import { Home } from "lucide-react";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "404 - Page Not Found | Rejoyan",
+  description: "The page you are looking for does not exist or has been moved.",
+  openGraph: {
+    title: "404 - Page Not Found | Rejoyan",
+    description: "The page you are looking for does not exist or has been moved.",
+    url: "https://rejoyan.me/",
+    siteName: "Rejoyan",
+    images: [
+      {
+        url: "https://md-rejoyan-islam.github.io/images/rejoyan.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Md Rejoyan Islam 404",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "404 - Page Not Found | Rejoyan",
+    description: "The page you are looking for does not exist or has been moved.",
+    images: ["https://md-rejoyan-islam.github.io/images/rejoyan.jpeg"],
+  },
+};
 
 export default function NotFound() {
   return (
-    <div className="min-h-[calc(100vh-160px)] w-full bg-background flex items-center justify-center p-4">
+    <div className="md:min-h-[calc(100vh-69px)] min-h-[calc(100vh-80px)] w-full bg-background flex items-center justify-center p-4">
       <div className="w-full max-w-md mx-auto text-center space-y-8">
         {/* 404 Text */}
         <div className="relative">
@@ -35,12 +63,6 @@ export default function NotFound() {
             Back to Home
           </Link>
           <BackButton />
-        </div>
-
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse-slow" />
-          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl animate-pulse-slow delay-300" />
         </div>
       </div>
     </div>

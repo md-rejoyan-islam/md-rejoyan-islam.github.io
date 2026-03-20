@@ -1,12 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
 import { HomeSubtittle, HomeTittle } from "./home-page-tittle-subtitle";
-
 import Image from "next/image";
 
 const technologies = [
-  // { name: "HTML", icon: "/icons/html.webp" },
-  // { name: "CSS", icon: "/icons/css.webp" },
   { name: "TailwindCSS", icon: "/icons/tailwind.webp" },
   { name: "JavaScript", icon: "/icons/js.webp" },
   { name: "TypeScript", icon: "/icons/typescript.webp" },
@@ -28,75 +25,62 @@ const technologies = [
   { name: "GraphQL", icon: "/icons/graphql.webp" },
   { name: "Python", icon: "/icons/python.webp" },
   { name: "Firebase", icon: "/icons/firebase.webp" },
-  // { name: "Numpy", icon: "/icons/numpy.webp" },
-  // { name: "Pandas", icon: "/icons/pandas.webp" },
-  // { name: "Node", icon: "/icons/node.webp" },
   { name: "Bootstrap", icon: "/icons/bootstrap.webp" },
 ];
 
 export default function LearningTechnologies() {
   return (
-    <div className="bg-gradient-to-br w-full  group/main     relative from-blue-50 to-indigo-50 py-20 dark:from-[#03081c]/50 dark:to-[#03081c]/50 ">
-      {/* background image  */}
+    <section className="section-padding relative overflow-hidden bg-white dark:bg-transparent">
+      {/* Background decoration */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-indigo-500/5 via-purple-500/5 to-pink-500/5 rounded-full blur-3xl" />
 
-      <div className="absolute  w-1/2   -right-1/4 opacity-50 inset-y-0  h-full flex items-center justify-center">
-        <div className="w-[350px] h-[350px] opacity-50 bg-no-repeat dark:bg-[url('/images/setting_dark.svg')] bg-[url('/images/setting.svg')] bg-contain bg-center origin-center animate-[spin_6s_linear_infinite]"></div>
-      </div>
-      <div className="absolute  w-1/2   -left-1/4 inset-y-0 opacity-50  h-full   flex items-center justify-center">
-        <div className="w-[350px] h-[350px] opacity-50 bg-no-repeat dark:bg-[url('/images/setting_dark.svg')] bg-[url('/images/setting.svg')] bg-contain bg-center origin-center animate-[spin_6s_linear_infinite]"></div>
-      </div>
+      <div className="max-w-7xl mx-auto relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-6 sm:mb-12 space-y-2 sm:space-y-4"
+        >
+          <HomeTittle label="Tech Stack" />
+          <HomeSubtittle label="Technologies and tools I use to build seamless digital experiences" />
+        </motion.div>
 
-      <div className="space-y-8 max-w-7xl mx-auto overflow-hidden   px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-4 relative z-[1000]">
-          <HomeTittle label="My Tech Stack" />
-          <HomeSubtittle label="Here are the technologies and tools I specialize in to build seamless digital experiences." />
-        </div>
-
-        <div className="grid grid-cols-3   sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 pb-1 xl:grid-cols-8 gap-4">
+        <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-2 sm:gap-4">
           {technologies.map((tech, index) => (
             <motion.div
               key={tech.name}
-              initial={{ opacity: 0, y: 20 }}
-              // animate={{ opacity: 1, y: 0 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{
-                scale: 1.05,
-                transition: { duration: 0.1, delay: 0 },
-              }}
+              initial={{ opacity: 0, y: 20, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              className="group relative overflow-hidden cursor-grab  rounded-xl "
+              transition={{
+                delay: index * 0.05,
+                duration: 0.4,
+                ease: "easeOut"
+              }}
+              whileHover={{ scale: 1.1, y: -5 }}
+              className="group"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              {/* hover:border-[var(--primary-button)] dark:hover:border-[#0d7ded6d]  */}
-              <div className="relative bg-white dark:bg-[#111832]/60 rounded-xl p-6 shadow-lg backdrop-blur-sm border border-[#bedffd]  dark:border-[#211c48]  transition-all duration-300 ">
-                <div className="text-center space-y-3">
-                  <div className="text-3xl">
+              <div className="premium-card p-2 sm:p-4 text-center">
+                <div className="relative z-10">
+                  <div className="w-8 h-8 sm:w-12 sm:h-12 mx-auto mb-1 sm:mb-3 rounded-lg sm:rounded-xl bg-slate-100 dark:bg-slate-800/80 p-1.5 sm:p-2.5 group-hover:bg-indigo-100 dark:group-hover:bg-indigo-500/20 transition-all duration-300">
                     <Image
                       src={tech.icon}
                       alt={tech.name}
-                      width={60}
-                      height={60}
-                      className="mx-auto object-contain p-1.5 sm:p-2 bg-gray-500/10 dark:bg-green-500/10 rounded-md w-12 sm:w-[50px] h-12  sm:h-[50px] "
+                      width={28}
+                      height={28}
+                      className="w-full h-full object-contain"
                     />
                   </div>
-                  <h3 className="font-medium text-sm sm:text-[15px] text-[#292875] dark:text-white/80">
+                  <h3 className="text-[8px] sm:text-xs font-medium text-slate-700 dark:text-slate-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                     {tech.name}
                   </h3>
                 </div>
-              </div>
-              <div className="absolute  hidden  group-hover/main:flex rounded-xl -translate-y-full group-hover:translate-y-0 inset-0 transition-all duration-500   items-center justify-center w-full h-full z-50 ">
-                <Image
-                  src={tech.icon}
-                  alt={tech.name}
-                  fill
-                  className="mx-auto  rounded-xl  bg-white dark:bg-[#111832] p-8  border border-[#bedffd] hover:border-[var(--primary-button)]  dark:border-[#211c48] dark:hover:border-[#0d7ded51]"
-                />
               </div>
             </motion.div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -22,6 +22,7 @@ export const LinkPreview = ({
   layout = "fixed",
   isStatic = false,
   imageSrc = "",
+  ariaLabel,
 }: {
   children: React.ReactNode;
   url: string;
@@ -32,6 +33,7 @@ export const LinkPreview = ({
   layout?: "fixed" | "responsive";
   isStatic?: boolean;
   imageSrc?: string;
+  ariaLabel?: string;
 }) => {
   let src;
   if (!isStatic) {
@@ -99,6 +101,7 @@ export const LinkPreview = ({
           onMouseMove={handleMouseMove}
           className={cn("text-black dark:text-white", className)}
           href={url}
+          aria-label={ariaLabel}
         >
           {children}
         </HoverCardPrimitive.Trigger>
@@ -134,6 +137,7 @@ export const LinkPreview = ({
                   className="block p-1 dark:bg-green-200/30 bg-slate-300/30 border-2 border-transparent shadow rounded-xl hover:border-neutral-200 dark:hover:border-neutral-800"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Preview of ${url}`}
                   style={{ fontSize: 0 }}
                 >
                   <Image

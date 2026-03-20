@@ -55,8 +55,8 @@ export default function ThemeSwitch() {
   return (
     <div ref={ref} className="relative inline-block text-left">
       <HoverTooltip title="Change Theme">
-        <a
-          href="#"
+        <button
+          type="button"
           aria-label="Theme Changer Button"
           className=" hover:bg-[var(--primary-button)] text-[var(--primary-button)] hover:text-white hover:border-[var(--primary-button)] border border-[#b4dafc] dark:border-[#253359] dark:hover:border-transparent  h-8 w-8  hover:gap-4 transition-all rounded-xl   justify-center flex gap-2 items-center   "
           onClick={toggleDropdown}
@@ -66,7 +66,7 @@ export default function ThemeSwitch() {
               return themeItem.icon;
             }
           })}
-        </a>
+        </button>
       </HoverTooltip>
 
       {isOpen && (

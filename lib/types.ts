@@ -61,4 +61,5 @@ export enum PROJECT_KEYWORD {
   ZOD = "Zod",
   SWAGGER = "Swagger",
   POSTGRESQL = "PostgreSQL",
+  N8N = "n8n",
 }

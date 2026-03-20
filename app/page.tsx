@@ -11,7 +11,31 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Rejoyan | Full Stack Developer",
   description:
-    "I am md rejoyan islam, a full stack developer, mern stack developer, next.js expert, python data analyst. I create beautiful and functional web applications.",
+    "I am Md Rejoyan Islam, a professional full-stack developer, MERN stack enthusiast, Next.js expert, and data analyst. I create beautiful, functional, and scalable web applications.",
+  openGraph: {
+    title: "Rejoyan | Full Stack Developer",
+    description:
+      "Professional full-stack developer portfolio. I create beautiful, functional, and highly scalable web applications.",
+    url: "https://rejoyan.me/",
+    siteName: "Rejoyan",
+    images: [
+      {
+        url: "https://md-rejoyan-islam.github.io/images/rejoyan.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Md Rejoyan Islam Home",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rejoyan | Full Stack Developer",
+    description:
+      "Professional full-stack developer portfolio. I create beautiful, functional, and highly scalable web applications.",
+    images: ["https://md-rejoyan-islam.github.io/images/rejoyan.jpeg"],
+  },
 };
 
 export default function Home() {

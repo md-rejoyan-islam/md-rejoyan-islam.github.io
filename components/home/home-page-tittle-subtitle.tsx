@@ -1,3 +1,4 @@
+"use client";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 
@@ -9,18 +10,20 @@ export function HomeTittle({
   readonly className?: string;
 }) {
   return (
-    <motion.h2
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className={clsx(
-        "text-3xl md:text-4xl font-bold text-[var(--primary-button)]",
-        className
-      )}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className={clsx("text-center", className)}
     >
-      {label}
-    </motion.h2>
+      <h2 className="text-xl sm:text-3xl md:text-5xl font-bold tracking-tight text-indigo-600 dark:text-white">
+        {label}
+      </h2>
+    </motion.div>
   );
 }
+
 export function HomeSubtittle({
   label,
   className,
@@ -29,10 +32,17 @@ export function HomeSubtittle({
   readonly className?: string;
 }) {
   return (
-    <p
-      className={clsx("text-gray-600 dark:text-text-secondary px-4", className)}
+    <motion.p
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: 0.1 }}
+      className={clsx(
+        "text-slate-600 dark:text-slate-400 text-[10px] sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed px-4",
+        className
+      )}
     >
       {label}
-    </p>
+    </motion.p>
   );
 }

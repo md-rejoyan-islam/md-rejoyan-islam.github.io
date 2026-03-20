@@ -10,6 +10,7 @@ export const blogs = [
     time: "6 min",
     image:
       "https://cdn.hashnode.com/res/hashnode/image/upload/v1751378203089/e144d397-ee76-4bcf-b45a-6443c513f0ba.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp",
+    tags: ["Zod", "TypeScript", "Validation", "Schema", "Type Safety"],
     host: {
       name: "Hashnode",
       link: "https://rejoyan.hashnode.dev/zod-mastery-guide-the-complete-beginner-to-expert-handbook",
@@ -26,6 +27,7 @@ export const blogs = [
     time: "7 min",
     image:
       "https://cdn.hashnode.com/res/hashnode/image/upload/v1746940406586/2eac2f32-8447-4815-8819-e0c66a421baf.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp",
+    tags: ["YAML", "Configuration", "Data Serialization", "DevOps", "Beginner"],
     host: {
       name: "Hashnode",
       link: "https://rejoyan.hashnode.dev/yaml-a-beginner-friendly-guide",
@@ -43,6 +45,7 @@ export const blogs = [
     time: "4 min",
     image:
       "https://cdn.hashnode.com/res/hashnode/image/upload/v1729791040052/124a1ab9-a181-4a2b-95fd-ec6e22bb45ef.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp",
+    tags: ["JSON", "JavaScript", "API", "Data Format", "Web Development"],
     host: {
       name: "Hashnode",
       link: "https://rejoyan.hashnode.dev/unlocking-the-power-of-json-tips-and-tricks-for-developers",
@@ -60,6 +63,7 @@ export const blogs = [
     time: "4 min",
     image:
       "https://cdn.hashnode.com/res/hashnode/image/upload/v1727973572150/c0afef41-a2ab-4c60-a6a9-5ac1b0091b6d.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp",
+    tags: ["CLI", "Terminal", "Git Bash", "PowerShell", "CMD", "Developer Tools"],
     host: {
       name: "FreeCodeCamp",
       link: "https://rejoyan.hashnode.dev/top-command-line-commands-every-cmd-git-bash-and-powershell-user-should-know",
@@ -77,6 +81,7 @@ export const blogs = [
     time: "4 min",
     image:
       "https://cdn.hashnode.com/res/hashnode/image/upload/v1726353770032/d8b506ad-8352-4db8-8b96-ac8b3e0a4ff9.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp",
+    tags: ["Next.js", "Deployment", "cPanel", "Node.js", "SSR", "Web Hosting"],
     host: {
       name: "FreeCodeCamp",
       link: "https://rejoyan.hashnode.dev/how-to-deploy-a-nextjs-app-router-project-on-nodejs-supported-cpanel",

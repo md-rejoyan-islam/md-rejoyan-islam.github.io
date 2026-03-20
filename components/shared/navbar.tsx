@@ -1,48 +1,25 @@
 "use client";
-import useDropDownPopupControl from "@/hooks/use-drop_down_popup_control";
+
 import clsx from "clsx";
 import { motion, stagger, useAnimate } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { FaGithub } from "react-icons/fa";
-import { RiMenu3Line } from "react-icons/ri";
-import { HomeIcon } from "../svg";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import ThemeSwitch from "../theme/theme-switch";
-import HoverTooltip from "../tooltip";
 
 export default function Navbar() {
   const links = [
-    {
-      name: "Home",
-      href: "/",
-      active: true,
-    },
-    {
-      name: "About",
-      href: "/about",
-      active: false,
-    },
-    {
-      name: "Projects",
-      href: "/projects",
-      active: false,
-    },
-    {
-      name: "Blogs",
-      href: "/blogs",
-      active: false,
-    },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Projects", href: "/projects" },
+    { name: "Blogs", href: "/blogs" },
   ];
 
-  const { isOpen, toggleMenu, dropDownRef } = useDropDownPopupControl();
-
   const pathname = usePathname();
-
   const [scope, animate] = useAnimate();
   const staggerList = stagger(0.1, { startDelay: 0 });
-
   const [scrollHeight, setScrollHeight] = useState(0);
 
   useEffect(() => {
@@ -58,115 +35,107 @@ export default function Navbar() {
     animate(
       "li",
       { opacity: 1, scale: 1, x: 0 },
-      {
-        duration: 0.2,
-        delay: staggerList,
-      }
+      { duration: 0.2, delay: staggerList }
     );
   }, [staggerList, animate]);
 
   return (
     <header
       className={clsx(
-        "text-[var(--primary-text)] hidden md:block dark:text-[#aeaecc] w-[100%]  z-[1000]  h-[60px] sticky top-0 md:top-1 transition-all duration-700   left-0  mx-auto border-b  px-4 bg-white dark:bg-[#061024] md:bg-transparent    dark:border-[#253359]/40 ",
-
-        scrollHeight > 60 &&
-          "md:w-[75%] rounded-md md:border-none bg-transparent "
+        "fixed top-0 left-0 right-0 z-[1000] transition-all duration-500",
+        "hidden md:block",
+        scrollHeight > 50 ? "py-2" : "py-4"
       )}
     >
       <div
         className={clsx(
-          scrollHeight >= 60
-            ? "h-[60px]  delay-500 transition-all duration-500 hidden md:block   -z-10 backdrop-blur-md absolute right-0 mx-auto top-0 left-0 bg-[#e0f3fd]/70 dark:bg-[#19193d]/50 border border-[#c8ebfe] dark:border-[#253359]/70 rounded-md "
-            : "hidden",
-          scrollHeight < 60 && "bg-white"
+          "max-w-6xl mx-auto rounded-2xl transition-all duration-500",
+          scrollHeight > 50
+            ? "bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl  shadow-lg shadow-slate-200/50 dark:shadow-none border border-slate-200/50 dark:border-slate-700/50"
+            : "bg-transparent"
         )}
-      ></div>
-      <div
-        className="flex items-center justify-between   h-full max-w-7xl mx-auto"
-        id="up-btn"
       >
-        <div className="h-full flex items-center">
-          {/* for medium and large screens  */}
+        <div className="flex items-center justify-between h-14 px-6">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2 group">
+            <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-[2px] overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 animate-gradient-x opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="relative w-full h-full bg-white dark:bg-slate-900 rounded-[10px] flex items-center justify-center">
+                <Image src={"/code.png"} width={24} height={24} alt="logo" />
+              </div>
+            </div>
+            <span className="font-bold text-lg gradient-text hidden sm:block">
+              Rejoyan
+            </span>
+          </Link>
+
+          {/* Navigation Links */}
           <nav className="h-full">
-            <ul
-              className="hidden md:flex font-semibold text-sm  h-full gap-8 justify-center items-center"
-              ref={scope}
-            >
-              <motion.li style={{ opacity: 0, scale: 0.3, x: -50 }}>
-                <Link href="/" aria-label="Home">
-                  <HomeIcon />
-                </Link>
-              </motion.li>
+            <ul className="flex items-center gap-1 h-full" ref={scope}>
               {links.map((link) => (
                 <motion.li
-                  className={`${
-                    pathname === link.href
-                      ? "text-[var(--primary-button)] "
-                      : ""
-                  } hover:text-[var(--primary-button)]   group h-full flex items-center`}
                   key={link.href}
                   style={{ opacity: 0, scale: 0.3, x: -50 }}
+                  className="h-full flex items-center"
                 >
-                  <div className="relative overflow-hidden  h-full flex items-center px-0">
-                    <Link href={link.href} className="relative z-10">
-                      {link.name}
-                    </Link>
-                    {pathname === link.href && (
-                      <span className="absolute inset-0 border-b-2 border-[var(--primary-button)] transform -translate-x-full transition-transform duration-300 ease-in-out group-hover:translate-x-0 translate-x-0"></span>
+                  <Link
+                    href={link.href}
+                    aria-label={link.name}
+                    className={clsx(
+                      "relative px-4 py-2 text-sm font-medium transition-colors duration-300 rounded-lg",
+                      pathname === link.href
+                        ? "text-indigo-600 dark:text-indigo-400"
+                        : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
                     )}
-                  </div>
+                  >
+                    {link.name}
+                    {pathname === link.href && (
+                      <motion.span
+                        layoutId="activeNav"
+                        className="absolute inset-0 bg-indigo-50 dark:bg-indigo-500/10 rounded-lg -z-10"
+                        transition={{
+                          type: "spring",
+                          stiffness: 380,
+                          damping: 30,
+                        }}
+                      />
+                    )}
+                  </Link>
                 </motion.li>
               ))}
             </ul>
           </nav>
-          <Link href="/" className="md:hidden" aria-label="Home">
-            <Image src={"/code.png"} width={40} height={40} alt="code" />
-          </Link>
-        </div>
-        <div className="flex gap-3 items-center">
-          <Link href={"https://github.com/md-rejoyan-islam"} target="_blank">
-            <HoverTooltip title="GitHub">
-              <div className="h-8 w-8 flex items-center justify-center rounded-xl border  hover:bg-[var(--primary-button)] text-[var(--primary-button)] hover:text-white hover:border-[var(--primary-button)] dark:hover:border-transparent border-[#b4dafc] dark:border-[#253359] transition-all">
-                <FaGithub className="w-4 h-4 " />
-              </div>
-            </HoverTooltip>
-          </Link>
-          <ThemeSwitch />
 
-          <button
-            onClick={toggleMenu}
-            ref={dropDownRef}
-            className="md:hidden"
-            aria-label="Toggle Menu"
-          >
-            <RiMenu3Line className="text-3xl  rounded-md border p-[5px]   hover:bg-[var(--primary-button)] text-[var(--primary-button)] hover:text-white hover:border-[var(--primary-button)] dark:hover:border-transparent border-[#b4dafc] dark:border-[#253359] transition-all  " />
-          </button>
+          {/* Right Side */}
+          <div className="flex items-center gap-3">
+            {/* Social Links */}
+            <div className="hidden sm:flex items-center gap-2">
+              <Link
+                href="https://github.com/md-rejoyan-islam"
+                target="_blank"
+                aria-label="GitHub Profile"
+                className="w-9 h-9 rounded-xl flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300"
+              >
+                <FaGithub className="w-5 h-5" />
+              </Link>
+              <Link
+                href="https://linkedin.com/in/md-rejoyan-islam"
+                target="_blank"
+                aria-label="LinkedIn Profile"
+                className="w-9 h-9 rounded-xl flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300"
+              >
+                <FaLinkedinIn className="w-5 h-5" />
+              </Link>
+            </div>
+
+            {/* Divider */}
+            <div className="hidden sm:block w-px h-6 bg-slate-200 dark:bg-slate-700" />
+
+            {/* Theme Switch */}
+            <ThemeSwitch />
+          </div>
         </div>
       </div>
-      {isOpen && (
-        <div className="bg-white dark:bg-[#0d1533]  absolute top-16 right-3.5 border border-[#0d79ed29] shadow-lg md:hidden  w-[200px] rounded-md">
-          <ul className="flex flex-col  p-5 gap-1">
-            {links.map((link) => (
-              <li key={link.href} className="block group">
-                <Link
-                  href={link.href}
-                  className={clsx(
-                    "group flex cursor-pointer items-center gap-2 rounded-xl p-2 transition-all duration-200 hover:bg-[#f9fafb] dark:hover:bg-[#161c40a6] dark:hover:text-white",
-                    pathname === link.href &&
-                      "bg-[#f9fafb] dark:bg-[#161c40a6] dark:text-white"
-                  )}
-                >
-                  {/* <TiHomeOutline className="text-xl text-[#0d78ed]" /> */}
-                  <span className="text-body-4 font-medium capitalize text-metal-600 group-hover:text-[#1c222b] dark:group-hover:text-white/80">
-                    {link.name}
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
     </header>
   );
 }

@@ -1,11 +1,13 @@
-import ScrollToTopButton from "@/components/scroll-to-top-button";
 import Footer from "@/components/shared/footer";
+import { GlobalBackground } from "@/components/shared/global-background";
+import MobileBottomMenu from "@/components/shared/mobile-bottom-menu";
 import Navbar from "@/components/shared/navbar";
+import ScrollToTopButton from "@/components/shared/scroll-to-top-button";
 import Socials from "@/components/shared/socials";
 import { ThemeProvider } from "@/components/theme/theme-provider";
-import { Toaster } from "@/components/ui/toaster";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -95,13 +97,26 @@ export default function RootLayout({
           defaultTheme="light"
           themes={["light", "dark"]}
         >
+          <GlobalBackground />
           <Navbar />
-          <main className="">{children}</main>
-          <Toaster />
+          <main className="relative z-10 pb-20 md:pb-0">{children}</main>
+          <Toaster 
+            richColors
+            toastOptions={{
+              closeButton: true,
+             classNames:{
+              toast:"bg-bg-main text-text-main border border-border-main",
+              error:"!bg-red-500 !text-white !border-red-600",
+              success:"!bg-green-500 !text-white !border-green-600",
+              warning:"!bg-yellow-500 !text-white !border-yellow-600",
+              info:"!bg-blue-500 !text-white !border-blue-600",
+             }
+           }}
+          />
           <Socials direction="col" position="fixed" />
           <ScrollToTopButton />
           <Footer />
-          {/* <MobileBottomMenu /> */}
+          <MobileBottomMenu />
         </ThemeProvider>
       </body>
     </html>

@@ -15,7 +15,7 @@ export default function HoverTooltip({
   return (
     <TooltipProvider>
       <Tooltip>
-        <TooltipTrigger aria-label="GitHub Icon">{children}</TooltipTrigger>
+        <TooltipTrigger asChild aria-label="GitHub Icon">{children}</TooltipTrigger>
         <TooltipContent className="z-[1000]">
           <p>{title}</p>
         </TooltipContent>

@@ -689,4 +689,7 @@ export const filterKeys = [
   {
     name: "API",
   },
+  {
+    name: "N8N",
+  },
 ];

@@ -1,77 +1,72 @@
 "use client";
 import { blogs } from "@/data/blogs";
-import { motion, stagger, useAnimate } from "framer-motion";
-import { useEffect } from "react";
-
+import { motion } from "framer-motion";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import BlogCard from "../blogs/BlogCard";
+import { HomeSubtittle, HomeTittle } from "./home-page-tittle-subtitle";
 
 interface Blog {
   id: number;
-  host: { link: string };
+  host: { link: string; name: string };
   title: string;
   image: string;
   description: string;
   date: string;
   time: string;
+  tags?: string[];
 }
 
 export default function ShowcaseBlogs() {
-  const [blogScope, BlogAnimate] = useAnimate();
-  const blogStaggerList = stagger(0.2, { startDelay: 1.3 });
-
-  useEffect(() => {
-    BlogAnimate(
-      "article",
-      { opacity: 1, scale: 1, x: 0 },
-      {
-        duration: 0.2,
-        delay: blogStaggerList,
-      }
-    );
-  }, [blogStaggerList, BlogAnimate]);
-
   return (
-    <div className=" my-20 relative">
-      <div className="absolute inset-0 opacity-[0.1] -z-10  dark:opacity-5 w-full h-full">
-        <div className=" bg-[url('/images/blogging.png')] w-full h-full bg-contain bg-center bg-no-repeat"></div>
-      </div>
-      <section className=" max-w-7xl mx-auto px-4   bg-white dark:bg-transparent    bg-opacity-90">
-        <div className="flex justify-between items-center text-center w-full">
-          <div className="mx-auto ">
-            <h2 className="font-incognito text-text-root   pb-4 text-[var(--primary-button)] text-4xl font-semibold tracking-tight">
-              My Blogs
-            </h2>
-            <p className="max-w-xl mx-auto  text-gray-600">
-              I write about web development, programming, and technology. Here
-              are some of my recent blogs.
-              <Link
-                href="/blogs"
-                className=" underline text-[var(--primary-button)] ml-2"
-              >
-                Read more my blogs
-              </Link>
-            </p>
-          </div>
+    <section className="section-padding relative overflow-hidden bg-slate-50/80 dark:bg-transparent">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-orange-500/5 to-pink-500/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-full blur-3xl" />
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-6 sm:mb-12 space-y-2 sm:space-y-4"
+        >
+          <HomeTittle label="Latest Blogs" />
+          <HomeSubtittle label="I write about web development, programming, and technology insights" />
+        </motion.div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 mb-6 sm:mb-10">
+          {blogs?.slice(0, 3).map((blog: Blog, index: number) => (
+            <motion.div
+              key={blog.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+            >
+              <BlogCard blog={blog} />
+            </motion.div>
+          ))}
         </div>
 
+        {/* View All Link */}
         <motion.div
-          className="py-10 gap-y-12 gap-x-7 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3"
-          ref={blogScope}
-          transition={{ delay: 1.3 }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="text-center"
         >
-          {blogs?.slice(0, 3).map((blog: Blog) => (
-            <motion.article
-              key={blog.id}
-              style={{ opacity: 0, scale: 0.3, x: -50 }}
-            >
-              <BlogCard blog={blog} key={blog.id} />
-            </motion.article>
-          ))}
+          <Link
+            href="/blogs"
+            className="inline-flex items-center gap-1.5 sm:gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-lg sm:rounded-xl font-semibold text-[10px] sm:text-base text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-500/10 hover:bg-indigo-100 dark:hover:bg-indigo-500/20 transition-colors"
+          >
+            Read All Blogs
+            <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+          </Link>
         </motion.div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }

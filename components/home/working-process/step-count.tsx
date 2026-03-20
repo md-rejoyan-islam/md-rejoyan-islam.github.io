@@ -44,7 +44,7 @@ export function StepContent({ step, direction, processes }: StepContentProps) {
       }}
       className="absolute w-full"
     >
-      <div className="space-y-6">
+      <div className="space-y-3 sm:space-y-6">
         <motion.div
           initial={{ scale: 0.8 }}
           animate={{ scale: 1 }}
@@ -57,7 +57,7 @@ export function StepContent({ step, direction, processes }: StepContentProps) {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.1 }}
-          className="text-3xl font-bold text-center text-gray-800 dark:text-white/80"
+          className="text-lg sm:text-3xl font-bold text-center text-gray-800 dark:text-white/80"
         >
           {content.title}
         </motion.h2>
@@ -65,7 +65,7 @@ export function StepContent({ step, direction, processes }: StepContentProps) {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="text-gray-600 text-center max-w-2xl mx-auto dark:text-text-secondary"
+          className="text-gray-600 text-center max-w-2xl mx-auto dark:text-text-secondary text-[10px] sm:text-base px-2"
         >
           {content.sort_description}
         </motion.p>

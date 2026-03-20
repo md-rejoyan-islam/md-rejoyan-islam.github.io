@@ -17,16 +17,16 @@ export default function ProcessCard({
     <Card className="h-full border-[#c7e4fe] dark:backdrop-blur-[1.5px] dark:border-[#1c2453] dark:bg-[#101531]/60  ">
       <button
         aria-label={`Step ${index + 1} - ${data.title}`}
-        className={`relative block w-full h-full overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg p-6 rounded-md ${
+        className={`relative block w-full h-full overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg p-3 sm:p-6 rounded-md ${
           step === index
             ? " border-l-4 border-l-[var(--primary-button)]"
             : "hover:border-l-4  hover:border-l-[var(--primary-button)]"
         }`}
         onClick={() => handleTabClick(index)}
       >
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-4">
           <span
-            className={` flex min-h-8 min-w-8 h-8 w-8 items-center justify-center rounded-full text-sm font-semibold
+            className={`flex min-h-6 min-w-6 sm:min-h-8 sm:min-w-8 h-6 w-6 sm:h-8 sm:w-8 items-center justify-center rounded-full text-[10px] sm:text-sm font-semibold
                         ${
                           step === index
                             ? "bg-[var(--primary-button)] text-white"
@@ -36,15 +36,15 @@ export default function ProcessCard({
             {index + 1}
           </span>
           <div>
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white/80">
+            <h3 className="text-xs sm:text-xl font-semibold text-gray-900 dark:text-white/80">
               {data.title}
             </h3>
-            <p className="mt-1 text-sm text-gray-500 dark:text-text-secondary">
+            <p className="mt-0.5 sm:mt-1 text-[10px] sm:text-sm text-gray-500 dark:text-text-secondary">
               {data.description}
             </p>
           </div>
         </div>
-        <div className="  h-full absolute left-0 top-0  rounded-sm w-full">
+        <div className="h-full absolute left-0 top-0 rounded-sm w-full">
           <motion.div
             className=" bg-[#63a3f8]/10 rounded-s-xl w-full h-full"
             initial={{ width: "0%" }}

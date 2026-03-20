@@ -4,7 +4,7 @@ import { BookOpen, FolderOpen, Home, Moon, Sun, User } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Button } from "../ui/button";
+import { useEffect, useState } from "react";
 
 const navigationItems = [
   {
@@ -32,40 +32,48 @@ const navigationItems = [
 const MobileBottomMenu = () => {
   const { setTheme, theme } = useTheme();
   const pathname = usePathname();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
-    <div className="md:hidden fixed max-w-[95vw] md:max-w-[90vw] mx-auto bottom-1  z-[1000] left-0 right-0">
-      <nav className="flex items-center bg-white/80 dark:bg-[#061024]/80 rounded-xl   backdrop-blur-sm border border-sky-600/20 z-50 justify-around py-2">
+    <div className="md:hidden fixed max-w-[90vw] mx-auto bottom-2 z-[1000] left-0 right-0">
+      <nav className="flex items-center bg-white/90 dark:bg-slate-900/90 rounded-full backdrop-blur-md border border-slate-200 dark:border-slate-700/50 shadow-lg justify-around py-1.5 px-2">
         {navigationItems.map((item) => {
           const Icon = item.icon;
           return (
             <Link
               href={item.href}
               key={item.name}
-              className={`flex space-y-2 dark:hover:bg-slate-900 rounded-md hover:bg-slate-100 flex-col items-center  h-auto py-1 px-3 ${
+              className={`flex flex-col items-center gap-0.5 py-1 px-2.5 rounded-lg transition-colors ${
                 pathname === item.href
-                  ? "text-blue-600"
-                  : "text-muted-foreground"
+                  ? "text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-500/10"
+                  : "text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300"
               }`}
             >
-              <Icon className="h-5 w-5" />
-              <span className="text-xs font-medium">{item.name}</span>
+              <Icon className="h-4 w-4" />
+              <span className="text-[10px] font-medium">{item.name}</span>
             </Link>
           );
         })}
-        <Button
-          variant="ghost"
-          size="sm"
-          className="flex flex-col items-center h-full  hover:bg-slate-100 dark:hover:bg-slate-900 py-1 px-3 text-muted-foreground"
+        <button
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          aria-label="Toggle Theme"
+          className="flex flex-col items-center gap-0.5 py-1 px-2.5 rounded-lg text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
         >
-          {theme === "dark" ? (
-            <Sun className="h-5 w-5" />
+          {mounted ? (
+            theme === "dark" ? (
+              <Sun className="h-4 w-4" />
+            ) : (
+              <Moon className="h-4 w-4" />
+            )
           ) : (
-            <Moon className="h-5 w-5" />
+            <div className="h-4 w-4" />
           )}
-
-          <span className="text-xs font-medium">Theme</span>
-        </Button>
+          <span className="text-[10px] font-medium">Theme</span>
+        </button>
       </nav>
     </div>
   );

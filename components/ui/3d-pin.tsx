@@ -82,6 +82,7 @@ export const PinPerspective = ({
               url={link?.href || "https://ui.aceternity.com"}
               className="relative cursor-pointer flex space-x-2 items-center  border-[#0d7ded65] text-[#0d7ded] border rounded-md hover:bg-[#0d7ded] hover:text-white py-1.5 px-2.5 "
               key={link.name}
+              ariaLabel={`${link.name} link`}
             >
               {link.name === "GitHub" && <FaGithub />}
               {link.name === "Preview" && <FaExternalLinkAlt />}
