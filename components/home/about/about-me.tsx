@@ -75,7 +75,7 @@ export function AboutMe() {
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 aria-label={tab.label}
-                className={`relative flex items-center gap-1 sm:gap-2 px-3 sm:px-6 py-2 sm:py-2.5 rounded-lg sm:rounded-xl text-[10px] sm:text-sm font-medium transition-all duration-300 ${
+                className={`relative flex items-center gap-1 sm:gap-2 px-3 sm:px-6 py-2 sm:py-2.5 rounded-lg sm:rounded-xl text-[14px] sm:text-sm font-medium transition-all duration-300 ${
                   activeTab === tab.id
                     ? "text-white"
                     : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"

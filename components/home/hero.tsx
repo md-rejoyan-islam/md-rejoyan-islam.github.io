@@ -84,7 +84,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mb-4 sm:mb-6"
           >
-            <p className="text-slate-500 dark:text-slate-400 text-sm sm:text-base mb-2 sm:mb-3 font-medium">
+            <p className="text-slate-500 dark:text-slate-400 text-[16px] sm:text-base mb-2 sm:mb-3 font-medium">
               Hello, I&apos;m
             </p>
             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-1 sm:mb-2">
@@ -101,7 +101,7 @@ export default function Hero() {
           >
             <div className="inline-flex items-center gap-1.5 sm:gap-2">
               <Code2 className="w-4 h-4 sm:w-5 sm:h-5 text-indigo-600 dark:text-indigo-400" />
-              <span className="text-sm sm:text-lg md:text-xl lg:text-2xl font-semibold text-slate-700 dark:text-slate-300">
+              <span className="text-[16px] sm:text-lg md:text-xl lg:text-2xl font-semibold text-slate-700 dark:text-slate-300">
                 <FlipWords
                   words={words}
                   className="text-indigo-600 dark:text-indigo-400"
@@ -115,7 +115,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-6 sm:mb-10 leading-relaxed px-2 sm:px-0"
+            className="text-[16px] sm:text-base md:text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-6 sm:mb-10 leading-relaxed px-2 sm:px-0"
           >
             I build full-stack web apps with MERN & Next.js, uncover insights through Python & Data Science, and automate business workflows with n8n — delivering complete, production-ready solutions.
           </motion.p>
@@ -130,7 +130,7 @@ export default function Hero() {
             {/* View Projects Button */}
             <motion.button
               onClick={() => router.push("#projects")}
-              className="group relative px-5 py-2.5 sm:px-8 sm:py-4 rounded-lg sm:rounded-xl font-bold text-sm sm:text-base overflow-hidden animate-pulse-glow"
+              className="group relative px-5 py-2.5 sm:px-8 sm:py-4 rounded-lg sm:rounded-xl font-bold text-[16px] sm:text-base overflow-hidden animate-pulse-glow"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -150,7 +150,7 @@ export default function Hero() {
             {/* Download Resume Button */}
             <motion.button
               onClick={handleDownload}
-              className="group relative px-5 py-2.5 sm:px-8 sm:py-4 rounded-lg sm:rounded-xl font-bold text-sm sm:text-base overflow-hidden"
+              className="group relative px-5 py-2.5 sm:px-8 sm:py-4 rounded-lg sm:rounded-xl font-bold text-[16px] sm:text-base overflow-hidden"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -201,7 +201,7 @@ export default function Hero() {
                   <p className="text-xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white mb-0.5 sm:mb-1">
                     <AnimatedCounter value={stat.value} />
                   </p>
-                  <p className="text-[10px] sm:text-xs lg:text-sm text-slate-500 dark:text-slate-400">
+                  <p className="text-[14px] sm:text-xs lg:text-sm text-slate-500 dark:text-slate-400">
                     {stat.label}
                   </p>
                 </motion.div>

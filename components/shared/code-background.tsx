@@ -129,7 +129,7 @@ function TypingCode({
 
   return (
     <pre
-      className={`text-[8px] sm:text-[10px] lg:text-xs font-mono leading-tight lg:leading-relaxed max-h-[200px] lg:max-h-[350px] overflow-hidden ${isDark ? "text-slate-300" : "text-slate-600"}`}
+      className={`text-[14px] sm:text-[10px] lg:text-xs font-mono leading-tight lg:leading-relaxed max-h-[200px] lg:max-h-[350px] overflow-hidden ${isDark ? "text-slate-300" : "text-slate-600"}`}
     >
       {lines.map((line, lineIndex) => (
         <div key={lineIndex} className="flex">
@@ -207,7 +207,7 @@ export function CodeBackground() {
               <div className="w-2 lg:w-3 h-2 lg:h-3 rounded-full bg-green-500/80" />
             </div>
             <span
-              className={`text-[8px] lg:text-xs ml-1 lg:ml-2 ${isDark ? "text-slate-500" : "text-slate-400"}`}
+              className={`text-[14px] lg:text-xs ml-1 lg:ml-2 ${isDark ? "text-slate-500" : "text-slate-400"}`}
             >
               portfolio.ts
             </span>
@@ -254,7 +254,7 @@ export function CodeBackground() {
               <div className="w-2 lg:w-3 h-2 lg:h-3 rounded-full bg-green-500/80" />
             </div>
             <span
-              className={`text-[8px] lg:text-xs ml-1 lg:ml-2 ${isDark ? "text-slate-500" : "text-slate-400"}`}
+              className={`text-[14px] lg:text-xs ml-1 lg:ml-2 ${isDark ? "text-slate-500" : "text-slate-400"}`}
             >
               projects.ts
             </span>

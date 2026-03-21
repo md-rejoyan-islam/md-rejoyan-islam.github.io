@@ -97,7 +97,7 @@ export function StatsSection() {
             </div>
 
             {/* Label */}
-            <div className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium mt-1">
+            <div className="text-[14px] sm:text-sm text-slate-500 dark:text-slate-400 font-medium mt-1">
               {stat.label}
             </div>
           </div>

@@ -51,7 +51,7 @@ export default function BlogCard({ blog }: BlogCardProps) {
             </CardItem>
           </div>
           <CardItem translateZ={50} className="w-full mt-4">
-            <div className="flex items-center gap-x-4 mt-3 text-sm">
+            <div className="flex items-center gap-x-4 mt-3 text-[16px]">
               <div className="flex items-center gap-x-2">
                 <FaCalendarMinus className="text-[var(--primary-button)] " />
                 <time dateTime={blog.date} className="text-text-secondary">

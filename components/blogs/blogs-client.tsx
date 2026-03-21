@@ -57,7 +57,7 @@ export default function BlogsClient() {
             className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-100 dark:border-indigo-500/20 mb-4 sm:mb-6"
           >
             <BookOpen className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-600 dark:text-indigo-400" />
-            <span className="text-xs sm:text-sm font-medium text-indigo-600 dark:text-indigo-400">
+            <span className="text-[14px] sm:text-sm font-medium text-indigo-600 dark:text-indigo-400">
               Blog
             </span>
           </motion.div>
@@ -87,10 +87,10 @@ export default function BlogsClient() {
               className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl bg-slate-100 dark:bg-slate-800/50 hover:bg-indigo-100 dark:hover:bg-purple-500/10 transition-colors group"
             >
               {site.icon}
-              <span className="text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:text-indigo-600 dark:group-hover:text-purple-400">
+              <span className="text-[14px] sm:text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:text-indigo-600 dark:group-hover:text-purple-400">
                 {site.name}
               </span>
-              <span className="text-[10px] sm:text-xs px-1.5 py-0.5 sm:px-2 sm:py-0.5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-400">
+              <span className="text-[14px] sm:text-xs px-1.5 py-0.5 sm:px-2 sm:py-0.5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-400">
                 {site.count}
               </span>
             </a>

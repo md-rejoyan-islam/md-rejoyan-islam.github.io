@@ -32,7 +32,7 @@ export default function MyExperience({
             <MapPin className="w-4 h-4" />
             {exp.company}
           </p>
-          <p className="text-sm text-gray-600 dark:text-[#95a1c0] flex items-center gap-2">
+          <p className="text-[16px] text-gray-600 dark:text-[#95a1c0] flex items-center gap-2">
             <Calendar className="w-4 h-4" />
             {exp.period}
           </p>

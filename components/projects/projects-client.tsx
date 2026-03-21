@@ -55,7 +55,7 @@ export default function ProjectsClient() {
             className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-100 dark:border-indigo-500/20 mb-3 sm:mb-6"
           >
             <Folder className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-600 dark:text-indigo-400" />
-            <span className="text-[10px] sm:text-sm font-medium text-indigo-600 dark:text-indigo-400">
+            <span className="text-[14px] sm:text-sm font-medium text-indigo-600 dark:text-indigo-400">
               Portfolio
             </span>
           </motion.div>
@@ -63,7 +63,7 @@ export default function ProjectsClient() {
           <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-4">
             My Projects
           </h1>
-          <p className="max-w-2xl mx-auto text-slate-600 dark:text-slate-400 text-xs sm:text-base md:text-lg px-2">
+          <p className="max-w-2xl mx-auto text-slate-600 dark:text-slate-400 text-[14px] sm:text-base md:text-lg px-2">
             A collection of projects that showcase my skills in full-stack
             development, from web applications to automation solutions.
           </p>
@@ -80,7 +80,7 @@ export default function ProjectsClient() {
             <button
               key={filter.name}
               onClick={() => handleFilter(filter.name)}
-              className={`px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl text-[10px] sm:text-sm font-medium transition-all duration-300 ${
+              className={`px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl text-[14px] sm:text-sm font-medium transition-all duration-300 ${
                 activeFilter === filter.name
                   ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/25"
                   : "bg-slate-100 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700/50"
@@ -154,14 +154,14 @@ export default function ProjectsClient() {
                   <div className="p-3 sm:p-5 relative">
                     {/* Title */}
                     <CardItem translateZ={60} className="w-full mb-1 sm:mb-2">
-                      <h3 className="text-sm sm:text-xl font-bold text-slate-900 dark:text-white group-hover/card:text-indigo-600 dark:group-hover/card:text-indigo-400 transition-colors duration-300">
+                      <h3 className="text-[16px] sm:text-xl font-bold text-slate-900 dark:text-white group-hover/card:text-indigo-600 dark:group-hover/card:text-indigo-400 transition-colors duration-300">
                         {project.name}
                       </h3>
                     </CardItem>
 
                     {/* Description */}
                     <CardItem translateZ={40} className="w-full mb-2 sm:mb-4">
-                      <p className="text-[10px] sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                      <p className="text-[14px] sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                         {project.description}
                       </p>
                     </CardItem>
@@ -172,7 +172,7 @@ export default function ProjectsClient() {
                         {project.techStack.map((tech) => (
                           <span
                             key={tech}
-                            className="px-1.5 py-0.5 sm:px-2.5 sm:py-1 text-[9px] sm:text-xs rounded-full bg-indigo-50 dark:bg-slate-800 text-indigo-600 dark:text-slate-300 font-medium border border-indigo-100 dark:border-slate-700"
+                            className="px-1.5 py-0.5 sm:px-2.5 sm:py-1 text-[13px] sm:text-xs rounded-full bg-indigo-50 dark:bg-slate-800 text-indigo-600 dark:text-slate-300 font-medium border border-indigo-100 dark:border-slate-700"
                           >
                             {tech}
                           </span>
@@ -202,7 +202,7 @@ export default function ProjectsClient() {
             <h3 className="text-base sm:text-xl font-semibold text-slate-900 dark:text-white mb-1 sm:mb-2">
               No projects found
             </h3>
-            <p className="text-xs sm:text-base text-slate-600 dark:text-slate-400">
+            <p className="text-[14px] sm:text-base text-slate-600 dark:text-slate-400">
               Try selecting a different filter
             </p>
           </motion.div>

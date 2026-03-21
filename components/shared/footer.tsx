@@ -56,7 +56,7 @@ export default function Footer() {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                className="text-slate-500 dark:text-slate-500 text-sm text-center sm:text-left"
+                className="text-slate-500 dark:text-slate-500 text-[16px] text-center sm:text-left"
               >
                 © {currentYear} Md. Rejoyan Islam. All rights reserved.
               </motion.p>
@@ -66,7 +66,7 @@ export default function Footer() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-slate-500 dark:text-slate-500 text-sm flex items-center gap-1"
+                className="text-slate-500 dark:text-slate-500 text-[16px] flex items-center gap-1"
               >
                 Made with{" "}
                 <FaHeart className="w-3.5 h-3.5 text-pink-500 animate-pulse" />{" "}

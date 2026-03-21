@@ -82,7 +82,7 @@ export default function ThemeSwitch() {
                     setIsOpen(false);
                   }}
                   className={clsx(
-                    " hover:bg-[#e3f3fc] dark:hover:bg-[#0d7ded]  flex gap-2 items-center w-full px-4 py-2 text-left text-sm hover:bg-dropdownHover",
+                    " hover:bg-[#e3f3fc] dark:hover:bg-[#0d7ded]  flex gap-2 items-center w-full px-4 py-2 text-left text-[16px] hover:bg-dropdownHover",
                     themeItem.key === theme
                       ? "bg-[#ebf5fb] dark:text-white dark:bg-[#0d7ded]/80 "
                       : "",

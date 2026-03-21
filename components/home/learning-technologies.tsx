@@ -72,7 +72,7 @@ export default function LearningTechnologies() {
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <h3 className="text-[8px] sm:text-xs font-medium text-slate-700 dark:text-slate-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                  <h3 className="text-[14px] sm:text-xs font-medium text-slate-700 dark:text-slate-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                     {tech.name}
                   </h3>
                 </div>

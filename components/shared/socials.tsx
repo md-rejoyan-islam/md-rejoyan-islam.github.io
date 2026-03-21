@@ -153,7 +153,7 @@ export default function Socials({ direction = "row", position = "relative" }) {
 
                 {/* Label */}
                 <motion.div
-                  className="absolute text-[var(--primary-button)] left-1/2 bottom-[-24px] text-[12px] font-semibold transform -translate-x-1/2"
+                  className="absolute text-[var(--primary-button)] left-1/2 bottom-[-24px] text-[14px] font-semibold transform -translate-x-1/2"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: isActive ? 1 : 0 }}
                   transition={{ duration: 0.3 }}

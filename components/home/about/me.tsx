@@ -32,15 +32,15 @@ export default function Me() {
       >
         <HomeSubtittle
           label="I'm a Full Stack Developer passionate about building scalable web applications — from modern React.js / Next.js frontends to robust Node.js / Express.js backends, with MongoDB and SQL for data management."
-          className="leading-relaxed text-[10px] sm:text-base"
+          className="leading-relaxed text-[14px] sm:text-base"
         />
         <HomeSubtittle
           label="I work with RESTful & GraphQL APIs, Redux for state management, Python for data analysis and ML workflows, and n8n for intelligent business automation."
-          className="leading-relaxed text-[10px] sm:text-base"
+          className="leading-relaxed text-[14px] sm:text-base"
         />
         <HomeSubtittle
           label="Always learning, always building — focused on solving real problems through clean, efficient code."
-          className="leading-relaxed text-[10px] sm:text-base"
+          className="leading-relaxed text-[14px] sm:text-base"
         />
      
 
@@ -49,7 +49,7 @@ export default function Me() {
             label="Let's Connect"
             icon={<TbUserUp className="w-3 h-3 sm:w-4 sm:h-4" />}
             iconPosition="right"
-            className="mt-2 sm:mt-6 text-[10px] sm:text-sm px-3 py-1.5 sm:px-4 sm:py-2 hover:bg-[#0d7ded] hover:text-white"
+            className="mt-2 sm:mt-6 text-[14px] sm:text-sm px-3 py-1.5 sm:px-4 sm:py-2 hover:bg-[#0d7ded] hover:text-white"
             onClick={() => {
               router.push("#contact");
             }}

@@ -84,10 +84,10 @@ export default function ProvideServices() {
                   </div>
                 </div>
 
-                <h3 className="text-sm sm:text-xl font-semibold mb-1.5 sm:mb-3 text-slate-800 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                <h3 className="text-[16px] sm:text-xl font-semibold mb-1.5 sm:mb-3 text-slate-800 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-[10px] sm:text-base text-slate-500 dark:text-slate-400 leading-relaxed">
+                <p className="text-[14px] sm:text-base text-slate-500 dark:text-slate-400 leading-relaxed">
                   {service.description}
                 </p>
               </div>

@@ -54,7 +54,7 @@ const MobileBottomMenu = () => {
               }`}
             >
               <Icon className="h-4 w-4" />
-              <span className="text-[10px] font-medium">{item.name}</span>
+              <span className="text-[14px] font-medium">{item.name}</span>
             </Link>
           );
         })}
@@ -72,7 +72,7 @@ const MobileBottomMenu = () => {
           ) : (
             <div className="h-4 w-4" />
           )}
-          <span className="text-[10px] font-medium">Theme</span>
+          <span className="text-[14px] font-medium">Theme</span>
         </button>
       </nav>
     </div>

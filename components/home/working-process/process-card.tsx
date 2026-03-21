@@ -26,7 +26,7 @@ export default function ProcessCard({
       >
         <div className="flex items-center gap-2 sm:gap-4">
           <span
-            className={`flex min-h-6 min-w-6 sm:min-h-8 sm:min-w-8 h-6 w-6 sm:h-8 sm:w-8 items-center justify-center rounded-full text-[10px] sm:text-sm font-semibold
+            className={`flex min-h-6 min-w-6 sm:min-h-8 sm:min-w-8 h-6 w-6 sm:h-8 sm:w-8 items-center justify-center rounded-full text-[14px] sm:text-sm font-semibold
                         ${
                           step === index
                             ? "bg-[var(--primary-button)] text-white"
@@ -36,10 +36,10 @@ export default function ProcessCard({
             {index + 1}
           </span>
           <div>
-            <h3 className="text-xs sm:text-xl font-semibold text-gray-900 dark:text-white/80">
+            <h3 className="text-[14px] sm:text-xl font-semibold text-gray-900 dark:text-white/80">
               {data.title}
             </h3>
-            <p className="mt-0.5 sm:mt-1 text-[10px] sm:text-sm text-gray-500 dark:text-text-secondary">
+            <p className="mt-0.5 sm:mt-1 text-[14px] sm:text-sm text-gray-500 dark:text-text-secondary">
               {data.description}
             </p>
           </div>

@@ -60,7 +60,7 @@ export default function ShowcaseBlogs() {
         >
           <Link
             href="/blogs"
-            className="inline-flex items-center gap-1.5 sm:gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-lg sm:rounded-xl font-semibold text-[10px] sm:text-base text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-500/10 hover:bg-indigo-100 dark:hover:bg-indigo-500/20 transition-colors"
+            className="inline-flex items-center gap-1.5 sm:gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-lg sm:rounded-xl font-semibold text-[14px] sm:text-base text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-500/10 hover:bg-indigo-100 dark:hover:bg-indigo-500/20 transition-colors"
           >
             Read All Blogs
             <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />

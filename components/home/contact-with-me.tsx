@@ -53,13 +53,13 @@ export function ContactWithMe() {
             className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-100 dark:border-indigo-500/20 mb-3 sm:mb-6"
           >
             <Send className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-600 dark:text-indigo-400" />
-            <span className="text-[10px] sm:text-sm font-medium text-indigo-600 dark:text-indigo-400">Get in Touch</span>
+            <span className="text-[14px] sm:text-sm font-medium text-indigo-600 dark:text-indigo-400">Get in Touch</span>
           </motion.div>
 
           <h2 className="text-xl sm:text-4xl md:text-5xl font-bold text-indigo-600 dark:text-white mb-2 sm:mb-4">
             Let&apos;s Work Together
           </h2>
-          <p className="max-w-xl mx-auto text-slate-600 dark:text-slate-400 text-xs sm:text-base md:text-lg">
+          <p className="max-w-xl mx-auto text-slate-600 dark:text-slate-400 text-[14px] sm:text-base md:text-lg">
             Have a project in mind? Let&apos;s discuss how we can bring your ideas to life.
           </p>
         </motion.div>
@@ -81,7 +81,7 @@ export function ContactWithMe() {
 
               <div className="relative z-10">
                 <h3 className="text-lg sm:text-2xl font-bold text-indigo-700 dark:text-white mb-1.5 sm:mb-3">Contact Info</h3>
-                <p className="text-slate-600 dark:text-slate-400 mb-5 sm:mb-10 leading-relaxed text-[10px] sm:text-base">
+                <p className="text-slate-600 dark:text-slate-400 mb-5 sm:mb-10 leading-relaxed text-[14px] sm:text-base">
                   I typically respond within 24 hours. Feel free to reach out!
                 </p>
 
@@ -100,16 +100,16 @@ export function ContactWithMe() {
                         <item.icon className="w-4 h-4 sm:w-5 sm:h-5 text-indigo-600 dark:text-indigo-400" />
                       </div>
                       <div>
-                        <p className="text-[10px] sm:text-sm text-slate-500 dark:text-slate-500 mb-0.5">{item.label}</p>
+                        <p className="text-[14px] sm:text-sm text-slate-500 dark:text-slate-500 mb-0.5">{item.label}</p>
                         {item.href ? (
                           <a
                             href={item.href}
-                            className="text-indigo-700 dark:text-white font-medium text-xs sm:text-base hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors"
+                            className="text-indigo-700 dark:text-white font-medium text-[14px] sm:text-base hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors"
                           >
                             {item.value}
                           </a>
                         ) : (
-                          <p className="text-indigo-700 dark:text-white font-medium text-xs sm:text-base">{item.value}</p>
+                          <p className="text-indigo-700 dark:text-white font-medium text-[14px] sm:text-base">{item.value}</p>
                         )}
                       </div>
                     </motion.div>
@@ -118,7 +118,7 @@ export function ContactWithMe() {
 
                 {/* Social Links */}
                 <div>
-                  <p className="text-[10px] sm:text-sm text-slate-500 dark:text-slate-500 mb-2 sm:mb-4">Follow me</p>
+                  <p className="text-[14px] sm:text-sm text-slate-500 dark:text-slate-500 mb-2 sm:mb-4">Follow me</p>
                   <div className="flex gap-2 sm:gap-3">
                     {socialLinks.map((social, index) => (
                       <motion.a
@@ -160,7 +160,7 @@ export function ContactWithMe() {
                 <div className="flex items-center justify-between mb-4 sm:mb-8">
                   <div>
                     <h3 className="text-base sm:text-xl font-bold text-slate-900 dark:text-white mb-0.5 sm:mb-1">Send a Message</h3>
-                    <p className="text-[10px] sm:text-sm text-slate-500 dark:text-slate-400">Fill out the form below</p>
+                    <p className="text-[14px] sm:text-sm text-slate-500 dark:text-slate-400">Fill out the form below</p>
                   </div>
                   <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 dark:from-indigo-500/20 dark:to-purple-500/20 flex items-center justify-center">
                     <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 text-indigo-600 dark:text-indigo-400" />

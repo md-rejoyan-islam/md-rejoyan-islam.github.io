@@ -57,7 +57,7 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-in fade-in-50 duration-700 delay-500">
           <Link
             href="/"
-            className="flex items-center gap-2 rounded-md bg-[#ebf5fe] dark:bg-[#161c40] dark:text-white/70 dark:border-none text-gray-900 px-4 py-2 text-sm font-semibold border hover:bg-[#e4f3ff]  shadow-sm  transition-colors w-full sm:w-auto justify-center"
+            className="flex items-center gap-2 rounded-md bg-[#ebf5fe] dark:bg-[#161c40] dark:text-white/70 dark:border-none text-gray-900 px-4 py-2 text-[16px] font-semibold border hover:bg-[#e4f3ff]  shadow-sm  transition-colors w-full sm:w-auto justify-center"
           >
             <Home className="h-4 w-4" />
             Back to Home

@@ -22,7 +22,7 @@ export default function NiceBtn({
         active
           ? "bg-[#0d7ded] text-white"
           : "bg-[#ebf5fe] dark:bg-[#161c40] dark:text-white text-[#292875] border-[.5px] border-[#7dbff9] dark:border-[#21314b] border-opacity-50",
-        "flex items-center text-xs sm:text-sm px-4 py-2 rounded-lg font-semibold",
+        "flex items-center text-[14px] sm:text-sm px-4 py-2 rounded-lg font-semibold",
         className
       )}
       onClick={() => onClick?.()}

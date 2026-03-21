@@ -33,7 +33,7 @@ export default function ProjectCard({
           <h2 className="relative z-10 pt-1 text-[#292875] dark:text-white/80 transition duration-200 ease-in-out text-2xl font-incognit font-semibold tracking-tight ">
             {project?.name}
           </h2>
-          <div className="text-sm text-text-secondary py-2">
+          <div className="text-[16px] text-text-secondary py-2">
             {project?.description}
           </div>
         </div>
@@ -41,7 +41,7 @@ export default function ProjectCard({
           <ul className="flex items-center gap-x-3 gap-y-2 flex-wrap">
             {project?.techStack?.map((tech) => (
               <li
-                className="text-nowrap text-[var(--primary-button)] border border-[#0d7ded2a] bg-black/5 dark:bg-white/5 px-2 py-1 rounded-md text-[10px]"
+                className="text-nowrap text-[var(--primary-button)] border border-[#0d7ded2a] bg-black/5 dark:bg-white/5 px-2 py-1 rounded-md text-[14px]"
                 key={tech}
               >
                 {tech}
@@ -55,7 +55,7 @@ export default function ProjectCard({
               <li key={link.href}>
                 <a
                   href={link?.href}
-                  className=" flex items-center gap-2 border border-project-card-border  hover:bg-button-bg text-button h-fit rounded-md px-2 text-sm py-1.5"
+                  className=" flex items-center gap-2 border border-project-card-border  hover:bg-button-bg text-button h-fit rounded-md px-2 text-[16px] py-1.5"
                 >
                   <span>{link?.name} </span>
                 </a>

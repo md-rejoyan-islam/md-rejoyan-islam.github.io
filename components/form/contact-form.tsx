@@ -61,7 +61,7 @@ const ContactForm = () => {
         <div>
           <label
             htmlFor="name"
-            className="block text-[10px] sm:text-sm font-medium text-gray-700 dark:text-gray-300 mb-0.5 sm:mb-1"
+            className="block text-[14px] sm:text-sm font-medium text-gray-700 dark:text-gray-300 mb-0.5 sm:mb-1"
           >
             Your Name
           </label>
@@ -70,16 +70,16 @@ const ContactForm = () => {
             type="text"
             placeholder="John Doe"
             {...register("name")}
-            className="w-full bg-white/[0.03] border-[#38a7c967] dark:border-[#212e54] placeholder:dark:text-gray-600 text-[10px] sm:text-base h-8 sm:h-10"
+            className="w-full bg-white/[0.03] border-[#38a7c967] dark:border-[#212e54] placeholder:dark:text-gray-600 text-[14px] sm:text-base h-8 sm:h-10"
           />
           {errors.name && (
-            <span className="text-red-600 text-[10px] sm:text-sm">{errors.name.message}</span>
+            <span className="text-red-600 text-[14px] sm:text-sm">{errors.name.message}</span>
           )}
         </div>
         <div>
           <label
             htmlFor="email"
-            className="block text-[10px] sm:text-sm font-medium text-gray-700 dark:text-gray-300 mb-0.5 sm:mb-1"
+            className="block text-[14px] sm:text-sm font-medium text-gray-700 dark:text-gray-300 mb-0.5 sm:mb-1"
           >
             Your Email
           </label>
@@ -88,17 +88,17 @@ const ContactForm = () => {
             type="email"
             placeholder="john@example.com"
             {...register("email")}
-            className="w-full bg-white/[0.03] border-[#38a7c967] dark:border-[#212e54] placeholder:dark:text-gray-600 text-[10px] sm:text-base h-8 sm:h-10"
+            className="w-full bg-white/[0.03] border-[#38a7c967] dark:border-[#212e54] placeholder:dark:text-gray-600 text-[14px] sm:text-base h-8 sm:h-10"
           />
           {errors.email && (
-            <span className="text-red-600 text-[10px] sm:text-sm">{errors.email.message}</span>
+            <span className="text-red-600 text-[14px] sm:text-sm">{errors.email.message}</span>
           )}
         </div>
       </div>
       <div>
         <label
           htmlFor="subject"
-          className="block text-[10px] sm:text-sm font-medium text-gray-700 dark:text-gray-300 mb-0.5 sm:mb-1"
+          className="block text-[14px] sm:text-sm font-medium text-gray-700 dark:text-gray-300 mb-0.5 sm:mb-1"
         >
           Subject
         </label>
@@ -107,16 +107,16 @@ const ContactForm = () => {
           type="text"
           placeholder="Project Inquiry"
           {...register("subject")}
-          className="w-full bg-white/[0.03] border-[#38a7c967] dark:border-[#212e54] placeholder:dark:text-gray-600 text-[10px] sm:text-base h-8 sm:h-10"
+          className="w-full bg-white/[0.03] border-[#38a7c967] dark:border-[#212e54] placeholder:dark:text-gray-600 text-[14px] sm:text-base h-8 sm:h-10"
         />
         {errors.subject && (
-          <span className="text-red-600 text-[10px] sm:text-sm">{errors.subject.message}</span>
+          <span className="text-red-600 text-[14px] sm:text-sm">{errors.subject.message}</span>
         )}
       </div>
       <div>
         <label
           htmlFor="message"
-          className="block text-[10px] sm:text-sm font-medium text-gray-700 dark:text-gray-300 mb-0.5 sm:mb-1"
+          className="block text-[14px] sm:text-sm font-medium text-gray-700 dark:text-gray-300 mb-0.5 sm:mb-1"
         >
           Your Message
         </label>
@@ -125,10 +125,10 @@ const ContactForm = () => {
           placeholder="Tell me about your project..."
           rows={4}
           {...register("message")}
-          className="w-full bg-white/[0.03] border-[#38a7c967] dark:border-[#212e54] placeholder:dark:text-gray-600 text-[10px] sm:text-base"
+          className="w-full bg-white/[0.03] border-[#38a7c967] dark:border-[#212e54] placeholder:dark:text-gray-600 text-[14px] sm:text-base"
         />
         {errors.message && (
-          <span className="text-red-600 text-[10px] sm:text-sm">{errors.message.message}</span>
+          <span className="text-red-600 text-[14px] sm:text-sm">{errors.message.message}</span>
         )}
       </div>
       <AnimatePresence>
@@ -139,7 +139,7 @@ const ContactForm = () => {
         >
           <Button
             type="submit"
-            className="w-full bg-[var(--primary-button)] text-[#fff] hover:bg-[var(--primary-button)] font-semibold py-2 sm:py-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-[10px] sm:text-base"
+            className="w-full bg-[var(--primary-button)] text-[#fff] hover:bg-[var(--primary-button)] font-semibold py-2 sm:py-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-[14px] sm:text-base"
             disabled={isSubmitting}
           >
             {isSubmitting ? (

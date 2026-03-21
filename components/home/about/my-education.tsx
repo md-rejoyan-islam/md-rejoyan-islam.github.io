@@ -30,7 +30,7 @@ export default function MyEducation({
             {edu.degree}
           </h4>
           <p className="text-[var(--primary-button)] mb-2">{edu.school}</p>
-          <p className="text-sm text-gray-600 dark:text-[#95a1c0] flex items-center gap-2">
+          <p className="text-[16px] text-gray-600 dark:text-[#95a1c0] flex items-center gap-2">
             <Calendar className="w-4 h-4" />
             {edu.year}
           </p>

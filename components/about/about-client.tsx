@@ -1,5 +1,6 @@
 "use client";
 
+import { certificates } from "@/data/certificate";
 import { motion } from "framer-motion";
 import {
   ArrowUpRight,
@@ -21,7 +22,6 @@ import {
 import Image from "next/image";
 import { FaInstagram } from "react-icons/fa";
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
-import { certificates } from "@/data/certificate";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -127,7 +127,7 @@ export default function AboutClient() {
             className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-100 dark:border-indigo-500/20 mb-3 sm:mb-6"
           >
             <User className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-600 dark:text-indigo-400" />
-            <span className="text-[10px] sm:text-sm font-medium text-indigo-600 dark:text-indigo-400">
+            <span className="text-[14px] sm:text-sm font-medium text-indigo-600 dark:text-indigo-400">
               About Me
             </span>
           </motion.div>
@@ -138,7 +138,7 @@ export default function AboutClient() {
           </h1>
 
           {/* Description */}
-          <p className="max-w-2xl mx-auto text-slate-600 dark:text-slate-400 text-xs sm:text-base md:text-lg px-2 mb-6 sm:mb-8">
+          <p className="max-w-2xl mx-auto text-slate-600 dark:text-slate-400 text-[14px] sm:text-base md:text-lg px-2 mb-6 sm:mb-8">
             A passionate full-stack developer dedicated to crafting elegant
             digital experiences. Specialized in creating robust, scalable
             applications using modern web technologies.
@@ -174,7 +174,7 @@ export default function AboutClient() {
             <a
               href="/pdf/REJOYAN_RESUME.pdf"
               download
-              className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-[10px] sm:text-sm font-medium transition-colors shadow-lg shadow-indigo-500/25"
+              className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-[14px] sm:text-sm font-medium transition-colors shadow-lg shadow-indigo-500/25"
             >
               <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               Resume
@@ -198,7 +198,7 @@ export default function AboutClient() {
               <h2 className="text-xl sm:text-2xl font-semibold text-indigo-600 dark:text-white">
                 Experience
               </h2>
-              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+              <p className="text-[14px] sm:text-sm text-slate-500 dark:text-slate-400">
                 Professional journey
               </p>
             </div>
@@ -229,16 +229,16 @@ export default function AboutClient() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 sm:gap-3 mb-1">
-                      <h3 className="font-semibold text-sm sm:text-base text-slate-900 dark:text-white">
+                      <h3 className="font-semibold text-[16px] sm:text-base text-slate-900 dark:text-white">
                         {exp.title}
                       </h3>
                       {exp.current && (
-                        <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 text-[9px] sm:text-[10px] font-semibold rounded-full bg-indigo-600 text-white">
+                        <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 text-[13px] sm:text-[10px] font-semibold rounded-full bg-indigo-600 text-white">
                           Current
                         </span>
                       )}
                     </div>
-                    <div className="flex items-center gap-2 text-xs sm:text-sm">
+                    <div className="flex items-center gap-2 text-[14px] sm:text-sm">
                       {exp.link ? (
                         <a
                           href={exp.link}
@@ -285,7 +285,7 @@ export default function AboutClient() {
               <h2 className="text-xl sm:text-2xl font-semibold text-indigo-600 dark:text-white">
                 Education
               </h2>
-              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+              <p className="text-[14px] sm:text-sm text-slate-500 dark:text-slate-400">
                 Academic background
               </p>
             </div>
@@ -300,17 +300,17 @@ export default function AboutClient() {
               >
                 <div className="flex justify-between items-start mb-3 sm:mb-4">
                   <GraduationCap className="w-6 h-6 sm:w-8 sm:h-8 text-slate-400 dark:text-slate-600" />
-                  {/* <span className="px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white text-[10px] sm:text-sm font-bold">
+                  {/* <span className="px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white text-[14px] sm:text-sm font-bold">
                     {edu.grade}
                   </span> */}
                 </div>
-                <h3 className="font-semibold text-sm sm:text-base text-slate-900 dark:text-white mb-1 sm:mb-2">
+                <h3 className="font-semibold text-[16px] sm:text-base text-slate-900 dark:text-white mb-1 sm:mb-2">
                   {edu.degree}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mb-2 sm:mb-3">
+                <p className="text-[14px] sm:text-sm text-slate-600 dark:text-slate-400 mb-2 sm:mb-3">
                   {edu.school}
                 </p>
-                <div className="flex items-center gap-2 text-[10px] sm:text-xs text-slate-500 dark:text-slate-400">
+                <div className="flex items-center gap-2 text-[14px] sm:text-xs text-slate-500 dark:text-slate-400">
                   <Calendar className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                   {edu.period}
                 </div>
@@ -335,7 +335,7 @@ export default function AboutClient() {
               <h2 className="text-xl sm:text-2xl font-semibold text-indigo-600 dark:text-white">
                 Certifications
               </h2>
-              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+              <p className="text-[14px] sm:text-sm text-slate-500 dark:text-slate-400">
                 Professional credentials
               </p>
             </div>
@@ -371,7 +371,7 @@ export default function AboutClient() {
                       href={cert.credentialUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white text-[10px] sm:text-xs font-medium flex items-center gap-1 hover:text-amber-300 transition-colors"
+                      className="text-white text-[14px] sm:text-xs font-medium flex items-center gap-1 hover:text-amber-300 transition-colors"
                     >
                       View{" "}
                       <ArrowUpRight className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
@@ -380,18 +380,18 @@ export default function AboutClient() {
                 </div>
                 <div className="p-2.5 sm:p-3 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 className="font-semibold text-[10px] sm:text-sm text-slate-900 dark:text-white mb-0.5 line-clamp-2" title={cert.title}>
+                    <h3 className="font-semibold text-[14px] sm:text-sm text-slate-900 dark:text-white mb-0.5 line-clamp-2" title={cert.title}>
                       {cert.title}
                     </h3>
-                    <p className="text-[9px] sm:text-xs text-slate-500 dark:text-slate-400">
+                    <p className="text-[13px] sm:text-xs text-slate-500 dark:text-slate-400">
                       {cert.companyName} • {cert.issueDate}
                     </p>
                   </div>
                   <div className="flex justify-between items-center mt-2 pt-2 border-t border-slate-100 dark:border-slate-800">
-                    <p className="text-[8px] sm:text-[9px] text-slate-400 dark:text-slate-500 truncate mr-2" title={`ID: ${cert.id}`}>
+                    <p className="text-[14px] sm:text-[9px] text-slate-400 dark:text-slate-500 truncate mr-2" title={`ID: ${cert.id}`}>
                       ID: {cert.id}
                     </p>
-                    <p className="text-[8px] sm:text-[9px] text-slate-400 dark:text-slate-500 shrink-0">
+                    <p className="text-[14px] sm:text-[9px] text-slate-400 dark:text-slate-500 shrink-0">
                       Exp: {cert.expirationDate}
                     </p>
                   </div>
@@ -417,7 +417,7 @@ export default function AboutClient() {
               <h2 className="text-xl sm:text-2xl font-semibold text-indigo-600 dark:text-white">
                 Volunteering
               </h2>
-              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+              <p className="text-[14px] sm:text-sm text-slate-500 dark:text-slate-400">
                 Community contributions
               </p>
             </div>
@@ -433,13 +433,13 @@ export default function AboutClient() {
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-rose-100 dark:bg-rose-500/20 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
                   <vol.icon className="w-5 h-5 sm:w-6 sm:h-6 text-rose-600 dark:text-rose-400" />
                 </div>
-                <h3 className="font-bold text-sm sm:text-base text-slate-900 dark:text-white mb-0.5 sm:mb-1">
+                <h3 className="font-bold text-[16px] sm:text-base text-slate-900 dark:text-white mb-0.5 sm:mb-1">
                   {vol.role}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+                <p className="text-[14px] sm:text-sm text-slate-600 dark:text-slate-400">
                   {vol.org}
                 </p>
-                <p className="text-[10px] sm:text-xs text-slate-500 dark:text-slate-500 mt-1.5 sm:mt-2">
+                <p className="text-[14px] sm:text-xs text-slate-500 dark:text-slate-500 mt-1.5 sm:mt-2">
                   {vol.period}
                 </p>
               </motion.div>
@@ -463,7 +463,7 @@ export default function AboutClient() {
               <h2 className="text-xl sm:text-2xl font-semibold text-indigo-600 dark:text-white">
                 Hobbies & Interests
               </h2>
-              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+              <p className="text-[14px] sm:text-sm text-slate-500 dark:text-slate-400">
                 What I enjoy outside work
               </p>
             </div>
@@ -479,7 +479,7 @@ export default function AboutClient() {
                 <span className="text-2xl sm:text-3xl group-hover:scale-110 transition-transform">
                   {hobby.icon}
                 </span>
-                <span className="font-semibold text-sm sm:text-base text-slate-700 dark:text-slate-300">
+                <span className="font-semibold text-[16px] sm:text-base text-slate-700 dark:text-slate-300">
                   {hobby.name}
                 </span>
               </motion.div>
@@ -503,7 +503,7 @@ export default function AboutClient() {
               <h2 className="text-xl sm:text-2xl font-semibold text-indigo-600 dark:text-white">
                 Contact
               </h2>
-              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+              <p className="text-[14px] sm:text-sm text-slate-500 dark:text-slate-400">
                 Get in touch
               </p>
             </div>
@@ -518,10 +518,10 @@ export default function AboutClient() {
                 <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-slate-600 dark:text-slate-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors" />
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+                <span className="text-[14px] sm:text-sm text-slate-500 dark:text-slate-400">
                   Email:
                 </span>
-                <span className="text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                <span className="text-[16px] sm:text-base text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
                   rejoyanislam0014@gmail.com
                 </span>
               </div>
@@ -535,10 +535,10 @@ export default function AboutClient() {
                 <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-slate-600 dark:text-slate-400 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors" />
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+                <span className="text-[14px] sm:text-sm text-slate-500 dark:text-slate-400">
                   Phone:
                 </span>
-                <span className="text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                <span className="text-[16px] sm:text-base text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
                   +8801568-816822
                 </span>
               </div>
@@ -549,10 +549,10 @@ export default function AboutClient() {
                 <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-slate-600 dark:text-slate-400" />
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+                <span className="text-[14px] sm:text-sm text-slate-500 dark:text-slate-400">
                   Location:
                 </span>
-                <span className="text-sm sm:text-base text-slate-900 dark:text-white">
+                <span className="text-[16px] sm:text-base text-slate-900 dark:text-white">
                   Sylhet, Bangladesh
                 </span>
               </div>

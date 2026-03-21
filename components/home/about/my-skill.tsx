@@ -35,7 +35,7 @@ export default function MySkill({
                 <h4 className="text-xl font-semibold text-gray-800 dark:text-[#d1dae4]">
                   {skill.name}
                 </h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-[16px] text-gray-600 dark:text-gray-400">
                   {skill.tech}
                 </p>
               </div>

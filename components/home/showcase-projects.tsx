@@ -55,7 +55,7 @@ export default function ShowcaseProjects() {
                       {project.techStack.slice(0, 3).map((tag) => (
                         <span
                           key={tag}
-                          className="px-1.5 py-0.5 sm:px-2.5 sm:py-1 text-[8px] sm:text-[10px] font-medium rounded-full bg-white/90 dark:bg-slate-800/90 text-slate-700 dark:text-slate-300 backdrop-blur-sm"
+                          className="px-1.5 py-0.5 sm:px-2.5 sm:py-1 text-[14px] sm:text-[10px] font-medium rounded-full bg-white/90 dark:bg-slate-800/90 text-slate-700 dark:text-slate-300 backdrop-blur-sm"
                         >
                           {tag}
                         </span>
@@ -89,10 +89,10 @@ export default function ShowcaseProjects() {
 
                   {/* Content */}
                   <div className="p-3 sm:p-5">
-                    <h3 className="text-sm sm:text-lg font-semibold mb-1 sm:mb-2 text-slate-800 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                    <h3 className="text-[16px] sm:text-lg font-semibold mb-1 sm:mb-2 text-slate-800 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                       {project.name}
                     </h3>
-                    <p className="text-[10px] sm:text-sm text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed">
+                    <p className="text-[14px] sm:text-sm text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed">
                       {project.description}
                     </p>
 
@@ -102,7 +102,7 @@ export default function ShowcaseProjects() {
                         <Link
                           href={project.links?.find((link) => link.name === "Preview")?.href ?? ""}
                           target="_blank"
-                          className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors"
+                          className="flex items-center gap-1 sm:gap-1.5 text-[14px] sm:text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors"
                         >
                           <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
                           Live Demo
@@ -112,7 +112,7 @@ export default function ShowcaseProjects() {
                         <Link
                           href={project.links?.find((link) => link.name === "GitHub")?.href ?? ""}
                           target="_blank"
-                          className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+                          className="flex items-center gap-1 sm:gap-1.5 text-[14px] sm:text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
                         >
                           <LuGithub className="w-3 h-3 sm:w-4 sm:h-4" />
                           Source
@@ -135,7 +135,7 @@ export default function ShowcaseProjects() {
         >
           <Link
             href="/projects"
-            className="inline-flex items-center gap-1.5 sm:gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-lg sm:rounded-xl font-semibold text-[10px] sm:text-base text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-500/10 hover:bg-indigo-100 dark:hover:bg-indigo-500/20 transition-colors"
+            className="inline-flex items-center gap-1.5 sm:gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-lg sm:rounded-xl font-semibold text-[14px] sm:text-base text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-500/10 hover:bg-indigo-100 dark:hover:bg-indigo-500/20 transition-colors"
           >
             View All Projects
             <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />

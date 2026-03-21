@@ -82,7 +82,7 @@ export default function Navbar() {
                     href={link.href}
                     aria-label={link.name}
                     className={clsx(
-                      "relative px-4 py-2 text-sm font-medium transition-colors duration-300 rounded-lg",
+                      "relative px-4 py-2 text-[16px] font-medium transition-colors duration-300 rounded-lg",
                       pathname === link.href
                         ? "text-indigo-600 dark:text-indigo-400"
                         : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"

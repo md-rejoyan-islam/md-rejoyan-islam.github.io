@@ -17,7 +17,7 @@ export default function GlowBtn({
   return (
     <motion.button
       className={clsx(
-        "group relative px-6 py-3 rounded-xl font-bold text-sm sm:text-base overflow-hidden hover:animate-pulse-glow",
+        "group relative px-6 py-3 rounded-xl font-bold text-[16px] sm:text-base overflow-hidden hover:animate-pulse-glow",
         className
       )}
       onClick={() => onClick?.()}
