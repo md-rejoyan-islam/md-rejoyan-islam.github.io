@@ -349,23 +349,13 @@ export default function AboutClient() {
                 className="group relative flex flex-col overflow-hidden rounded-xl sm:rounded-2xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-amber-200 dark:hover:border-amber-500/30 transition-all duration-300"
               >
                 <div className="relative h-24 sm:h-32 bg-slate-100 dark:bg-slate-800 overflow-hidden shrink-0">
-                  {cert.credentialUrl?.toLowerCase().endsWith(".pdf") ? (
-                    <div className="absolute inset-0 w-full h-[160%] -top-4 transition-transform duration-500 group-hover:scale-105 pointer-events-none bg-white">
-                      <iframe
-                        src={`${cert.credentialUrl}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`}
-                        className="w-full h-full border-0"
-                        title={cert.title}
-                        scrolling="no"
-                      />
-                    </div>
-                  ) : (
-                    <Image
-                      src={cert.image}
-                      alt={cert.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  )}
+                  <Image
+                    src={cert.image}
+                    alt={cert.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-2 sm:pb-3 cursor-pointer">
                     <a
                       href={cert.credentialUrl}

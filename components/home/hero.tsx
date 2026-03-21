@@ -1,46 +1,12 @@
 "use client";
-import { animate, motion, useMotionValue, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowRight, Code2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { IoMdDownload } from "react-icons/io";
 import { FlipWords } from "../ui/flip-words";
 
-// Animated Counter Component
-function AnimatedCounter({
-  value,
-  suffix = "+",
-}: {
-  value: number;
-  suffix?: string;
-}) {
-  const count = useMotionValue(0);
-  const rounded = useTransform(count, (latest) => Math.round(latest));
-  const [displayValue, setDisplayValue] = useState(0);
-
-  useEffect(() => {
-    const controls = animate(count, value, {
-      duration: 2,
-      ease: "easeOut",
-    });
-
-    const unsubscribe = rounded.on("change", (latest) => {
-      setDisplayValue(latest);
-    });
-
-    return () => {
-      controls.stop();
-      unsubscribe();
-    };
-  }, [value, count, rounded]);
-
-  return (
-    <span>
-      {displayValue}
-      {suffix}
-    </span>
-  );
-}
+import { AnimatedCounter } from "@/components/ui/animated-counter";
 
 export default function Hero() {
   const router = useRouter();
@@ -199,7 +165,7 @@ export default function Hero() {
                   }}
                 >
                   <p className="text-xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white mb-0.5 sm:mb-1">
-                    <AnimatedCounter value={stat.value} />
+                    <AnimatedCounter value={stat.value} duration={2.5} suffix="+" />
                   </p>
                   <p className="text-[14px] sm:text-xs lg:text-sm text-slate-500 dark:text-slate-400">
                     {stat.label}

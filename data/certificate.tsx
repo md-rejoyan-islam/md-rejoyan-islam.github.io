@@ -6,7 +6,7 @@ export const certificates = [
     issueDate: "Oct 2025",
     expirationDate: "No Expiration",
     credentialUrl: "https://static.frontendmasters.com/ud/c/ebcc5b18d5/EBGnaPNfBj/go-basics.pdf",
-    image: "/certificates/frontend-masters.png",
+    image: "/certificates/go-basics_page-0001.jpg",
   },
   {
     id: "ebcc5b18d5-niuLofHUtM",
@@ -15,7 +15,7 @@ export const certificates = [
     issueDate: "Oct 2025",
     expirationDate: "No Expiration",
     credentialUrl: "https://static.frontendmasters.com/ud/c/ebcc5b18d5/niuLofHUtM/go-for-js-devs.pdf",
-    image: "/certificates/frontend-masters.png",
+    image: "/certificates/go-for-js-devs_page-0001.jpg",
   },
   {
     id: "ebcc5b18d5-XQKnWntAkM",
@@ -24,7 +24,7 @@ export const certificates = [
     issueDate: "Aug 2025",
     expirationDate: "No Expiration",
     credentialUrl: "https://static.frontendmasters.com/ud/c/ebcc5b18d5/XQKnWntAkM/tailwind-css-v2.pdf",
-    image: "/certificates/tailwind.png",
+    image: "/certificates/tailwind-css-v2_page-0001.jpg",
   },
   {
     id: "ebcc5b18d5-hixpadIGiV",
@@ -33,7 +33,7 @@ export const certificates = [
     issueDate: "Aug 2025",
     expirationDate: "No Expiration",
     credentialUrl: "https://static.frontendmasters.com/ud/c/ebcc5b18d5/hixpadIGiV/complete-react-v9.pdf",
-    image: "/certificates/frontend-masters.png",
+    image: "/certificates/complete-react-v9_page-0001.jpg",
   },
   {
     id: "822fb0897da6",
@@ -42,7 +42,7 @@ export const certificates = [
     issueDate: "Jul 2025",
     expirationDate: "Jul 2026",
     credentialUrl: "https://verify.certs365.io/?=822fb0897da6",
-    image: "/certificates/advanced-sql.png",
+    image: "/certificates/AI+ Prompt Engineer Level 1.png",
   },
   {
     id: "ebcc5b18d5-pApqiQbIWA",
@@ -51,7 +51,7 @@ export const certificates = [
     issueDate: "Jul 2025",
     expirationDate: "No Expiration",
     credentialUrl: "https://static.frontendmasters.com/ud/c/ebcc5b18d5/pApqiQbIWA/fullstack-v3.pdf",
-    image: "/certificates/frontend-masters.png",
+    image: "/certificates/fullstack-v3_page-0001.jpg",
   },
   {
     id: "ebcc5b18d5-yCoqZbtnkv",
@@ -60,7 +60,7 @@ export const certificates = [
     issueDate: "Jul 2025",
     expirationDate: "No Expiration",
     credentialUrl: "https://static.frontendmasters.com/ud/c/ebcc5b18d5/yCoqZbtnkv/linux-command-line.pdf",
-    image: "/certificates/frontend-masters.png",
+    image: "/certificates/linux-command-line_page-0001.jpg",
   },
   {
     id: "UC-c4c12f06-b4e1-4cb0-bad5-9ac3df46efa0",
@@ -69,7 +69,7 @@ export const certificates = [
     issueDate: "Mar 2025",
     expirationDate: "No Expiration",
     credentialUrl: "https://www.udemy.com/certificate/UC-c4c12f06-b4e1-4cb0-bad5-9ac3df46efa0/",
-    image: "/certificates/tailwind.png",
+    image: "/certificates/url-shotner.png",
   },
   {
     id: "UC-f52ed464-68c9-4cb1-8c91-f086b5df7678",
@@ -78,7 +78,7 @@ export const certificates = [
     issueDate: "Mar 2025",
     expirationDate: "No Expiration",
     credentialUrl: "https://www.udemy.com/certificate/UC-f52ed464-68c9-4cb1-8c91-f086b5df7678/",
-    image: "/certificates/tailwind.png",
+    image: "/certificates/jsforbiggner.png",
   },
   {
     id: "UC-13673791-73cb-4550-911d-cab6bda0bea5",
@@ -87,7 +87,7 @@ export const certificates = [
     issueDate: "Mar 2025",
     expirationDate: "No Expiration",
     credentialUrl: "https://www.udemy.com/certificate/UC-13673791-73cb-4550-911d-cab6bda0bea5/",
-    image: "/certificates/tailwind.png",
+    image: "/certificates/docker.png",
   },
   {
     id: "UC-239affa6-58a8-4023-ae55-a389478ff2e8",
@@ -96,7 +96,7 @@ export const certificates = [
     issueDate: "Mar 2025",
     expirationDate: "No Expiration",
     credentialUrl: "https://www.udemy.com/certificate/UC-239affa6-58a8-4023-ae55-a389478ff2e8/",
-    image: "/certificates/tailwind.png",
+    image: "/certificates/simple-react-app.png",
   },
   {
     id: "9af51cf5a6",
@@ -105,7 +105,7 @@ export const certificates = [
     issueDate: "Nov 2023",
     expirationDate: "No Expiration",
     credentialUrl: "https://learn.365datascience.com/certificates/CC-40723D86C7/",
-    image: "/certificates/advanced-sql.png",
+    image: "/certificates/sql-advance.png",
   },
   {
     id: "6e4a8a7efb",
@@ -123,7 +123,7 @@ export const certificates = [
     issueDate: "Nov 2023",
     expirationDate: "No Expiration",
     credentialUrl: "https://learn.365datascience.com/e/e90bb5535d/",
-    image: "/certificates/sql.png",
+    image: "/certificates/chatgpt.png",
   },
   {
     id: "a2d177b7ce",
@@ -132,7 +132,7 @@ export const certificates = [
     issueDate: "Nov 2023",
     expirationDate: "No Expiration",
     credentialUrl: "https://learn.365datascience.com/certificates/CC-699430A468/",
-    image: "/certificates/git-github.png",
+    image: "/certificates/Git and GitHub.png",
   },
   {
     id: "64de731ccde7064749d09005",
@@ -141,7 +141,7 @@ export const certificates = [
     issueDate: "Aug 2023",
     expirationDate: "No Expiration",
     credentialUrl: "https://res.cloudinary.com/bohubrihi/image/upload/v1692300063/production/64de731ccde7064749d09005.pdf",
-    image: "/certificates/tailwind.png",
+    image: "/certificates/64de731ccde7064749d09005_page-0001.jpg",
   },
   {
     id: "UC-4602c606-dc39-4bdf-8fbe-922d8b6b6651",
@@ -150,6 +150,6 @@ export const certificates = [
     issueDate: "Jul 2023",
     expirationDate: "No Expiration",
     credentialUrl: "https://www.udemy.com/certificate/UC-4602c606-dc39-4bdf-8fbe-922d8b6b6651/",
-    image: "/certificates/tailwind.png",
+    image: "/certificates/tailwindcss.png",
   }
 ];

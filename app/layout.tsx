@@ -5,7 +5,8 @@ import Navbar from "@/components/shared/navbar";
 import ScrollToTopButton from "@/components/shared/scroll-to-top-button";
 import Socials from "@/components/shared/socials";
 import { ThemeProvider } from "@/components/theme/theme-provider";
-import type { Metadata } from "next";
+import { GoogleTagManager } from '@next/third-parties/google';
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Toaster } from "sonner";
 import "./globals.css";
@@ -21,15 +22,17 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata: Metadata = {
   title: "Rejoyan | Full Stack Developer",
   description:
     "I am md rejoyan islam, a full stack developer, mern stack developer, next.js expert, python data analyst. I create beautiful and functional web applications.",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
+
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -86,11 +89,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
       <body
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable}  antialiased bg-bg-main text-text-main  `}
       >
+        {process.env.NEXT_PUBLIC_GTM_ID && (
+          <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
+        )}
         <ThemeProvider
           enableSystem
           attribute="class"

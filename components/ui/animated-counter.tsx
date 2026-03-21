@@ -1,37 +1,41 @@
 "use client";
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { useEffect, useState } from "react";
+import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
+import { useEffect, useState, useRef } from "react";
 
-interface AnimatedCounterProps {
+export interface AnimatedCounterProps {
   value: number;
   suffix?: string;
   prefix?: string;
   duration?: number;
 }
 
-function AnimatedCounter({ value, suffix = "", prefix = "", duration = 2 }: AnimatedCounterProps) {
+export function AnimatedCounter({ value, suffix = "", prefix = "", duration = 2 }: AnimatedCounterProps) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) => Math.round(latest));
   const [displayValue, setDisplayValue] = useState(0);
 
   useEffect(() => {
-    const controls = animate(count, value, {
-      duration: duration,
-      ease: "easeOut",
-    });
+    if (isInView) {
+      const controls = animate(count, value, {
+        duration: duration,
+        ease: "easeOut",
+      });
+      return () => controls.stop();
+    }
+  }, [value, duration, count, isInView]);
 
+  useEffect(() => {
     const unsubscribe = rounded.on("change", (latest) => {
       setDisplayValue(latest);
     });
-
-    return () => {
-      controls.stop();
-      unsubscribe();
-    };
-  }, [value, duration, count, rounded]);
+    return () => unsubscribe();
+  }, [rounded]);
 
   return (
-    <span>
+    <span ref={ref}>
       {prefix}{displayValue}{suffix}
     </span>
   );
