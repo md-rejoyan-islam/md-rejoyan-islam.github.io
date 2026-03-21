@@ -69,7 +69,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-12 md:pt-24 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center pt-8 md:pt-24 pb-10 sm:pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="max-w-4xl mx-auto relative z-10 w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

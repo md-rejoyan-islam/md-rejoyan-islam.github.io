@@ -33,7 +33,7 @@ export function ContactWithMe() {
   ];
 
   return (
-    <section className="relative py-12 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-visible" id="contact">
+    <section className="relative py-8 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-visible" id="contact">
       {/* Transparent background - no blocking of fixed elements */}
 
       <div className="max-w-6xl mx-auto relative z-10">

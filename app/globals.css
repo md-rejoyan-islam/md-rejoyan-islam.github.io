@@ -243,7 +243,7 @@ html {
 
 /* Section Styles */
 .section-padding {
-  @apply py-16 md:py-24 px-4 sm:px-6 lg:px-8;
+  @apply py-10 md:py-24 px-4 sm:px-6 lg:px-8;
 }
 
 /* Light mode section backgrounds */
