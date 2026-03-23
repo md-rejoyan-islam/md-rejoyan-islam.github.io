@@ -8,7 +8,11 @@ export interface MESSAGE_TYPE {
 }
 
 export enum PROJECT_KEYWORD {
+  MINIO = "MinIO",
+  WEB_SOCKET = "WebSocket",
+  REDIS = "Redis",
   TAILWINDCSS = "Tailwind CSS",
+  LOVABLE = "Lovable",  
   MATERIALUI = "Material UI",
   FIGMA = "Figma",
   BOOTSTRAP = "Bootstrap",

@@ -13,7 +13,243 @@ export const projects: {
   techStack: string[];
 }[] = [
   {
-    id: 111,
+    id: 1,
+    name: "SUST Fitness Club",
+    description: "The official fitness platform for Shahjalal University of Science and Technology. It manages community events, weekly sessions, outdoor activities, and comprehensive university memberships. Built with a scalable Node.js/Prisma backend and a responsive React frontend dashboard.",
+    isBest: true,
+    techStack: [
+      PROJECT_KEYWORD.REACT,
+      PROJECT_KEYWORD.VITE,
+      PROJECT_KEYWORD.TAILWINDCSS,
+      PROJECT_KEYWORD.SHADCN_UI,
+      PROJECT_KEYWORD.REDUX_TOOLKIT,
+      PROJECT_KEYWORD.NODE,
+      PROJECT_KEYWORD.EXPRESSJS,
+      PROJECT_KEYWORD.PRISMA,
+      PROJECT_KEYWORD.MYSQL,
+      PROJECT_KEYWORD.SWAGGER,
+      PROJECT_KEYWORD.ZOD
+    ],
+    banner: "/images/projects/sust-fitness-club.webp",
+    links: [
+      {
+        name: "Preview",
+        href: "https://www.sustfitnessclub.org",
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: "AI Social Media Reply Automation",
+    description:
+      "An intelligent n8n workflow that automates conversational interactions across Facebook, Instagram, TikTok, and WhatsApp. It fetches user comments and messages, generates context-aware smart replies using AI, seamlessly posts the response, and logs all interaction data into Google Sheets.",
+    isBest: false,
+    techStack: [
+      PROJECT_KEYWORD.N8N,
+      "OpenAI API",
+      "Facebook API",
+      "Instagram API",
+      "TikTok API",
+      "WhatsApp API",
+      "Google Sheets API"
+    ],
+    banner: "/images/projects/social-n8n.webp",
+    links: [],
+  },
+  {
+    id: 3,
+      name: "Tilbod - API",
+      description:
+        "The robust backend API service powering the Tilbod ecosystem. It securely handles complex business logic, user authentication, precise database operations, file storage with GCP, and payment integrations.",
+      isBest: false,
+      techStack: [
+        PROJECT_KEYWORD.NODE,
+        PROJECT_KEYWORD.EXPRESSJS,
+        PROJECT_KEYWORD.MONGODB,
+        PROJECT_KEYWORD.TYPESCRIPT,
+        PROJECT_KEYWORD.ZOD,
+        PROJECT_KEYWORD.SWAGGER
+      ],
+      banner: "/images/projects/api.webp",
+      links: [
+        {
+          name: "Preview",
+          href: "https://api.tilbod.is/",
+        },
+      ]
+    }       ,
+  {
+    id: 4,
+      name: "Tilbod - Admin Dashboard",
+      description:
+        "A modern, multi-theme React application serving as the administrative dashboard for Tilbod companies. It features comprehensive data management, dynamic color themes, and a responsive mobile-first design.",
+      isBest: false,
+      techStack: [
+        PROJECT_KEYWORD.REACT,
+        PROJECT_KEYWORD.VITE,
+        PROJECT_KEYWORD.TAILWINDCSS,
+        PROJECT_KEYWORD.SHADCN_UI,
+        PROJECT_KEYWORD.TYPESCRIPT,
+        PROJECT_KEYWORD.REDUX_TOOLKIT
+      ],
+      banner: "/images/projects/tilbod-admin.webp",
+      links: [
+        {
+          name: "Preview",
+          href: "https://app.tilbod.is",
+        },]
+    },
+  {
+    id: 5,
+      name: "Tilbod - Public Website",
+      description:
+        "The official public-facing website for Tilbod. Built with Next.js, it features robust i18n support, server-side performance optimizations, and a modern responsive interface to engage visitors.",
+      isBest: false,
+      techStack: [
+        PROJECT_KEYWORD.NEXTJS,
+        PROJECT_KEYWORD.REACT,
+        PROJECT_KEYWORD.TAILWINDCSS,
+        PROJECT_KEYWORD.TYPESCRIPT,
+        PROJECT_KEYWORD.REDUX_TOOLKIT_QUERY
+      ],
+      banner: "/images/projects/tilbod-public.webp",
+      links: [
+        {
+          name: "Preview",
+          href: "https://tilbod.is/is",
+        },]
+    },
+  {
+    id: 6,
+      name: "Bturkish Store - Shopify Automation",
+      description:
+        "An automated n8n workflow that scrapes product data, intelligently parses it using OpenAI, and directly lists products on Shopify. Features include Telegram progress tracking and structured Google Sheets logging.",
+      isBest: true,
+      techStack: [
+        PROJECT_KEYWORD.N8N,
+        "OpenAI API",
+        "Shopify API",
+        "Telegram API",
+        "Google Sheets API"
+      ],
+      banner: "/images/projects/shopify-n8n.webp",
+      links: [
+        {
+          name: "Preview",
+          href: "https://bturkishstore.app.n8n.cloud/",
+        },]
+      
+    },
+  {
+    id: 7,
+    name: "Elevation Homes AI Automation",
+    description:
+      "An automated n8n pipeline for intelligent real estate lead engagement. It leverages Retell AI for phone calls and Twilio for SMS follow-ups, logging all interactions and outcomes directly to Google Sheets.",
+    isBest: false,
+    techStack: [
+      PROJECT_KEYWORD.N8N,
+      "JavaScript",
+      "Retell AI",
+      "Twilio API",
+      "Google Sheets API"
+    ],
+    banner: "/images/projects/elevation-home.webp",
+    links: [],
+  },
+  {
+    id: 8,
+      name: "Bulk-SMS",
+      description:
+        "An Enterprise Blockchain Communication platform introducing a crypto credit-based ecosystem. It features robust contact submission, massive bulk messaging capabilities, and reliable file storage using MinIO.",
+      isBest: true,
+      techStack: [
+        PROJECT_KEYWORD.REACT,
+        "React Router",
+        PROJECT_KEYWORD.NODE,
+        PROJECT_KEYWORD.EXPRESSJS,
+        PROJECT_KEYWORD.MONGODB,
+        PROJECT_KEYWORD.DOCKER,
+        PROJECT_KEYWORD.MINIO
+      ],
+      banner: "/images/projects/bulk-sms.webp",
+      links: [
+        {
+          name: "Preview",
+          href: "https://bulk-sms.net/",
+        },]
+    },
+  {
+    id: 9,
+      name: "Sora HK",
+      description:
+        "An advanced AI video generation SaaS platform built for the Hong Kong market. Features include text-to-video capabilities, secure payment integrations, dynamic watermark management, WebSocket-based progress tracking, and multi-channel notifications.",
+      isBest: true,
+      techStack: [
+        PROJECT_KEYWORD.REACT,
+        PROJECT_KEYWORD.VITE,
+        PROJECT_KEYWORD.NODE,
+        PROJECT_KEYWORD.MONGODB,
+        PROJECT_KEYWORD.DOCKER,
+        PROJECT_KEYWORD.NEXTJS,
+        PROJECT_KEYWORD.TYPESCRIPT,
+        PROJECT_KEYWORD.REDIS,
+        PROJECT_KEYWORD.WEB_SOCKET
+      ],
+      banner: "/images/projects/sora-hk.webp",
+      links: [
+        {
+          name: "Preview",
+          href: "https://sorahk.site/",
+        },]
+    },
+  {
+    id: 10,
+      name: "RedPro",
+      description:
+        "A comprehensive multi-tenant real estate project management platform. Designed with dynamic organization hierarchies, it tracks project lifecycles, monitors budgets, and integrates securely with S3 for robust document management.",
+      isBest: false,
+      techStack: [
+        PROJECT_KEYWORD.NEXTJS,
+        PROJECT_KEYWORD.TAILWINDCSS,
+        PROJECT_KEYWORD.SHADCN_UI,
+        PROJECT_KEYWORD.REDUX_TOOLKIT_QUERY,
+        PROJECT_KEYWORD.TYPESCRIPT,
+        PROJECT_KEYWORD.MONGODB,
+        PROJECT_KEYWORD.NODE,
+        PROJECT_KEYWORD.DOCKER,
+        "NestJS",
+        "Redis"
+      ],
+      banner: "/images/projects/redpro.webp",
+      links: [
+        {
+          name: "Preview",
+          href: "https://redpro.ai",
+        },]
+    },
+  {
+    id: 11,
+      name: "KB Fitness Key Biscayne",
+      description:
+        "A dynamic front-end platform for a premier fitness gym in Key Biscayne, Miami. It showcases modern HIIT classes, personalized training programs, and structured group workouts with a highly engaging and robust user interface.",
+      isBest: false,
+      techStack: [
+        PROJECT_KEYWORD.REACT,
+        PROJECT_KEYWORD.VITE,
+        PROJECT_KEYWORD.HTML,
+        PROJECT_KEYWORD.CSS,
+        PROJECT_KEYWORD.JAVASCRIPT,
+        PROJECT_KEYWORD.LOVABLE
+      ],
+      banner: "/images/projects/kbfitness.webp",
+      links: [
+        {
+          name: "Preview",
+          href: "https://kbfitnessfl.com",
+        },]
+    },
+  {
+    id: 12,
     name: "Neuronomous",
     isBest: true,
     description:
@@ -38,15 +274,12 @@ export const projects: {
       {
         name: "Preview",
         href: "https://neuronomous.net",
+      }
+    
+    ]
       },
-      {
-        name: "Server",
-        href: "https://github.com/md-rejoyan-islam/SUST_EEE_IOT_HUB_API",
-      },
-    ],
-  },
   {
-    id: 1,
+    id: 13,
     name: "Quiz Master",
     isBest: true,
     description:
@@ -65,16 +298,10 @@ export const projects: {
       {
         name: "GitHub",
         href: "https://github.com/md-rejoyan-islam/Quiz-Master-Client",
+      },]
       },
-      {
-        name: "Preview",
-        href: "https://quiz-master-client-app.vercel.app",
-      },
-    ],
-  },
-
   {
-    id: 2,
+    id: 14,
     name: "Quiz Master API",
     isBest: true,
     description:
@@ -93,66 +320,51 @@ export const projects: {
       {
         name: "GitHub",
         href: "https://github.com/md-rejoyan-islam/Quiz-Master-API",
+      },]
       },
-      {
-        name: "Preview",
-        href: "https://api-quiz-master.vercel.app",
-      },
-    ],
-  },
   {
-    id: 3,
-    name: "MOVIX",
-    isBest: true,
-    description:
-      "The Movix website is a modern web application designed for movie and TV show enthusiasts. It likely features a sleek interface allowing users to explore trending movies and shows, access detailed information such as ratings and trailers, and search an extensive database, providing a seamless experience for cinema lovers.",
-    techStack: [
-      PROJECT_KEYWORD.REACT,
-      PROJECT_KEYWORD.NEXTJS,
-      PROJECT_KEYWORD.TYPESCRIPT,
-      PROJECT_KEYWORD.REDUX_TOOLKIT_QUERY,
-      PROJECT_KEYWORD.TAILWINDCSS,
-      PROJECT_KEYWORD.FRAMER_MOTION,
-    ],
-    banner: "/images/projects/movix.webp",
-    links: [
-      {
-        name: "GitHub",
-        href: "https://github.com/md-rejoyan-islam/movix-client.git",
+    id: 15,
+        name: "MOVIX",
+        isBest: true,
+        description:
+          "The Movix website is a modern web application designed for movie and TV show enthusiasts. It likely features a sleek interface allowing users to explore trending movies and shows, access detailed information such as ratings and trailers, and search an extensive database, providing a seamless experience for cinema lovers.",
+        techStack: [
+          PROJECT_KEYWORD.REACT,
+          PROJECT_KEYWORD.NEXTJS,
+          PROJECT_KEYWORD.TYPESCRIPT,
+          PROJECT_KEYWORD.REDUX_TOOLKIT_QUERY,
+          PROJECT_KEYWORD.TAILWINDCSS,
+          PROJECT_KEYWORD.FRAMER_MOTION,
+        ],
+        banner: "/images/projects/movix.webp",
+        links: [
+          {
+            name: "GitHub",
+            href: "https://github.com/md-rejoyan-islam/movix-client.git",
+          },]
       },
-      {
-        name: "Preview",
-        href: "https://movix-cinema.vercel.app/",
-      },
-    ],
-  },
   {
-    id: 4,
-    name: "KVirus-19",
-    isBest: true,
-    description:
-      "KVirus-19 is a web application that provides information about the COVID-19 pandemic. It includes features such as tracking the number of cases, deaths, and recoveries, as well as providing information about prevention and treatment. The application is built using React, Tailwind CSS, and Redux.",
-    techStack: [
-      PROJECT_KEYWORD.REACT,
-      PROJECT_KEYWORD.NEXTJS,
-      PROJECT_KEYWORD.TYPESCRIPT,
-      PROJECT_KEYWORD.TAILWINDCSS,
-      PROJECT_KEYWORD.FRAMER_MOTION,
-    ],
-    banner: "/images/projects/kvirus-19.png",
-    links: [
-      {
-        name: "GitHub",
-        href: "https://github.com/md-rejoyan-islam/covid-19",
+    id: 16,
+        name: "KVirus-19",
+        isBest: true,
+        description:
+          "KVirus-19 is a web application that provides information about the COVID-19 pandemic. It includes features such as tracking the number of cases, deaths, and recoveries, as well as providing information about prevention and treatment. The application is built using React, Tailwind CSS, and Redux.",
+        techStack: [
+          PROJECT_KEYWORD.REACT,
+          PROJECT_KEYWORD.NEXTJS,
+          PROJECT_KEYWORD.TYPESCRIPT,
+          PROJECT_KEYWORD.TAILWINDCSS,
+          PROJECT_KEYWORD.FRAMER_MOTION,
+        ],
+        banner: "/images/projects/kvirus-19.png",
+        links: [
+          {
+            name: "GitHub",
+            href: "https://github.com/md-rejoyan-islam/covid-19",
+          },]
       },
-      {
-        name: "Preview",
-        href: "https://covid-19-nextjs.vercel.app/",
-      },
-    ],
-  },
   {
-    id: 5,
+    id: 17,
     name: "Quranul Karim Multi-Languages",
     isBest: true,
     description:
@@ -169,15 +381,10 @@ export const projects: {
       {
         name: "GitHub",
         href: "https://github.com/md-rejoyan-islam/quranul-karim",
+      },]
       },
-      {
-        name: "Preview",
-        href: "https://quranul-karim-multi-languages.vercel.app",
-      },
-    ],
-  },
   {
-    id: 6,
+    id: 18,
     name: "Event Explorer",
     isBest: false,
     description:
@@ -195,15 +402,10 @@ export const projects: {
       {
         name: "GitHub",
         href: "https://github.com/md-rejoyan-islam/event_explorer_client",
+      },]
       },
-      {
-        name: "Preview",
-        href: "https://event-explorer.vercel.app",
-      },
-    ],
-  },
   {
-    id: 7,
+    id: 19,
     name: "Event Explorer API",
     isBest: false,
     description:
@@ -220,15 +422,10 @@ export const projects: {
       {
         name: "GitHub",
         href: "https://github.com/md-rejoyan-islam/event_explorer_api",
+      },]
       },
-      {
-        name: "Preview",
-        href: "https://ministerial-gabriel-rejoyan-cd2987cb.koyeb.app/graphql",
-      },
-    ],
-  },
   {
-    id: 8,
+    id: 20,
     name: "Job Box",
     isBest: false,
     description:
@@ -244,15 +441,10 @@ export const projects: {
       {
         name: "GitHub",
         href: "https://github.com/md-rejoyan-islam/job-box-client.git",
+      },]
       },
-      {
-        name: "Preview",
-        href: "https://job-box-app.netlify.app/",
-      },
-    ],
-  },
   {
-    id: 9,
+    id: 21,
     name: "Job Box API",
     isBest: false,
     description:
@@ -269,15 +461,10 @@ export const projects: {
       {
         name: "GitHub",
         href: "https://github.com/md-rejoyan-islam/job-box-server",
+      },]
       },
-      {
-        name: "Preview",
-        href: "https://tinyurl.com/mr3r4sse",
-      },
-    ],
-  },
   {
-    id: 10,
+    id: 22,
     name: "Stay-Swift - Hotel Booking",
     isBest: true,
     description:
@@ -295,15 +482,10 @@ export const projects: {
       {
         name: "GitHub",
         href: "https://github.com/md-rejoyan-islam/stay-swift-hotel",
+      },]
       },
-      {
-        name: "Preview",
-        href: "https://stay-swift-hotel.vercel.app/",
-      },
-    ],
-  },
   {
-    id: 11,
+    id: 23,
     name: "KINSUST A VOLUNTARY ORGANIZATION",
     isBest: true,
     description:
@@ -320,20 +502,10 @@ export const projects: {
       {
         name: "GitHub",
         href: "https://github.com/md-rejoyan-islam/kinsust-nextjs.git",
+      },]
       },
-      {
-        name: "Preview",
-        href: "https://kinsust.vercel.app",
-      },
-      {
-        name: "Server",
-        href: "https://github.com/md-rejoyan-islam/kinsust_backend",
-      },
-    ],
-  },
-
   {
-    id: 12,
+    id: 24,
     name: "TRAFALGAR - Online Medical Service",
     isBest: false,
     description:
@@ -349,19 +521,10 @@ export const projects: {
       {
         name: "GitHub",
         href: "https://github.com/md-rejoyan-islam/trafalfar",
+      },]
       },
-      {
-        name: "Preview",
-        href: "https://md-rejoyan-islam.github.io/trafalfar",
-      },
-      {
-        name: "Figma",
-        href: "https://www.figma.com/design/zbgBIoTtfJgaTn5ljw9Uk8/Trafalgar-Landing-Page?node-id=0-1&node-type=canvas",
-      },
-    ],
-  },
   {
-    id: 13,
+    id: 25,
     name: "POSITIVUS - Digital Marketing Agency",
     isBest: false,
     description:
@@ -377,19 +540,10 @@ export const projects: {
       {
         name: "GitHub",
         href: "https://github.com/md-rejoyan-islam/positivus",
+      },]
       },
-      {
-        name: "Preview",
-        href: "https://md-rejoyan-islam.github.io/positivus",
-      },
-      {
-        name: "Figma",
-        href: "https://www.figma.com/design/XfusUxB41cF8pclYknAlvP/Positivus-Landing-Page-Design",
-      },
-    ],
-  },
   {
-    id: 14,
+    id: 26,
     name: "Bizpro - Business Promotion Solution",
     isBest: false,
     description:
@@ -405,19 +559,10 @@ export const projects: {
       {
         name: "GitHub",
         href: "https://github.com/md-rejoyan-islam/bizpro",
+      },]
       },
-      {
-        name: "Preview",
-        href: "https://md-rejoyan-islam.github.io/bizpro",
-      },
-      {
-        name: "Figma",
-        href: "https://www.figma.com/design/27PECBAoJw6P4iRKSzqisb/Bizpro---A-Business-Promotion-Solution-Landing-Page",
-      },
-    ],
-  },
   {
-    id: 15,
+    id: 27,
     name: "Tasty Food 🍔🍕🍣",
     isBest: false,
     description:
@@ -432,15 +577,10 @@ export const projects: {
       {
         name: "GitHub",
         href: "https://github.com/md-rejoyan-islam/tasty-food",
+      },]
       },
-      {
-        name: "Preview",
-        href: "https://md-rejoyan-islam.github.io/tasty-food",
-      },
-    ],
-  },
   {
-    id: 16,
+    id: 28,
     name: "React Tic-Tac-Toe Game",
     isBest: false,
     description:
@@ -457,15 +597,10 @@ export const projects: {
       {
         name: "GitHub",
         href: "https://github.com/md-rejoyan-islam/react-Tic-Tac-Toe-game",
+      },]
       },
-      {
-        name: "Preview",
-        href: "https://react-tic-tac-toe-game-rejoyan.netlify.app",
-      },
-    ],
-  },
   {
-    id: 17,
+    id: 29,
     name: "Blood Finder App",
     isBest: false,
     description:
@@ -480,46 +615,8 @@ export const projects: {
     banner: "/images/projects/blood-finder.png",
     links: [],
   },
-  // {
-  //   name: "Messenger",
-  //   description: "I am currently working here.",
-  //   techStack: ["REACT", "TailwindCSS", "Vite"],
-  //   banner: "/images/projects/trafalgar.png",
-  //   links: [
-  //     {
-  //       name: "GitHub",
-  //       href: "https://github.com/md-rejoyan-islam/messenger.git",
-
-  //     },
-  //     {
-  //       name: "Preview",
-  //       href: "https://messenger-live-chat.netlify.app",
-
-  //     },
-  //   ],
-  // },
-  // {
-  //   name: "Random Name Picker",
-  //   isBest: false,
-  //   description:
-  //     "Welcome to the Random Name Picker project! This simple web application allows you to randomly select names from a list. Whether you're organizing a raffle, choosing a winner, or just having fun, this tool has got you covered.",
-  //   techStack: ["REACT", "TailwindCSS", "TypeScript"],
-  //   banner: "/images/projects/trafalgar.png",
-  //   links: [
-  //     {
-  //       name: "GitHub",
-  //       href: "https://github.com/md-rejoyan-islam/random-name-picker",
-
-  //     },
-  //     {
-  //       name: "Preview",
-  //       href: "https://reactjs-random-name-picker.netlify.app",
-
-  //     },
-  //   ],
-  // },
   {
-    id: 18,
+    id: 30,
     name: "Doctor Portal",
     isBest: true,
     description:
@@ -530,19 +627,10 @@ export const projects: {
       {
         name: "GitHub",
         href: "https://github.com/md-rejoyan-islam/doctor-portal.git",
+      },]
       },
-      {
-        name: "Preview",
-        href: "https://doctors-portal-f127f.web.app",
-      },
-      {
-        name: "Server",
-        href: "https://github.com/md-rejoyan-islam/doctor-portal-server.git",
-      },
-    ],
-  },
   {
-    id: 19,
+    id: 31,
     name: "Doctor's Portal - Backend",
     isBest: false,
     description:
@@ -560,15 +648,10 @@ export const projects: {
       {
         name: "GitHub",
         href: "https://github.com/md-rejoyan-islam/doctor-portal-server",
+      },]
       },
-      {
-        name: "Preview",
-        href: "tinyurl.com/33yacxun",
-      },
-    ],
-  },
   {
-    id: 20,
+    id: 32,
     name: "Tasker",
     isBest: false,
     description:
@@ -585,15 +668,10 @@ export const projects: {
       {
         name: "GitHub",
         href: "https://github.com/md-rejoyan-islam/tasker.git",
+      },]
       },
-      {
-        name: "Preview",
-        href: "https://easy-tasker-app.netlify.app",
-      },
-    ],
-  },
   {
-    id: 21,
+    id: 33,
     name: "Donate Now",
     isBest: false,
     description:
@@ -609,15 +687,10 @@ export const projects: {
       {
         name: "GitHub",
         href: "https://github.com/md-rejoyan-islam/donate-now.git",
+      },]
       },
-      {
-        name: "Preview",
-        href: "https://md-rejoyan-islam.github.io/donate-now",
-      },
-    ],
-  },
   {
-    id: 22,
+    id: 34,
     name: "KIN DASHBOARD",
     isBest: false,
     description:
@@ -633,19 +706,10 @@ export const projects: {
       {
         name: "GitHub",
         href: "https://github.com/md-rejoyan-islam/kinsust-dashboard.git",
+      },]
       },
-      {
-        name: "Preview",
-        href: "https://dashboard-kin.netlify.app/",
-      },
-      {
-        name: "Server",
-        href: "https://github.com/md-rejoyan-islam/kinsust_backend",
-      },
-    ],
-  },
   {
-    id: 23,
+    id: 35,
     name: "E-Commerce API",
     description:
       "This an e-commerce API built for managing online store operations. It likely includes features like product listing, cart management, order processing, and user authentication, designed with modern web technologies for scalability and efficiency, serving as a backend solution for e-commerce applications.",
@@ -664,14 +728,9 @@ export const projects: {
       {
         name: "GitHub",
         href: "https://github.com/md-rejoyan-islam/ecommerce-api",
-      },
-      {
-        name: "Preview",
-        href: "tinyurl.com/k7tssj6c",
-      },
-    ],
-  },
-];
+      },]
+      }
+]
 
 export const filterKeys = [
   {
@@ -691,5 +750,6 @@ export const filterKeys = [
   },
   {
     name: "N8N",
-  },
+  }
 ];
+
