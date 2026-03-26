@@ -9,7 +9,7 @@ import { HomeSubtittle, HomeTittle } from "./home-page-tittle-subtitle";
 
 export default function ShowcaseProjects() {
   return (
-    <section className="section-padding relative overflow-hidden bg-white dark:bg-transparent" id="projects">
+    <section className="section-padding relative overflow-hidden bg-transparent" id="projects">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-500/5 to-pink-500/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-full blur-3xl" />

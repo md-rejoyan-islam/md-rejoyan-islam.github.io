@@ -30,7 +30,7 @@ const technologies = [
 
 export default function LearningTechnologies() {
   return (
-    <section className="section-padding relative overflow-hidden bg-white dark:bg-transparent">
+    <section className="section-padding relative overflow-hidden bg-transparent">
       {/* Background decoration */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-indigo-500/5 via-purple-500/5 to-pink-500/5 rounded-full blur-3xl" />
 

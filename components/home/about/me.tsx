@@ -32,15 +32,15 @@ export default function Me() {
       >
         <HomeSubtittle
           label="I'm a Full Stack Developer passionate about building scalable web applications — from modern React.js / Next.js frontends to robust Node.js / Express.js backends, with MongoDB and SQL for data management."
-          className="leading-relaxed text-[14px] sm:text-base"
+          className="leading-relaxed text-base"
         />
         <HomeSubtittle
           label="I work with RESTful & GraphQL APIs, Redux for state management, Python for data analysis and ML workflows, and n8n for intelligent business automation."
-          className="leading-relaxed text-[14px] sm:text-base"
+          className="leading-relaxed text-base"
         />
         <HomeSubtittle
           label="Always learning, always building — focused on solving real problems through clean, efficient code."
-          className="leading-relaxed text-[14px] sm:text-base"
+          className="leading-relaxed text-base"
         />
      
 

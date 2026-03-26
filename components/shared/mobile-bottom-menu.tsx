@@ -49,19 +49,19 @@ const MobileBottomMenu = () => {
               key={item.name}
               className={`flex flex-col items-center gap-0.5 py-1 px-2.5 rounded-lg transition-colors ${
                 pathname === item.href
-                  ? "text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-500/10"
+                  ? "text-indigo-600 dark:text-indigo-400"
                   : "text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300"
               }`}
             >
               <Icon className="h-4 w-4" />
-              <span className="text-[14px] font-medium">{item.name}</span>
+              <span className="text-xs font-medium">{item.name}</span>
             </Link>
           );
         })}
         <button
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           aria-label="Toggle Theme"
-          className="flex flex-col items-center gap-0.5 py-1 px-2.5 rounded-lg text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+          className="flex flex-col items-center gap-0.5 py-1 px-2.5 rounded-lg text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
         >
           {mounted ? (
             theme === "dark" ? (
@@ -72,7 +72,7 @@ const MobileBottomMenu = () => {
           ) : (
             <div className="h-4 w-4" />
           )}
-          <span className="text-[14px] font-medium">Theme</span>
+          <span className="text-xs font-medium">Theme</span>
         </button>
       </nav>
     </div>

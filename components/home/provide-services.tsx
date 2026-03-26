@@ -50,7 +50,7 @@ const services = [
 
 export default function ProvideServices() {
   return (
-    <section className="section-padding relative overflow-hidden bg-slate-50/80 dark:bg-transparent">
+    <section className="section-padding relative overflow-hidden bg-transparent">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/community.svg')] bg-contain bg-center bg-no-repeat opacity-[0.03] dark:opacity-[0.02]" />
 

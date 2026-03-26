@@ -44,7 +44,7 @@ export function AboutMe() {
   ];
 
   return (
-    <section className="section-padding relative overflow-hidden bg-white dark:bg-transparent" id="about">
+    <section className="section-padding relative overflow-hidden bg-transparent" id="about">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-indigo-500/5 to-purple-500/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-full blur-3xl" />
@@ -88,7 +88,7 @@ export function AboutMe() {
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
-                <tab.icon className="w-3 h-3 sm:w-4 sm:h-4 relative z-10" />
+                <tab.icon className="w-4 h-4 sm:w-5 sm:h-5 relative z-10" />
                 <span className="relative z-10 hidden sm:inline">{tab.label}</span>
               </button>
             ))}

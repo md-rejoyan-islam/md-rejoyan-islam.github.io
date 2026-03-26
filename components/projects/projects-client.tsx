@@ -21,12 +21,12 @@ const itemVariants = {
 };
 
 export default function ProjectsClient() {
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter] = useState("ALL");
   const [projects, setProjects] = useState(projectsData);
 
   const handleFilter = (filterName: string) => {
     setActiveFilter(filterName);
-    if (filterName === "All") {
+    if (filterName === "ALL") {
       setProjects(projectsData);
     } else {
       const filtered = projectsData.filter((project) =>
@@ -55,7 +55,7 @@ export default function ProjectsClient() {
             className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-100 dark:border-indigo-500/20 mb-3 sm:mb-6"
           >
             <Folder className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-600 dark:text-indigo-400" />
-            <span className="text-[14px] sm:text-sm font-medium text-indigo-600 dark:text-indigo-400">
+            <span className="text-sm sm:text-sm font-medium text-indigo-600 dark:text-indigo-400">
               Portfolio
             </span>
           </motion.div>
@@ -63,7 +63,7 @@ export default function ProjectsClient() {
           <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-4">
             My Projects
           </h1>
-          <p className="max-w-2xl mx-auto text-slate-600 dark:text-slate-400 text-[14px] sm:text-base md:text-lg px-2">
+          <p className="max-w-2xl mx-auto text-slate-600 dark:text-slate-400 text-base sm:text-base md:text-lg px-2">
             A collection of projects that showcase my skills in full-stack
             development, from web applications to automation solutions.
           </p>
@@ -80,10 +80,10 @@ export default function ProjectsClient() {
             <button
               key={filter.name}
               onClick={() => handleFilter(filter.name)}
-              className={`px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl text-[14px] sm:text-sm font-medium transition-all duration-300 ${
+              className={`px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl text-sm sm:text-sm font-medium transition-all duration-300 ${
                 activeFilter === filter.name
                   ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/25"
-                  : "bg-slate-100 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700/50"
+                  : "bg-white dark:bg-slate-800/50 text-slate-700 dark:text-slate-400 hover:bg-indigo-50 dark:hover:bg-slate-700/50 border border-slate-200 dark:border-slate-700/50"
               }`}
             >
               {filter.name}

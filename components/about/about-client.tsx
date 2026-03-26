@@ -127,7 +127,7 @@ export default function AboutClient() {
             className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-100 dark:border-indigo-500/20 mb-3 sm:mb-6"
           >
             <User className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-600 dark:text-indigo-400" />
-            <span className="text-[14px] sm:text-sm font-medium text-indigo-600 dark:text-indigo-400">
+            <span className="text-sm sm:text-sm font-medium text-indigo-600 dark:text-indigo-400">
               About Me
             </span>
           </motion.div>
@@ -138,7 +138,7 @@ export default function AboutClient() {
           </h1>
 
           {/* Description */}
-          <p className="max-w-2xl mx-auto text-slate-600 dark:text-slate-400 text-[14px] sm:text-base md:text-lg px-2 mb-6 sm:mb-8">
+          <p className="max-w-2xl mx-auto text-slate-600 dark:text-slate-400 text-base sm:text-base md:text-lg px-2 mb-6 sm:mb-8">
             A passionate full-stack developer dedicated to crafting elegant
             digital experiences. Specialized in creating robust, scalable
             applications using modern web technologies.
@@ -198,7 +198,7 @@ export default function AboutClient() {
               <h2 className="text-xl sm:text-2xl font-semibold text-indigo-600 dark:text-white">
                 Experience
               </h2>
-              <p className="text-[14px] sm:text-sm text-slate-500 dark:text-slate-400">
+              <p className="text-sm sm:text-sm text-slate-500 dark:text-slate-400">
                 Professional journey
               </p>
             </div>
@@ -238,7 +238,7 @@ export default function AboutClient() {
                         </span>
                       )}
                     </div>
-                    <div className="flex items-center gap-2 text-[14px] sm:text-sm">
+                    <div className="flex items-center gap-2 text-sm sm:text-sm">
                       {exp.link ? (
                         <a
                           href={exp.link}
@@ -285,7 +285,7 @@ export default function AboutClient() {
               <h2 className="text-xl sm:text-2xl font-semibold text-indigo-600 dark:text-white">
                 Education
               </h2>
-              <p className="text-[14px] sm:text-sm text-slate-500 dark:text-slate-400">
+              <p className="text-sm sm:text-sm text-slate-500 dark:text-slate-400">
                 Academic background
               </p>
             </div>
@@ -335,7 +335,7 @@ export default function AboutClient() {
               <h2 className="text-xl sm:text-2xl font-semibold text-indigo-600 dark:text-white">
                 Certifications
               </h2>
-              <p className="text-[14px] sm:text-sm text-slate-500 dark:text-slate-400">
+              <p className="text-sm sm:text-sm text-slate-500 dark:text-slate-400">
                 Professional credentials
               </p>
             </div>

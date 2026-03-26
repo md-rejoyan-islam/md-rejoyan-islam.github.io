@@ -178,6 +178,7 @@ export function CodeBackground() {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
       {/* Left side code block - top left area */}
+      <div className="opacity-50 lg:opacity-100">
       <motion.div
         initial={{ opacity: 0, x: -80, y: -30, rotate: -5 }}
         animate={{ opacity: isDark ? 0.2 : 0.15, x: 0, y: 0, rotate: -5 }}
@@ -223,8 +224,10 @@ export function CodeBackground() {
           />
         </motion.div>
       </motion.div>
+      </div>
 
       {/* Right side code block - bottom right area */}
+      <div className="opacity-50 lg:opacity-100">
       <motion.div
         initial={{ opacity: 0, x: 80, y: 30, rotate: 5 }}
         animate={{ opacity: isDark ? 0.2 : 0.15, x: 0, y: 0, rotate: 5 }}
@@ -270,6 +273,7 @@ export function CodeBackground() {
           />
         </motion.div>
       </motion.div>
+      </div>
 
       {/* Decorative elements */}
       <motion.div

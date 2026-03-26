@@ -7,12 +7,17 @@ export default function ProcessCard({
   index,
   data,
   handleTabClick,
+  isMobile = false,
 }: {
   readonly step: number;
   readonly index: number;
-  readonly data: { title: string; description: string };
+  readonly data: { title: string; description: string; sort_description?: string };
   readonly handleTabClick: (index: number) => void;
+  readonly isMobile?: boolean;
 }) {
+  // On mobile, show sort_description if available, otherwise show description
+  const displayDescription = isMobile && data.sort_description ? data.sort_description : data.description;
+
   return (
     <Card className="h-full border-[#c7e4fe] dark:backdrop-blur-[1.5px] dark:border-[#1c2453] dark:bg-[#101531]/60  ">
       <button
@@ -26,7 +31,7 @@ export default function ProcessCard({
       >
         <div className="flex items-center gap-2 sm:gap-4">
           <span
-            className={`flex min-h-6 min-w-6 sm:min-h-8 sm:min-w-8 h-6 w-6 sm:h-8 sm:w-8 items-center justify-center rounded-full text-[14px] sm:text-sm font-semibold
+            className={`flex min-h-6 min-w-6 sm:min-h-8 sm:min-w-8 h-6 w-6 sm:h-8 sm:w-8 items-center justify-center rounded-full text-sm sm:text-sm font-semibold
                         ${
                           step === index
                             ? "bg-[var(--primary-button)] text-white"
@@ -36,27 +41,29 @@ export default function ProcessCard({
             {index + 1}
           </span>
           <div>
-            <h3 className="text-[14px] sm:text-xl font-semibold text-gray-900 dark:text-white/80">
+            <h3 className="text-base sm:text-xl font-semibold text-gray-900 dark:text-white/80">
               {data.title}
             </h3>
-            <p className="mt-0.5 sm:mt-1 text-[14px] sm:text-sm text-gray-500 dark:text-text-secondary">
-              {data.description}
+            <p className="mt-0.5 sm:mt-1 text-sm text-gray-500 dark:text-text-secondary">
+              {displayDescription}
             </p>
           </div>
         </div>
-        <div className="h-full absolute left-0 top-0 rounded-sm w-full">
-          <motion.div
-            className=" bg-[#63a3f8]/10 rounded-s-xl w-full h-full"
-            initial={{ width: "0%" }}
-            animate={{
-              width: step === index ? "100%" : "0%",
-            }}
-            transition={{
-              duration: step === index ? 4 : 0.3,
-              ease: "linear",
-            }}
-          />
-        </div>
+        {!isMobile && (
+          <div className="h-full absolute left-0 top-0 rounded-sm w-full">
+            <motion.div
+              className=" bg-[#63a3f8]/10 rounded-s-xl w-full h-full"
+              initial={{ width: "0%" }}
+              animate={{
+                width: step === index ? "100%" : "0%",
+              }}
+              transition={{
+                duration: step === index ? 4 : 0.3,
+                ease: "linear",
+              }}
+            />
+          </div>
+        )}
       </button>
     </Card>
   );

@@ -38,7 +38,7 @@ export function HomeSubtittle({
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: 0.1 }}
       className={clsx(
-        "text-slate-600 dark:text-slate-400 text-[14px] sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed px-4",
+        "text-slate-600 dark:text-slate-400 text-base sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed px-4",
         className
       )}
     >

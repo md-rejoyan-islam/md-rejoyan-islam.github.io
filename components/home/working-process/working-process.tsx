@@ -68,7 +68,7 @@ export default function WorkingProcesses() {
   ];
 
   return (
-    <section className="section-padding relative overflow-hidden bg-white dark:bg-transparent">
+    <section className="section-padding relative overflow-hidden bg-transparent">
       {/* Background decoration */}
       <div className="absolute inset-0 w-full max-w-[600px] h-[400px] sm:h-[600px] lg:max-h-[500px] mx-auto bg-[url('/images/output.svg')] bg-cover opacity-[0.03] dark:opacity-[0.02] bg-no-repeat" />
 
@@ -85,9 +85,51 @@ export default function WorkingProcesses() {
         </motion.div>
 
         <div className="pt-4 sm:pt-8 mx-auto w-full px-2 sm:px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
+          {/* Mobile Layout - Simple stacked cards */}
+          <div className="md:hidden space-y-3">
+            {workProcess?.map((data, index) => (
+              <motion.div
+                key={data.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <ProcessCard step={-1} index={index} data={data} handleTabClick={() => {}} isMobile={true} />
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Tablet Layout - Center section on top, then 2 column grid */}
+          <div className="hidden md:flex lg:hidden flex-col gap-6">
+            {/* Center: Steps - on top for tablet */}
+            <div className="relative min-h-[280px] h-[280px] overflow-hidden flex items-center justify-center w-full">
+              <BackgroundLines>
+                <AnimatePresence initial={false} custom={direction}>
+                  <StepContent step={step} direction={direction} key={step} processes={workProcess} />
+                </AnimatePresence>
+              </BackgroundLines>
+            </div>
+
+            {/* Cards grid */}
+            <div className="grid grid-cols-2 gap-4 sm:gap-6">
+              {workProcess?.map((data, index) => (
+                <motion.div
+                  key={data.id}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <ProcessCard step={step} index={index} data={data} handleTabClick={handleTabClick} />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Desktop Layout - 3 column with center animation */}
+          <div className="hidden lg:grid lg:grid-cols-3 gap-4 sm:gap-8">
             {/* Left side: Progress bars */}
-            <div className="space-y-2 sm:space-y-3 md:hidden lg:block order-1">
+            <div className="space-y-2 sm:space-y-3">
               {workProcess?.slice(0, 3).map((data, index) => (
                 <motion.div
                   key={data.id}
@@ -100,21 +142,8 @@ export default function WorkingProcesses() {
               ))}
             </div>
 
-            <div className="gap-2 sm:gap-4 order-2 sm:grid-cols-2 md:grid hidden lg:hidden col-span-full">
-              {workProcess?.map((data, index) => (
-                <motion.div
-                  key={data.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <ProcessCard step={step} index={index} data={data} handleTabClick={handleTabClick} />
-                </motion.div>
-              ))}
-            </div>
-
             {/* Center: Steps */}
-            <div className="relative col-span-full lg:col-span-1 min-h-[200px] sm:min-h-[300px] md:min-h-[200px] flex items-center w-full order-1 lg:order-2">
+            <div className="relative min-h-[300px] flex items-center w-full">
               <BackgroundLines>
                 <AnimatePresence initial={false} custom={direction}>
                   <StepContent step={step} direction={direction} key={step} processes={workProcess} />
@@ -123,7 +152,7 @@ export default function WorkingProcesses() {
             </div>
 
             {/* Right side: Progress bars */}
-            <div className="space-y-2 sm:space-y-3 flex-1 order-3 md:hidden lg:block">
+            <div className="space-y-2 sm:space-y-3">
               {workProcess?.slice(3, 6).map((data, index) => (
                 <motion.div
                   key={data.id}
