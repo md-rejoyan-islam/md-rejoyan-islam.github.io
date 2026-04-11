@@ -27,7 +27,7 @@ export default function Hero() {
   };
 
   const stats = [
-    { value: 2, label: "Years of Experience" },
+    { value: 3, label: "Years of Experience" },
     { value: 20, label: "Total Projects" },
     { value: 15, label: "Happy Clients" },
     { value: 5, label: "n8n Automations" },
@@ -82,7 +82,9 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-base sm:text-lg md:text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-6 sm:mb-10 leading-relaxed px-2 sm:px-0"
           >
-            I build full-stack web apps with MERN & Next.js, uncover insights through Python & Data Science, and automate business workflows with n8n — delivering complete, production-ready solutions.
+            I build full-stack web apps with MERN & Next.js, uncover insights
+            through Python & Data Science, and automate business workflows with
+            n8n — delivering complete, production-ready solutions.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -164,7 +166,11 @@ export default function Hero() {
                   }}
                 >
                   <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white mb-0.5 sm:mb-1">
-                    <AnimatedCounter value={stat.value} duration={2.5} suffix="+" />
+                    <AnimatedCounter
+                      value={stat.value}
+                      duration={2.5}
+                      suffix="+"
+                    />
                   </p>
                   <p className="text-sm sm:text-xs lg:text-sm text-slate-500 dark:text-slate-400">
                     {stat.label}
